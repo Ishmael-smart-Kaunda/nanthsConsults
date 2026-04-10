@@ -7,7 +7,7 @@ import { FiArrowRight } from "react-icons/fi"
 import { MdArrowDropDown, MdArrowForward} from "react-icons/md"
 import { FaUser } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
-import { AiOutlineClose } from "react-icons/ai"
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai"
 import { FiEdit } from "react-icons/fi"
 import { NavLink, Link } from "react-router-dom"
 
@@ -48,23 +48,23 @@ export default function NavBar(){
                             </div>
                     </div>
                     
-                    <div  className=" w-full px-5 md:px-25 py-1 flex flex-row justify-between align-center shadow-md bg-black/90">
-                            <div className=" h-full flex flex-row justify-between text-zinc-50 py-1">
+                    <div  className=" w-full px-5 md:px-25 py-1 flex flex-row justify-between align-center shadow-md bg-[#000]">
+                            <div className=" h-full flex flex-row justify-between text-[#fff] py-1">
                                 
                                 <span className="inline-flex gap-2 font-semibold cursor-pointer" 
                                       onClick={openMenu}>
-                                    <FcMenu className="size-6 text-zinc-900"/> 
+                                    <AiOutlineMenu className="size-6.5"/> 
                                     Menu
                                 </span>
                                 
 
                             </div> 
-                            <NavLink to='/contact' className="cursor-pointer p-1 px-5 border border-white/30  rounded-md font-semibold text-white/80 bg-amer-800 hover:bg-ascent/20">Contact</NavLink>       
+                            <NavLink to='/contact' className="cursor-pointer p-1 px-5 border border-white/10  rounded-md font-semibold text-white/80 bg-[#854836]">Contact</NavLink>       
                     </div>
                     {/*Nav menu */}
                     {/*overlay */}
                         {open&&<div onClick={closeMenu} className="cursor-pointer absolute inset-0  w-full h-[100vh] bg-black/90 transition-all duration-500"></div>}
-                    <div className={`${open ? 'left-0 opacity-100' : 'left-[-550px] opacity-0'} z-1000 transition-all duration-500 absolute top-0 w-full md:w-[350px] min-h-[100vh] border bg-white font-semibold p-3 box-border text-gray-500`}>
+                    <div className={`${open ? 'left-0 opacity-100' : 'left-[-550px] opacity-0'} z-1000 transition-all duration-500 absolute top-0 w-full md:w-[350px] min-h-[100vh] bg-white font-semibold p-3 text-gray-500`}>
                         
                         <div className="w-full flex flex-col items-end">
                                 <AiOutlineClose 
@@ -72,34 +72,22 @@ export default function NavBar(){
                                 onClick={closeMenu}
                                 />
                         </div>
-                        <ul className="space-y-2 mt-4">
+                        <div className="space-y-5 mt-4 flex flex-col">
                             <NavLink to='/'  onClick={closeMenu }
-                                 className="hover:text-ascent mt-2 cursor-pointer"
+                                 className="hover:text-ascent cursor-pointer"
                             >
-                                Home
+                              Home
                             </NavLink>
-
-                            <div className="my-2">
-                                <span className="inline-flex gap-3 hover:text-ascent cursor-pointer" 
-                                      onClick={toggleDisplay}> 
-                                      Services <MdArrowDropDown className="size-6"/>
+                                <span className="inline-flex gap-3 hover:text-ascent cursor-pointer h-2" 
+                                        onClick={toggleDisplay}> 
+                                        Services <MdArrowDropDown className="size-6"/>
                                 </span>
-                                <ul className={`${display? 'h-fit opacity-100': ''}h-fit opacity-100  font-light py-2 transition-all duration-500 overflow-hidden px-2 text-[16px] `}>
-                                   <NavLink to='/services'
-                                   
-                                   onClick={closeMenu }
-                                   > 
+                                <ul className={`${display? 'h-fit opacity-100 py-2': 'h-1 opacity-0'}  font-light transition-all duration-500 overflow-hidden px-2 text-[16px] `}>
+                                   <NavLink to='/services' onClick={closeMenu }> 
                                         <li className="cursor-pointer border-t border-t-gray-300  border-b border-b-gray-300 p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">Talent Acquisition & Rentention</li>
                                   </NavLink>
 
-                                   <NavLink to="/services"    
-                                              onClick={
-                                               closeMenu
-                                            }
-                                              
-                                    
-                                    >
-                                           
+                                    <NavLink to="/services"onClick={closeMenu}>    
                                          <li  className="cursor-pointer border-b border-b-gray-300  p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">Creation of HR System</li>
                                     </NavLink>
 
@@ -127,14 +115,12 @@ export default function NavBar(){
                                          <li  className="cursor-pointer border-b border-b-gray-300  p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">Integrated Management Systems</li>
                                     </NavLink>
                                 </ul>
-                                
-                            </div>
                              
-                            <NavLink to='/about'  onClick={closeMenu }><li className="hover:text-ascent cursor-pointer">About</li></NavLink>
+                            <NavLink to='/about'    onClick={closeMenu }><li className="hover:text-ascent cursor-pointer">About</li></NavLink>
                             <NavLink to='/contact'  onClick={closeMenu }><li className="hover:text-ascent cursor-pointer">Contact</li></NavLink>
-                        </ul>
+                        </div>
                         
-                        <button  onClick={closeMenu } className="cursor-pointer mx-auto flex flex-row justify-center text-white bg-amber-800 gap-5 rounded-sm border w-full md:w-[90%] p-2">
+                        <button  onClick={closeMenu } className="sticky top-[90%] cursor-pointer mx-auto flex flex-row justify-center text-white bg-amber-800 gap-5 rounded-sm border w-full md:w-[90%] p-2">
                                <FaUser className="size-6"/> LogIn
                         </button>
 

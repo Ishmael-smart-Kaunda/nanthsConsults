@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 export default function Footer(){
                                 return(
-                                       <footer className="w-full px-5 py- md:px-25 bg-black/90">
+                                       <footer className="w-full px-5 py- md:px-25 bg-black">
                                             <div className="flex flex-col md:flex-row justify-between pt-20 text-stone-400">
                                                 <div className="w-full   space-y-3">
 
@@ -18,7 +18,7 @@ export default function Footer(){
                                                     <p className="text-[12px] text-sm italic">Get HR insights and updates directly to your inbox</p>
                                                     <fieldset className="flex flex-row mt-3 rounded-lg">
                                                         <input type="email" placeholder="Your Email" className="rounded-l-lg p-2 bg-white focus:outline-none"/>
-                                                        <button className=" w-30 bg-ascent font-bold text-white  rounded-r-lg">Subscribe</button>
+                                                        <button className=" w-30 bg-[#854836] font-bold text-white  rounded-r-lg">Subscribe</button>
                                                     </fieldset>
                                                     
 
