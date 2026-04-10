@@ -19,7 +19,7 @@ export default function Services(){
                  <h1 className="font-bold text-amber-950 text-[25px] ">Our Services</h1>
                   <div className="w-15 h-1.5 rounded-xl bg-amber-800 mb-10"/>
                   
-                  <div className={`${more?'h-fit':'h-300 md:h-130'} transition-all duration-500 w-full grid grid-cols-1 md:grid-cols- lg:grid-cols-2 gap-6 mb-10  overflow-hidden`}>
+                  <div className={`${more?'h-fit':'h-390 md:h-130'} transition-all duration-500 w-full grid grid-cols-1 md:grid-cols- lg:grid-cols-2 gap-6 mb-10  overflow-hidden`}>
                 
                <article className="cursor-poiter p-2 flex flex-col min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
