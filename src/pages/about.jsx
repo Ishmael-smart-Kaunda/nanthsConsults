@@ -31,9 +31,9 @@ export default function About(){
 
                                 </div>
                                 
-                                <section className="bg-zinc-50 w-full py-10 my-5 rounded-3xl">  
+                                <section className="bg-zinc-100 w-full py-15 my-5 rounded-[16px]">  
                                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 p-5 mb-10">
-                                                        <div className="text-justify p-5 border border-gray-300/40 rounded-sm md:w-7/10 space-y-3 mx-auto ">
+                                                        <div className="text-justify p-5 border border-gray-300/70 rounded-sm md:w-7/10 space-y-3 mx-auto ">
                                                                 <h3 className="font-semibold text-[20px]">Our Vision</h3>
                                                                 <p className="">To be a reliable and number one choice consulting firm in Malawi and beyond.</p>
                                                         </div>
@@ -87,7 +87,7 @@ export default function About(){
                                 </section> 
 
                                 <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <figure className="relative w-full h-full md:col-span-1 bg-gradient-to-tr from-stone-950 to-gray-950 rounded-lg">
+                                        <figure className="relative w-full h-full md:col-span-1 bg-gradient-to-tr from-stone-800 to-gray-900 rounded-lg">
                                                 <img src={image} alt="contact us" className="w-full h-full rounded-md mix-blend-overlay"/>
                                                 <figcaption className=" absolute top-[50%] text-white/50 -translate-[50%] left-[50%] text-center text-5xl font-bold">
                                                  Why Chose Us</figcaption>

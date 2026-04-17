@@ -31,7 +31,7 @@ export default function Contact(){
                                 </p>
                                  
                      
-                        <div className="my-5 w-9/10 md:w-full mx-auto p-10 pt-20 rounded-md bg-zinc-400 ">
+                        <div className="my-5 w-9/10 md:w-full mx-auto p-10 pt-20 rounded-md bg-zinc-500 ">
                                 <address className="flex flex-col md:flex-row justify-between gap-8 items-center">
                                         <div className="flex flex-col items-center gap-2 text-white w-45">
                                                 <HiPhone className="size-8 text-amber-950"/>
@@ -74,26 +74,26 @@ export default function Contact(){
                                                 type="text"
                                                 name="user_name" 
                                                 placeholder="Full name" 
-                                                className="w-full p-3 text-gray-600/90 bg-zinc-50 shadow-md rounded-md rounded-md placeholder: text-placeholder  focus:outline-none "
+                                                className="w-full p-3 text-gray-600/90 bg-zinc-50 shadow-sm border border border-black/10 placeholder: text-placeholder  focus:outline-none "
                                                 required
                                                 />
                                                 <input 
                                                 type="email"
                                                 name="email" 
                                                 placeholder="Email address" 
-                                                className="w-full p-3 text-gray-600/90  bg-zinc-50 shadow-md rounded-md focus:outline-none "
+                                                className="w-full p-3 text-gray-600/90  bg-zinc-50 shadow-sm border  border-black/10 focus:outline-none "
                                                 />
                                                 <input 
                                                 type="tel"
                                                 name="phone" 
                                                 placeholder="Phone" 
-                                                className="w-full p-3 text-gray-600/90 bg-zinc-50 shadow-md rounded-md focus:outline-none"
+                                                className="w-full p-3 text-gray-600/90 bg-zinc-50 shadow-sm  border border-black/10 focus:outline-none"
                                                 />
                                              
                                                 <textarea 
                                                 name="message" 
                                                 placeholder="Message" 
-                                                className="w-full p-3 text-gray-600/90  bg-zinc-50 shadow-md rounded-md focus:outline-none"
+                                                className="w-full p-3 text-gray-600/90  bg-zinc-50 shadow-sm border border-black/10 focus:outline-none"
                                                 >
                                                 </textarea>
                                         

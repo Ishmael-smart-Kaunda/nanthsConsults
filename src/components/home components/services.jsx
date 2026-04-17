@@ -1,4 +1,4 @@
-import image from "../../assets/images/hero/hero.jpeg"
+import image from "../../assets/images/hero/hero1.jpeg"
 import { FaShieldAlt } from "react-icons/fa"
 import { RiFileSearchLine, RiSettings3Line } from "react-icons/ri"
 import { RiBarChartBoxLine, RiLineChartLine, RiBuilding4Line, RiFileTextLine, RiPresentationLine, RiServerLine, RiShieldCheckLine,  } from "react-icons/ri"
@@ -16,12 +16,12 @@ export default function Services(){
     }
        return(
                <section id="services" className="w-full max-w-[1440px] px-5 md:px-25 mx-auto  border border-black/0 ">
-                 <h1 className="font-bold text-amber-950 text-[25px] ">Our Services</h1>
-                  <div className="w-15 h-1.5 rounded-xl bg-amber-800 mb-10"/>
+                 <h1 className="font-bold text-amber-950/80 text-[22px]">Our Services</h1>
+                  <div className="w-15 h-0.5 rounded-xl bg-amber-950 mb-10"/>
                   
                   <div className={`${more?'h-fit':'h-390 md:h-130'} transition-all duration-500 w-full grid grid-cols-1 md:grid-cols- lg:grid-cols-2 gap-6 mb-10  overflow-hidden`}>
                 
-               <article className="cursor-poiter p-2 flex flex-col min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] rounded-md hover:shadow-zinc-400 transition-all duration-500">
+               <article className=" cursor-poiter p-2 flex flex-col h-fit md:min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="p-1 bg-stone-100 back-drop-blur w-fit rounded-md">
                         <RiFileSearchLine className="size-10 text-black/90"/>
@@ -41,7 +41,7 @@ export default function Services(){
 
 
 
-                <article className="cursor-poiter p-2 flex flex-col min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                <article className="cursor-poiter p-2 flex flex-col h-fit md:min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="p-1 bg-stone-100 back-drop-blur w-fit rounded-md">
                         <RiSettings3Line className="size-10 text-black/90"/>
@@ -57,7 +57,7 @@ export default function Services(){
                     </div> 
                 </article> 
 
-                <article className="cursor-ointer p-2 flex flex-col min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80 rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                <article className="cursor-ointer p-2 flex flex-col h-fit md:min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80 rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="p-1 bg-stone-100 back-drop-blur w-fit rounded-md">
                         <RiBarChartBoxLine className="size-10 text-blck/50"/>
@@ -76,7 +76,7 @@ export default function Services(){
 
                
 
-                <article className="hr-pinter p-2 flex flex-col min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80 text-black/80 rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                <article className="hr-pinter p-2 flex flex-col h-fit md:min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80 text-black/80 rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="p-1 bg-stone-100 back-drop-blur w-fit rounded-md">
                         <RiLineChartLine className="size-10 textblak/50"/>
@@ -92,7 +92,7 @@ export default function Services(){
                     </div> 
                 </article> 
 
-                <article className="cursor-poiner p-2 flex flex-col min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80  rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                <article className="cursor-poiner p-2 flex flex-col h-fit md:min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80  rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="p-1 bg-stone-100 back-drop-blur w-fit rounded-md">
                         <RiBuilding4Line className="size-10 text-blak/50"/>
@@ -108,7 +108,7 @@ export default function Services(){
                     </div> 
                 </article>
 
-                <article className="cursor-poiter p-2 flex flex-col min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80  rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                <article className="cursor-poiter p-2 flex flex-col h-fit md:min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80  rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="p-1 bg-stone-00 back-drop-blur w-fit rounded-md">
                         <RiFileTextLine className="size-10 tex-black/50"/>
@@ -125,7 +125,7 @@ export default function Services(){
                     </div> 
                 </article>
 
-                <article className="cursor-ponter p-2 flex flex-col min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80 rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                <article className="cursor-ponter p-2 flex flex-col h-fit md:min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80 rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="p-1 bg-stoe-100 back-drop-blur w-fit rounded-md">
                         <RiPresentationLine className="size-10 tet-black/50"/>
@@ -141,7 +141,7 @@ export default function Services(){
                     </div> 
                 </article>
 
-                <article className="cursor-pointr p-2 flex flex-col min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80 rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                <article className="cursor-pointr p-2 flex flex-col h-fit md:min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80 rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="p-1 bg-stoe-100 back-drop-blur w-fit rounded-md">
                         <RiShieldCheckLine className="size-10 text-blck/50"/>
@@ -157,7 +157,7 @@ export default function Services(){
                     </div> 
                 </article>
 
-                <article className="cursor-ponter p-2 flex flex-col min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80  rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                <article className="cursor-ponter p-2 flex flex-col h-fit md:min-h-60 shadow-zinc/200 shadow-sm bg-[#f7f7f7] text-black/80  rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="p-1 bg-stone-10 back-drop-blur w-fit rounded-md">
                         <RiServerLine className="size-10 text-lack/50"/>

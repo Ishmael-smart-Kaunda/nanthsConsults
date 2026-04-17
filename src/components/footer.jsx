@@ -24,11 +24,11 @@ export default function Footer(){
 
                                                 </form>
                                             </div>
-                                            <div className="h-40 text-stone-500 py-5 font-semibold list-none text-[13px] space-y-3 ">
-                                                <Link to='/'> <li className="cursor-pointer underline w-fit hover:text-white transition-all ">Home</li></Link>
-                                                <Link to='/services'> <li className="cursor-pointer underline w-fit hover:text-white duration-300">Services</li></Link>
-                                                <Link to='/about'> <li className="cursor-pointer underline w-fit hover:text-white duration-300">About Us</li></Link>
-                                                <Link to='/contact'> <li className="cursor-pointer underline w-fit hover:text-white duration-300">Contact</li></Link>
+                                            <div className="h-40 text-stone-500 py-5 font-semibold list-none text-[13px] ">
+                                                <Link to='/'> <li className="cursor-pointer underline w-fit hover:text-white transition-all my-2">Home</li></Link>
+                                                <Link to='/services'> <li className="cursor-pointer underline w-fit hover:text-white duration-300  my-2">Services</li></Link>
+                                                <Link to='/about'> <li className="cursor-pointer underline w-fit hover:text-white duration-300  my-2">About Us</li></Link>
+                                                <Link to='/contact'> <li className="cursor-pointer underline w-fit hover:text-white duration-300  my-2">Contact</li></Link>
 
                                             </div>
                                             

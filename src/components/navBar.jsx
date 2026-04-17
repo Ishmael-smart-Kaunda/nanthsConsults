@@ -6,10 +6,11 @@ import { FaArrowDown } from "react-icons/fa"
 import { FiArrowRight } from "react-icons/fi"
 import { MdArrowDropDown, MdArrowForward} from "react-icons/md"
 import { FaUser } from "react-icons/fa"
-import { FiMail } from "react-icons/fi"
+import { FiMail, FiUser } from "react-icons/fi"
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai"
 import { FiEdit } from "react-icons/fi"
 import { NavLink, Link } from "react-router-dom"
+
 
 
 
@@ -29,26 +30,49 @@ export default function NavBar(){
           const toggleDisplay=()=>{
                 setDisplay(!display)    
           }
+          {/* Sign Up form toggle show */}
+          const [show, setShow]=useState(false)
+          const toggleSignUp = ()=>{
+                setShow(!show)    
+          }
+         
+          {/*toggle overlay */}
+          let isOpen=null;
+          const toggleOverlay=()=>{
+             if(open | show){
+                isOpen=true;
+             }
+             else{
+                isOpen=false;
+             }
+             return isOpen;
+          }
+          toggleOverlay()
 
           return(
                  <header className="sticky top-0 w-full bg-white z-100">
                     <div className=" w-full py-2 flex flex-row justify-between px-5 md:px-25">
                              <NavLink to='/'>
                                 <div className="gap-5">
-                                    <h2 className="text-ascent font-bold text-sm">Nanths Consults</h2>
+                                    <h2 className="text-ascent font-bold text-sm">Nanth Consults</h2>
                                     <p className="hidden text-[12px] font-semibold">A step closer to reliable HR & Adminstration solutions</p>
                                 </div>
                             </NavLink>
                             <div className="inline-flex gap-5">
-                                <span className="hidden  cursor-pointer md:inline-flex gap-2 font-semibold text-ascent hover:text-ascent/70"><FaUser className="size-5"/> LogIn</span>
-                                <span className="hidden cursor-pointer md:inline-flex gap-2 font-semibold text-ascent hover:text-ascent/70"><FiMail className="size-5.5"/> Email</span>
+                                <span onClick={toggleSignUp} 
+                                      className="hidden  cursor-pointer md:inline-flex gap-2 font-sebold text-black/80 hover:text-amber-800"
+                                      >
+                                        <FaUser className="size-5 translate-y-0.5"/> Sign Up
+                                </span>
+
+                                <span  className="hidden cursor-pointer md:inline-flex gap-2 font-norm text-black/80 hover:text-amber-800"><FiMail className="size-5 translate-y-0.5"/> Email</span>
                                 <Link to='/blog'>
-                                   <span className="cursor-pointer inline-flex gap-2 font-semibold text-ascent hover:text-ascent/70"><FiEdit className="size-5.5"/> NewsLeter</span>
+                                   <span className="cursor-pointer inline-flex gap-1 font-semld text-black/80 hover:text-amber-800"><FiEdit className="size-5 translate-y-0.5"/> NewsLeter</span>
                                 </Link>
                             </div>
                     </div>
                     
-                    <div  className=" w-full px-5 md:px-25 py-1 flex flex-row justify-between align-center shadow-md bg-[#000]">
+                    <div  className=" w-full px-5 md:px-25 py-2 flex flex-row justify-between align-center shadow-md bg-[#000]">
                             <div className=" h-full flex flex-row justify-between text-[#fff] py-1">
                                 
                                 <span className="inline-flex gap-2 font-semibold cursor-pointer" 
@@ -59,11 +83,11 @@ export default function NavBar(){
                                 
 
                             </div> 
-                            <NavLink to='/contact' className="cursor-pointer p-1 px-5 border border-white/10  rounded-md font-semibold text-white/80 bg-[#854836]">Contact</NavLink>       
+                            <NavLink to='/contact' className="cursor-pointer p-1 px-5 border border-white/10  rounded-sm font-semibold text-white/80 bg-[#854836]">Contact</NavLink>       
                     </div>
                     {/*Nav menu */}
                     {/*overlay */}
-                        {open&&<div onClick={closeMenu} className="cursor-pointer absolute inset-0  w-full h-[100vh] bg-black/90 transition-all duration-500"></div>}
+                        {isOpen &&<div onClick={closeMenu} className="cursor-pointer absolute inset-0  w-full h-[100vh] bg-black/92 transition-all duration-500"></div>}
                     <div className={`${open ? 'left-0 opacity-100' : 'left-[-550px] opacity-0'} z-1000 transition-all duration-500 absolute top-0 w-full md:w-[350px] min-h-[100vh] bg-white font-semibold p-3 text-gray-500`}>
                         
                         <div className="w-full flex flex-col items-end">
@@ -120,12 +144,37 @@ export default function NavBar(){
                             <NavLink to='/contact'  onClick={closeMenu }><li className="hover:text-ascent cursor-pointer">Contact</li></NavLink>
                         </div>
                         
-                        <button  onClick={closeMenu } className="sticky top-[90%] cursor-pointer mx-auto flex flex-row justify-center text-white bg-amber-800 gap-5 rounded-sm border w-full md:w-[90%] p-2">
-                               <FaUser className="size-6"/> LogIn
+                        <button  onClick={()=>{toggleSignUp(); closeMenu()}} className="sticky top-[90%] cursor-pointer mx-auto flex flex-row justify-center text-white bg-amber-800 gap-5 rounded-sm border w-full md:w-[90%] p-2">
+                               <FaUser className="size-6"/> Sign Up
                         </button>
 
 
                     </div>
+                    {/*sign up form*/}
+                    <div className={`fixed ${show ? 'opacity-100 left-[50%] translate-x-[-50%]' :'opacity-0 left-[200%] translate-x-[-50%]'} top-[53%] rounded-sm -translate-y-[50%] bg-white transition-all duration-500 z-100 w-9/10 md:w-[400px] e px-5 py-10 h-fit`}>
+                        <button onClick={toggleSignUp} className="cursor-pointer relative w-full hover:scale-110 transition-transiform duration-500">
+                            <AiOutlineClose className="size-7 text-red-600 translate absolute left-[95%] -top-10"/></button>
+                        <div className="mx-auto w-fit p-2 rounded-full bg-gradient-to-b from-amber-950 to-white">
+                            <FaUser className="size-15 text-white/50 w-ful rounderder"/>
+                        </div>
+                         <h1 className=" text-center mt-5 text-black/90 text-[17px] font-semibold">Sign Up for Newsletter</h1>
+                          <p className="text-center text-gray-500 text-[15px]">Get HR & Admin insights for your business growth</p>
+                          <form className="w-full my-10 flex flex-col gap-5">
+                               <fieldset className="inline-flex gap-3 w-full">
+                                     <input type="text" placeholder="Name" className="border border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/>
+                                    <input type="text" placeholder="Phone" className="border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/> 
+                               </fieldset>
+                               
+                               <input type="text" placeholder="Email" className="border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/>
+                               <fieldset className="inline-flex gap-2 w-full">
+                                    
+                                    <button className="cursor-pointer p-2 w-full rounded-sm bg-amber-700 text-white font-semibold">Sign Up</button>
+                               </fieldset>
+                               
+                          </form>
+                     
+                    </div>
+                         
                     
                 </header> 
           )
