@@ -24,22 +24,22 @@ export default function Footer(){
                     {/* Links */}
                     <div className="flex flex-col gap-0.5 w-[30%]">
                         <NavLink to="services">
-                            <p className="bg-ascent py-2 text-center cursor-pointer text-white/80  px-4">
+                            <p className="bg-white/80 py-2 text-center cursor-pointer  px-4">
                                 Services
                             </p>
                         </NavLink>
                         <NavLink to="contact">
-                            <p className="bg-ascent py-2 text-center cursor-pointer text-white/80 px-4">
+                            <p className="bg-white/80 py-2 text-center cursor-pointer px-4">
                                 Contact
                             </p>
                         </NavLink>
                         <NavLink to="about">
-                            <p className="bg-ascent py-2 text-center cursor-pointer text-white/80  px-4">
+                            <p className="bg-white/80 py-2 text-center cursor-pointer  px-4">
                                 About
                             </p>
                         </NavLink>
                         <NavLink to="blog">
-                            <p className="bg-ascent py-2 text-center cursor-pointer text-white/80  px-4">
+                            <p className="bg-white/80 py-2 text-center cursor-pointer  px-4">
                                 Blog
                             </p>
                         </NavLink>
