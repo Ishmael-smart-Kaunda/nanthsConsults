@@ -3,14 +3,14 @@ import Image from "../../assets/images/logo/nanth-logo.jpeg"
 
 export default function About(){
          return(
-                 <section  className="relative w-full grid grid-cols-2 max-w-[1440px] gap-2 md:py- px-5 md:px-25 max-w-[1440px]">
+                 <section  className="relative w-full grid grid-cols-1 md:grid-cols-2 max-w-[1440px] gap-2 md:py- px-5 md:px-25 max-w-[1440px]">
                    {/* <img src={image} alt=" timely HR solutions" className="hidden absolute inset-0 w-full h-full object-cover mb-5 mix-blend-overlay"/>*/}
-                    <div className="w-full h-full grid content-center  box-border ">
-                          <span className=""></span>
+                    <div className="w-full h-full grid  box-border py-10">
+                         
                           
-                          <div className="flex flex-col gap-5 mx-auto">
-                            <img src={Image} alt="" className="hidden size-30 mx-auto"/>
-                            <span className="flex flex-col items-center text-6xl md:text-6xl font-bold mb-15 md:mb-0 "> <b className="text-">About </b> Us</span>
+                          <div className="hidden flex flex-col gap-5">
+                            <img src={Image} alt="" className=" size-30 "/>
+                            <span className="flex md:flex-col text-xl md:text-xl font-bold mb-15 md:mb-0 "> Nanths Consults</span>
                          
                           </div>
                          
