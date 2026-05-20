@@ -1,15 +1,22 @@
 import { useState } from "react"
+import logo from "../assets/images/logo/nanth-logo.jpeg"
 
-import { FaSignInAlt } from "react-icons/fa"
+import { FaPenAlt, FaPenNib, FaSignInAlt } from "react-icons/fa"
 import { FcMenu } from "react-icons/fc"
 import { FaArrowDown } from "react-icons/fa"
-import { FiArrowRight } from "react-icons/fi"
-import { MdArrowDropDown, MdArrowForward} from "react-icons/md"
+import { FiArrowRight, FiFileText, FiHome, FiPenTool } from "react-icons/fi"
+import { MdArrowDropDown, MdArrowForward, MdMail, MdOutlineArticle, MdOutlineClose, MdPinEnd} from "react-icons/md"
 import { FaUser } from "react-icons/fa"
 import { FiMail, FiUser } from "react-icons/fi"
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai"
+import { AiFillCloseCircle, AiFillMail, AiOutlineClose, AiOutlineMenu } from "react-icons/ai"
 import { FiEdit } from "react-icons/fi"
 import { NavLink, Link } from "react-router-dom"
+import { FaMicroblog, FaPenClip } from "react-icons/fa6"
+import { HiArrowDown, HiChevronRight } from "react-icons/hi2"
+import { HiMail } from "react-icons/hi"
+import { CgMail } from "react-icons/cg"
+import { BiMailSend } from "react-icons/bi"
+import { BsMailbox2 } from "react-icons/bs"
 
 
 
@@ -50,30 +57,33 @@ export default function NavBar(){
           toggleOverlay()
 
           return(
-                 <header className="sticky top-0 w-full bg-white z-100">
-                    <div className=" w-full py-2 flex flex-row justify-between px-5 md:px-25">
+                 <header className=" w-full  ">
+                    <div className="fixed top-0 z-100 bg-white w-full flex flex-row justify-between px-5 md:px-25 shadow-s">
                              <NavLink to='/'>
-                                <div className="gap-5">
-                                    <h2 className="text-ascent font-bold text-sm">Nanth Consults</h2>
-                                    <p className="hidden text-[12px] font-semibold">A step closer to reliable HR & Adminstration solutions</p>
+                                <div className="inline-flex">
+                                    <img src={logo} alt="" className="size-12 " />
+                                    <div className="hidden pt-2">
+                                        <h2 className="text-ascent font-bold text-sm">Nanth Consults</h2>
+                                        <p className="w-45 text-[12px] font-light">A step closer to reliable HR & Adminstration solutions</p>
+                                    </div>
                                 </div>
                             </NavLink>
-                            <div className="inline-flex gap-5">
+                            <div className="inline-flex items-center gap-8">
                                 <span onClick={toggleSignUp} 
-                                      className="hidden  cursor-pointer md:inline-flex gap-2 font-sebold text-black/80 hover:text-amber-800"
+                                      className="hidden  cursor-pointer md:inline-flex gap-1 font-sebold text-black/80 hover:text-amber-800"
                                       >
-                                        <FaUser className="size-5 translate-y-0.5"/> Sign Up
+                                        <FiUser className="size-5 translate-y-0.2"/> Sign Up
                                 </span>
 
-                                <span  className="hidden cursor-pointer md:inline-flex gap-2 font-norm text-black/80 hover:text-amber-800"><FiMail className="size-5 translate-y-0.5"/> Email</span>
+                                <span  className="hidden cursor-pointer md:inline-flex gap-1 font-norm text-black/80 hover:text-amber-800"><FiMail className="size-4 translate-y-1"/> Email</span>
                                 <Link to='/blog'>
-                                   <span className="cursor-pointer inline-flex gap-1 font-semld text-black/80 hover:text-amber-800"><FiEdit className="size-5 translate-y-0.5"/> NewsLeter</span>
+                                   <span className="cursor-pointer inline-flex gap-1 font-semld text-black/80 hover:text-amber-800"><FiFileText className="text-gray-700 size-4 translate-y-1"/> Blog</span>
                                 </Link>
                             </div>
                     </div>
                     
-                    <div  className=" w-full px-5 md:px-25 py-2 flex flex-row justify-between align-center shadow-md bg-[#000]">
-                            <div className=" h-full flex flex-row justify-between text-[#fff] py-1">
+                    <div  className="mt-16 w-full px-5 md:px-25 py-3 flex flex-row justify-between items-center bg-black">
+                            <div className="flex flex-row justify-between text-[#fff]">
                                 
                                 <span className="inline-flex gap-2 font-semibold cursor-pointer" 
                                       onClick={openMenu}>
@@ -83,69 +93,36 @@ export default function NavBar(){
                                 
 
                             </div> 
-                            <NavLink to='/contact' className="cursor-pointer p-1 px-5 border border-white/10  rounded-sm font-semibold text-white/80 bg-[#854836]">Contact</NavLink>       
+                            <NavLink to='/contact' className="cursor-pointer p-2 px-5 border border-white/10  rounded-sm font-semibold text-white/80 bg-[#854836]">Get Started</NavLink>       
                     </div>
                     {/*Nav menu */}
                     {/*overlay */}
                         {isOpen &&<div onClick={closeMenu} className="cursor-pointer absolute inset-0  w-full h-[100vh] bg-black/92 transition-all duration-500"></div>}
-                    <div className={`${open ? 'left-0 opacity-100' : 'left-[-550px] opacity-0'} z-1000 transition-all duration-500 absolute top-0 w-full md:w-[350px] min-h-[100vh] bg-white font-semibold p-3 text-gray-500`}>
+                    <div className={`${open ? 'left-0 opacity-100' : 'left-[-550px] opacity-0'} z-1000 transition-all duration-500 absolute top-0 w-full md:w-[350px] min-h-[100vh] bg-white font-semibold p-3`}>
                         
-                        <div className="w-full flex flex-col items-end">
-                                <AiOutlineClose 
-                                  className="size-7 rounded-full text-red-800 hover:scale-102 cursor-pointer"
-                                onClick={closeMenu}
+                        <div className="w-full px-5 flex flex-col items-end">
+                                <MdOutlineClose 
+                                  className="size-6 rounded-full bg-black/20 text-white hover:scale-105 cursor-pointer"
+                                  onClick={closeMenu}
                                 />
                         </div>
-                        <div className="space-y-5 mt-4 flex flex-col">
-                            <NavLink to='/'  onClick={closeMenu }
-                                 className="hover:text-ascent cursor-pointer"
-                            >
-                              Home
-                            </NavLink>
-                                <span className="inline-flex gap-3 hover:text-ascent cursor-pointer h-2" 
-                                        onClick={toggleDisplay}> 
-                                        Services <MdArrowDropDown className="size-6"/>
-                                </span>
-                                <ul className={`${display? 'h-fit opacity-100 py-2': 'h-1 opacity-0'}  font-light transition-all duration-500 overflow-hidden px-2 text-[16px] `}>
-                                   <NavLink to='/services' onClick={closeMenu }> 
-                                        <li className="cursor-pointer border-t border-t-gray-300  border-b border-b-gray-300 p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">Talent Acquisition & Rentention</li>
-                                  </NavLink>
-
-                                    <NavLink to="/services"onClick={closeMenu}>    
-                                         <li  className="cursor-pointer border-b border-b-gray-300  p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">Creation of HR System</li>
-                                    </NavLink>
-
-                                    <NavLink to='/services'
-                                           onClick={closeMenu }
-                                           >
-                                         <li  className="cursor-pointer border-b border-b-gray-300 p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">Job Evaluation & Salary Survey</li>
-                                    </NavLink>
-                                     <Link to='/services#performance'  onClick={closeMenu }>
-                                         <li   className="cursor-pointer border-b border-b-gray-300  p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">Perfomance management </li>
-                                    </Link>
-                                     <NavLink to='/services'  onClick={closeMenu }>
-                                         <li  className="cursor-pointer border-b border-b-gray-300  p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">Organizational Design and Business Development</li>
-                                    </NavLink> 
-                                     <NavLink to='/services'  onClick={closeMenu }>
-                                         <li  className="cursor-pointer border-b border-b-gray-300  p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">Policies and Contract Formulation </li>
-                                    </NavLink>
-                                     <NavLink to='/services'  onClick={closeMenu }>
-                                         <li  className="cursor-pointer border-b border-b-gray-300 p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">Training and Development</li>
-                                    </NavLink>
-                                     <NavLink to='/services'  onClick={closeMenu }>
-                                         <li  className="cursor-pointer border-b border-b-gray-300  p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">HR Outsourcing Services</li>
-                                    </NavLink>
-                                     <NavLink to='/services'  onClick={closeMenu }>
-                                         <li  className="cursor-pointer border-b border-b-gray-300  p-2 bg-gray-100 hover:bg-gray-300 transition-all duration-300">Integrated Management Systems</li>
-                                    </NavLink>
-                                </ul>
-                             
-                            <NavLink to='/about'    onClick={closeMenu }><li className="hover:text-ascent cursor-pointer">About</li></NavLink>
-                            <NavLink to='/contact'  onClick={closeMenu }><li className="hover:text-ascent cursor-pointer">Contact</li></NavLink>
+                        <div className=" mt-4 flex flex-col gap-8 font-normal px-5 py-8">
+                            <NavLink to='/'  onClick={closeMenu } className="ursor-pointer inline-flex justify-between  items-center gap-3 borblack/15 p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Home <HiChevronRight className="size-3"/></NavLink>
+                            <NavLink to='/services'  onClick={closeMenu } className=" cursor-pointer  inline-flex justify-between  items-center gap-3  p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Our services <HiChevronRight className="size-3"/></NavLink> 
+                            <NavLink to='/about'    onClick={closeMenu } className=" cursor-pointer  inline-flex justify-between  items-center gap-3  p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">About Us <HiChevronRight className="size-3"/></NavLink>
+                            <NavLink to='/contact'  onClick={closeMenu }className=" cursor-pointer  inline-flex justify-between  items-center gap-3 p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Contact Us <HiChevronRight className="size-3"/></NavLink>
                         </div>
                         
-                        <button  onClick={()=>{toggleSignUp(); closeMenu()}} className="sticky top-[90%] cursor-pointer mx-auto flex flex-row justify-center text-white bg-amber-800 gap-5 rounded-sm border w-full md:w-[90%] p-2">
-                               <FaUser className="size-6"/> Sign Up
+                        <hr className="w-9/10 mx-auto opacity-10"/>
+
+                        <figure className="w-7/10 mx-auto py-2 font-normal -space-y-6">
+                            <img src={logo} alt="" className="mx-auto scale-50" />
+                            <figcaption className="text-center text-[13px]">A step closer to your HR, admin business solutions</figcaption>
+
+                        </figure>
+                        
+                        < button  onClick={()=>{toggleSignUp(); closeMenu()}} className="font-normal text-[15px] text-ascent underline cursor-pointer my-10 mx-auto flex flex-row justify-center  items-start border-none gap-2 w-full ">
+                               <FaUser className="hidden size-5"/> Sign up for newsletter
                         </button>
 
 

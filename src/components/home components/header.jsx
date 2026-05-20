@@ -109,8 +109,8 @@ export default function Header(){
 
 
              return(
-                     <div className="w-full md:max-w-[1440px] h-[100vh] md:min-h-[93vh]">
-                           <section className="relative w-full h-6/10 md:h-8/10 bg-[#f7f7f7]/80 gradient-to-r  from-violet-50 via-violet-100 to-slate-900/70 ">
+                     <div className="w-full md:max-w-[1440px] h-[100vh] md:min-h-[93vh] bg-black/30">
+                           <section className="relative w-full h-full  bg-[#f7f7f7]/80 gradient-to-r  from-violet-50 via-violet-100 to-slate-900/70 ">
                               <img src={image1}
                                    alt=" Timely HR solutions" className="hiddn absolute inset-0 w-full h-full object-cover blur-sm mix-blend-overlay"/>
                               <div className="absolute top-1/10 md:top-2/10 left-1/2 -translate-x-1/2 w-full md:w-[85%] overflow-hidden mx-auto flex flex-col md:flex-row ">
@@ -200,35 +200,7 @@ export default function Header(){
                            
                            </section>
    
-                            <section className="w-full max-w-[1440px] h-fit px-5 md:px-25 py-3 md:py-0  text-white/80 bg-[#000]/90 roundedxl">
-                                <div className="gap-5 flex flex-col md:flex-row items-center justify-between">
-                                    <div className=" w-fit inline-flex align-center gap-2">
-                                        <div className=" bg-gradientto-tr from-ascent to-zinc-700 rounded-md"> <BsBarChartFill className="size-12"/></div>
-                                        <span className="-space-y-1"> 
-                                            <p className="font-semibold"><strong className="text-[20px] font-bold">10+</strong> Years Experience</p>
-                                            <p>Trusted HR & Admin advisory</p>
-                                        </span>
-                                    </div>
-                                    <div className=" w-fit h-full inline-flex align-center gap-2">
-                                        <AiOutlineUser className="size-12 my-auto"/>
-                                        <span className="-space-y-1"> 
-                                            <p className="font-semibold"><strong className="text-[25px] font-bold">20+</strong> Clients Served</p>
-                                            <p>Across multiple sectors</p>
-                                        </span>
-
-                                    </div>
-                                    <div className=" w-fit h-full inline-flex items-center gap-2">
-                                        <FiCheckCircle className="size-12 my-auto translate-y-2"/>
-                                         
-                                        <span className="-space-y-1"> 
-                                            <p className="font-semibold"><strong className="text-[25px] font-bold"></strong> Compliance and efficiency</p>
-                                            <p>Reduce risks, improve operation</p>
-                                        </span>
-                                        
-
-                                    </div>
-                                </div>
-                           </section>
+                           
 
                      </div>
              )
