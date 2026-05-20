@@ -1,3 +1,4 @@
+
 import { useState } from "react"
 
 import { FaSignInAlt } from "react-icons/fa"
@@ -50,6 +51,7 @@ export default function NavBar(){
           toggleOverlay()
 
           return(
+            
                  <header className="sticky top-0 w-full bg-white z-100">
                     <div className=" w-full py-2 flex flex-row justify-between px-5 md:px-25">
                              <NavLink to='/'>
@@ -175,7 +177,8 @@ export default function NavBar(){
                      
                     </div>
                          
-                    
-                </header> 
+                </header>
+
+                
           )
 }
