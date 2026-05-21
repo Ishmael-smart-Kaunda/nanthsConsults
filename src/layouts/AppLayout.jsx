@@ -1,6 +1,6 @@
 // Use of AppLayout and Outlet
-// Considerung the fact that the Navbar has to appear across multiple pages
-// Consistent component, i set it to be the default applayout (Shared page structure / Reusable)
+// Considering the fact that the Navbar has to appear across multiple pages
+// Consistent component, i set it to be the default app layout (Shared page structure / Reusable)
 // Now the Outlet represents the Child component
 // The matching child component will be rendered there
 

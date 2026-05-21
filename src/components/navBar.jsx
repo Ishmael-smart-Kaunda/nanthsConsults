@@ -1,3 +1,4 @@
+
 import { useState } from "react"
 import logo from "../assets/images/logo/nanth-logo.jpeg"
 
@@ -153,7 +154,8 @@ export default function NavBar(){
                      
                     </div>
                          
-                    
-                </header> 
+                </header>
+
+                
           )
 }
