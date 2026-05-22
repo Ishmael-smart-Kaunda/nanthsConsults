@@ -45,17 +45,18 @@ export default function NavBar(){
           }
          
           {/*toggle overlay */}
-          let isOpen=null;
+          let isClose=null;
           const toggleOverlay=()=>{
-             if(open | show){
-                isOpen=true;
+            
+             if(open || show){
+                isClose=false;
              }
              else{
-                isOpen=false;
+                isClose=true;
              }
-             return isOpen;
+             return isClose;
           }
-          toggleOverlay()
+         
 
           return(
                  <header className=" w-full  ">
@@ -81,6 +82,8 @@ export default function NavBar(){
                                    <span className="cursor-pointer inline-flex gap-1 font-semld text-black/80 hover:text-amber-800"><FiFileText className="text-gray-700 size-4 translate-y-1"/> Blog</span>
                                 </Link>
                             </div>
+                                         {/*overlay */}
+                        {open &&<div onClick={closeMenu} className="cursor-pointer absolute inset-0  w-full h-[100vh] bg-black/92 transition-all duration-500 delay-300"></div>}
                     </div>
                     
                     <div  className="mt-16 w-full px-5 md:px-25 py-3 flex flex-row justify-between items-center bg-black">
@@ -97,8 +100,7 @@ export default function NavBar(){
                             <NavLink to='/contact' className="cursor-pointer p-2 px-5 border border-white/10  rounded-sm font-semibold text-white/80 bg-[#854836]">Get Started</NavLink>       
                     </div>
                     {/*Nav menu */}
-                    {/*overlay */}
-                        {isOpen &&<div onClick={closeMenu} className="cursor-pointer absolute inset-0  w-full h-[100vh] bg-black/92 transition-all duration-500"></div>}
+       
                     <div className={`${open ? 'left-0 opacity-100' : 'left-[-550px] opacity-0'} z-1000 transition-all duration-500 absolute top-0 w-full md:w-[350px] min-h-[100vh] bg-white font-semibold p-3`}>
                         
                         <div className="w-full px-5 flex flex-col items-end">
@@ -130,14 +132,15 @@ export default function NavBar(){
                     </div>
                     {/*sign up form*/}
                     <div className={`fixed ${show ? 'opacity-100 left-[50%] translate-x-[-50%]' :'opacity-0 left-[200%] translate-x-[-50%]'} top-[53%] rounded-sm -translate-y-[50%] bg-white transition-all duration-500 z-100 w-9/10 md:w-[400px] e px-5 py-10 h-fit`}>
-                        <button onClick={toggleSignUp} className="cursor-pointer relative w-full hover:scale-110 transition-transiform duration-500">
-                            <AiOutlineClose className="size-7 text-red-600 translate absolute left-[95%] -top-10"/></button>
+                        <button onClick={()=>{toggleSignUp(); closeMenu()}} className="cursor-pointer relative w-full  ">
+                            <AiOutlineClose className="size-5  text-red-600 absolute left-[95%] -top-10 hover:scale-115 transition-all duration-500"/>
+                        </button>
                         <div className="mx-auto w-fit p-2 rounded-full bg-gradient-to-b from-amber-950 to-white">
                             <FaUser className="size-15 text-white/50 w-ful rounderder"/>
                         </div>
                          <h1 className=" text-center mt-5 text-black/90 text-[17px] font-semibold">Sign Up for Newsletter</h1>
-                          <p className="text-center text-gray-500 text-[15px]">Get HR & Admin insights for your business growth</p>
-                          <form className="w-full my-10 flex flex-col gap-5">
+                         <p className="text-center text-gray-500 text-[15px]">Get HR & Admin insights for your business growth</p>
+                         <form className="w-full my-10 flex flex-col gap-5">
                                <fieldset className="inline-flex gap-3 w-full">
                                      <input type="text" placeholder="Name" className="border border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/>
                                     <input type="text" placeholder="Phone" className="border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/> 
@@ -145,11 +148,9 @@ export default function NavBar(){
                                
                                <input type="text" placeholder="Email" className="border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/>
                                <fieldset className="inline-flex gap-2 w-full">
-                                    
                                     <button className="cursor-pointer p-2 w-full rounded-sm bg-amber-700 text-white font-semibold">Sign Up</button>
-                               </fieldset>
-                               
-                          </form>
+                               </fieldset>    
+                        </form>
                      
                     </div>
                          

@@ -7,3 +7,41 @@
       --ascent: #57311b;
       --ascent2:#664418;
 }
+
+
+ /* bounce 1s infinite */
+
+ @theme{
+      --animate-slider: slider 1s linear infinite;
+      
+
+      @keyframes slider {
+            0%, 100% {
+            transform: translateX(5px);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+            transform: none;
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+      }     
+}
+@theme{
+     
+      --animate-marquee: marquee 20s linear infinite;
+
+      @keyframes marquee {
+            from {
+            transform: translateX(0);
+            }
+
+            to {
+            transform: translateX(-50%);
+            }
+      }
+
+            
+}
+
+
+
