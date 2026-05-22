@@ -9,18 +9,18 @@ export default function About(){
                          
                           
                           <div className=" flex flex-col h-fit gap-5">
-                            <img src={Image} alt="" className="hidden size-30 "/>
-                            <span className="flex md:flex-col items-center md:text-8xl font-bold mb-15 md:mb-0 ">Who Are <p className="">We</p></span>
+                           
+                            <span className="flex md:flex-col gap-2 items-center text-3xl md:text-8xl font-bold md:mb-15 ">Who Are  <p className=""> We?</p></span>
                          
                           </div>
                     </div>
                     
 
-                    <div className="w-full my-15 px-2 relaxed font-light space-y-6 text-[21px]">
+                    <div className="w-full md:my-15 px-2 relaxed font-light space-y-6 text-[21px]">
                         
                         
 
-                        <p id="services" className="first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:font-bold first-letter:text-gray-900 first-line:tracking-widest ">
+                        <p id="services" className="first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:font-bold first-letter:text-ascent first-line:tracking-widest ">
                             We are a duly registered Malawian consultancy firm that provides 
                             a full range of management consultancy services specifically in the areas of human resources 
                             management, trainings, performance management, integrated management systems, 
