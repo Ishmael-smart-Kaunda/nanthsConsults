@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Background Image */}
       <img
         className="absolute inset-0 w-full h-full object-cover"
-        src="https://images.pexels.com/photos/7654425/pexels-photo-7654425.jpeg"
+        src="https://i.pinimg.com/1200x/3b/83/8e/3b838e8cfa9a10073c9b9efa3dce1268.jpg"
         alt="Professional HR team meeting"
       />
 
