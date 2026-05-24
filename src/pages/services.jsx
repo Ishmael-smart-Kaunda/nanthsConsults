@@ -4,6 +4,8 @@ import Footer from '../components/footer'
 import ServiceDescription from '../components/sercives components/ServiceDescription'
 import Approach from '../components/sercives components/Approach'
 import BuildnOutsource from '../components/sercives components/BuildnOutsource'
+import Insights from '../components/sercives components/Insights'
+import SalaryStructureEvaluation from '../components/sercives components/SalaryStructureEvaluation'
 
 const services = () => {
   return (
@@ -12,6 +14,8 @@ const services = () => {
       <ServiceDescription />
       <Approach />
       <BuildnOutsource />
+      <Insights />
+      <SalaryStructureEvaluation />
       <Footer />
     </div>
   )

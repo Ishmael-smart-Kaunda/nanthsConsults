@@ -1,117 +1,183 @@
+// Service description section
+// This section contains expected links () to appropriate pages depending on the ID
+// 1. Organizational Design and Business Development
+// 2. Policies and Contract Formulation
+// 3. Recruitment, Selection and Employee Retention
+// 4. Creation of HR Systems
+// that is how the page is being set up strategically
+// links across the services page all lead to a predefined page (Route)
+
+
 import { VscArrowSmallRight } from "react-icons/vsc";
 
+const services = [
+  {
+    id: 1,
+    title: "Organizational Design and Business Development",
+  },
+  {
+    id: 2,
+    title: "Policies and Contract Formulation",
+  },
+  {
+    id: 3,
+    title: "Recruitment, Selection and Employee Retention",
+  },
+  {
+    id: 4,
+    title: "Creation of HR Systems",
+  },
+];
 
 const ServiceDescription = () => {
   return (
-    <section className='w-screen overflow-hidden bg-gray-200'>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-6 py-4 md:px-12 md:py-8 lg:px-24 lg:py-12">
+    <section className="w-full bg-gray-100 overflow-hidden">
 
-            {/* Text Block */}
-            <div className="">
-                {/* Section Hook Main heading*/}
-                <p className="text-amber-800 font-semibold lg:text-xl">
-                    ORGANIZATIONAL SUPPORT SOLUTIONS
-                </p>
+      <div className="
+        max-w-[1600px]
+        mx-auto
+        px-6
+        py-16
+        md:px-12
+        lg:px-24
+        lg:py-24
+      ">
 
-                {/* Sub-heading & follow-up */}
-                <h2 className=" font-bold text-2xl md:text-3xl lg:text-4xl leading-10 mt-4 mb-2">
-                    A Partnership Built Around <br /> Your Growth
-                </h2>
+        <div className="
+          grid
+          grid-cols-1
+          lg:grid-cols-[1fr_1fr]
+          gap-16
+          items-start
+        ">
 
-                <div className="bg-gray-400 h-[3px] outline-0 border-0 w-[35%] mb-4"></div>
+          {/* LEFT SIDE */}
+          <div>
 
-                {/* Description */}
-                <p className="relaxed font-light space-y-6 text-[21px]">
-                    Modern organizations face constant operational and workforce challenges that require 
-                    structure, adaptability, and professional support.
-                    <br />
-                    <br />
-                    Our team helps businesses strengthen workplace systems, improve organizational processes, 
-                    and create environments where people and businesses thrive together.
-                </p>
+            {/* Tag */}
+            <p className="
+              uppercase
+              tracking-[0.2em]
+              text-sm
+              font-semibold
+              text-amber-700
+              mb-5
+            ">
+              Organizational Support Solutions
+            </p>
 
-            </div>
+            {/* Heading */}
+            <h2 className="
+              text-3xl
+              md:text-5xl
+              font-bold
+              leading-[115%]
+              text-gray-900
+              mb-6
+            ">
+              A Partnership Built Around Your Growth
+            </h2>
 
-            {/* Services Block */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Divider */}
+            <div className="
+              w-24
+              h-[3px]
+              bg-amber-700
+              rounded-full
+              mb-8
+            " />
 
-                {/* First Service Row */}
+            {/* Paragraph */}
+            <p className="
+              text-lg
+              leading-8
+              text-gray-600
+              max-w-2xl
+            ">
+              Modern organizations face evolving workforce and operational
+              challenges that require structure, adaptability, and strategic
+              support.
+              <br />
+              <br />
+              Our team helps businesses strengthen workplace systems,
+              improve organizational processes, and create environments
+              where people and businesses thrive together.
+            </p>
 
-                <div className="bg-transparent p-2 text-center flex flex-col gap-2.5 items-center">
-                    <h3 className="text-xl font-medium">
-                        Organizational Design and Business Development
-                    </h3>
-                    <button className="flex items-center cursor-pointer p-1 outline-0 border-2 border-amber-800 bg-transparent text-amber-800 hover:bg-gray-300 hover:border-0 duration-100">
-                        Learn More
-                        <VscArrowSmallRight size={20}/>
-                    </button>
-                </div>
+          </div>
 
-                <div className="bg-transparent p-2 text-center flex flex-col gap-2.5 items-center">
-                    <h3 className="text-xl font-medium">
-                        Policies and Contract Formulation
-                    </h3>
-                    <button className="flex items-center cursor-pointer p-1 outline-0 border-2 border-amber-800 bg-transparent text-amber-800 hover:bg-gray-300 hover:border-0 duration-100">
-                        Learn More
-                        <VscArrowSmallRight size={20}/>
-                    </button>
-                </div>
+          {/* RIGHT SIDE */}
+          <div className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            gap-5
+          ">
 
-                {/* Second Service Row */}
+            {services.map((service) => (
+              <div
+                key={service.id}
+                className="
+                  bg-white
+                  border
+                  border-gray-200
+                  rounded-2xl
+                  p-8
+                  flex
+                  flex-col
+                  justify-between
+                  min-h-[220px]
+                  shadow-sm
+                  hover:shadow-xl
+                  hover:-translate-y-1
+                  transition-all
+                  duration-300
+                "
+              >
 
-                <div className="bg-transparent p-2 text-center flex flex-col gap-2.5 items-center">
-                    <h3 className="text-xl font-medium">
-                        Recruitment, Selection and Employee Retention
-                    </h3>
-                    <button className="flex items-center cursor-pointer p-1 outline-0 border-2 border-amber-800 bg-transparent text-amber-800 hover:bg-gray-300 hover:border-0 duration-100">
-                        Learn More
-                        <VscArrowSmallRight size={20}/>
-                    </button>
-                </div>
+                <h3 className="
+                  text-xl
+                  font-semibold
+                  leading-[140%]
+                  text-gray-900
+                ">
+                  {service.title}
+                </h3>
 
-                <div className="bg-transparent p-2 text-center flex flex-col gap-2.5 items-center">
-                    <h3 className="text-xl font-medium">
-                        Creation of HR Systems 
-                    </h3>
-                    <button className="flex items-center cursor-pointer p-1 outline-0 border-2 border-amber-800 bg-transparent text-amber-800 hover:bg-gray-300 hover:border-0 duration-100">
-                        Learn More
-                        <VscArrowSmallRight size={20}/>
-                    </button>
-                </div>
+                <button className="
+                  flex
+                  items-center
+                  gap-2
+                  w-fit
+                  mt-8
+                  text-amber-700
+                  font-semibold
+                  group
+                  cursor-pointer
+                ">
+                  Learn More
 
+                  <VscArrowSmallRight
+                    size={22}
+                    className="
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-1
+                    "
+                  />
+                </button>
 
-                {/* Third Service Row
+              </div>
+            ))}
 
-                <div className="bg-transparent p-2 text-center flex flex-col gap-2.5 items-center">
-                    <h3 className="text-xl font-medium">
-                        Organizational Design and Business Development
-                    </h3>
-                    <button className="flex items-center cursor-pointer p-1 outline-0 border-2 border-amber-800 bg-transparent text-amber-800 hover:bg-gray-300 hover:border-0 duration-100">
-                        Learn More
-                        <VscArrowSmallRight size={20}/>
-                    </button>
-                </div>
-
-                <div className="bg-transparent p-2 text-center flex flex-col gap-2.5 items-center">
-                    <h3 className="text-xl font-medium">
-                        Policies and Contract Formulation
-                    </h3>
-                    <button className="flex items-center cursor-pointer p-1 outline-0 border-2 border-amber-800 bg-transparent text-amber-800 hover:bg-gray-300 hover:border-0 duration-100">
-                        Learn More
-                        <VscArrowSmallRight size={20}/>
-                    </button>
-                </div> */}
-
-
-
-                
-
-            </div>
+          </div>
 
         </div>
+
+      </div>
+
     </section>
+  );
+};
 
-  )
-}
-
-export default ServiceDescription
+export default ServiceDescription;
