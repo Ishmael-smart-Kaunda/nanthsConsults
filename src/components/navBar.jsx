@@ -97,7 +97,7 @@ export default function NavBar(){
                                 
 
                             </div> 
-                            <NavLink to='/contact' className="cursor-pointer p-2 px-5 border border-white/10  rounded-sm font-semibold text-white/80 bg-[#854836]">Get Started</NavLink>       
+                            <NavLink to='/contact' className="cursor-pointer p-3 px-6  rounded-sm font-semibold text-[18px] text-white /80 bg-ascent">Get Started</NavLink>       
                     </div>
                     {/*Nav menu */}
        
