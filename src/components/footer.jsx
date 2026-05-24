@@ -3,6 +3,9 @@ import { RiFacebookBoxFill, RiLinkedinBoxFill,RiInstagramFill } from "react-icon
 import { Link, NavLink } from "react-router-dom"
 import { VscArrowSmallRight } from "react-icons/vsc";
 
+import logo from "../assets/images/logo/nanth-logo.jpeg"
+
+
 export default function Footer(){
     return(
         <footer className="w-full px-5 md:pt-15 md:pb-5 bg-black min-h-[100px]">
@@ -12,7 +15,7 @@ export default function Footer(){
                 
                 {/* Logo + Hook */}
                 <div className="flex flex-col justify-between gap-6">
-                    <img className="w-[50%]" src="https://images.pexels.com/photos/1337380/pexels-photo-1337380.jpeg" alt="Company Logo" />
+                    <img className="size-30" src={logo} alt="Company Logo"/>
                     <h2 className="font-semibold text-lg md:text-2xl lg:text-3xl text-white/80">
                         Strategic Support for Growing Organizations.
                     </h2>
@@ -61,13 +64,14 @@ export default function Footer(){
                 </div>
 
                 {/* Newsletter Hook + CTA */}
-                <div className="p-5 flex flex-col gap-8">
+                <div className="p-5 flex flex-col gap-8 bg-[#444444]">
 
                     {/* newsletter input and submission */}
                     <div className=" w-full ">
                         <div className="flex items-center mb-1">
                             <input 
                                 type="text"
+                                placeholder="Email"
                                 className="bg-white/80 py-2 px-3 outline-0 border-0" 
                             />
                             <button className="bg-ascent py-2 px-3 cursor-pointer">
