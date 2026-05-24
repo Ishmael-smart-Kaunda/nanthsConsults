@@ -199,20 +199,21 @@ export default function Services(){
                
                 <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
 
-                <article className="cursor-pointr p-5 flex flex-col h-80 shadow-zinc/200 shadow-sm bg-white text-black rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                <article className="relative cursor-pointr p-5 flex flex-col h-80 shadow-zinc/200 shadow-sm bg-white text-black rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="p-1 bg-black back-drop-blur w-fit rounded-md">
                         <RiShieldCheckLine className="size-10 text-white"/>
                     </div>
-                    <div className="py-2 flex flex-col md:justify-between gap-3 sapce-y-3 h-1/2">
+                    <div className="py-2 flex flex-col md:justify-between gap-3 sapce-y-3">
                         
                         <h4 className="text-[16px] md:text-md font-bold text-tone-600">Integrated Management Systems</h4>
-                        <p className="text-gray-500 text-[16px] leading-relaxed">
+                        <p className="text-[16px] leading-relaxed">
                             From implementation to audit, we deliver IMS solutions that position your business for global standards.
                         </p> 
-                      <Link to='/services' className="font-semibold text-slate-900 hover:text-red-950 w-fit">View more</Link>
+                      <Link to='/services' className="font-semibold text-slate-900 hover:text-red-950 w-fit">Learn more</Link>
                         
                     </div> 
+                    <div className="hidden absolute bottom-0 w-[93%] mx-auto h-25 border g-ascent rounded-t-md">e</div>
                 </article>
 
                 <article className="cursor-ponter p-5 flex flex-col h-80 shadow-zinc/200 shadow-sm bg-white text-black  rounded-md hover:shadow-zinc-400 transition-all duration-500">
@@ -226,7 +227,7 @@ export default function Services(){
                         <p className="text-ay-500 text-[16px] leading-relaxed">
                            We provide reliable, end-to-end HR support that ensures efficiency, compliance, and peace of mind.
                         </p> 
-                      <Link to='/services' className="font-semibold text-slate-900 hover:text-red-950 w-fit">View more</Link>
+                      <Link to='/services' className="font-semibold text-slate-900 hover:text-red-950 w-fit">Learn more</Link>
                         
                     </div> 
                 </article>
