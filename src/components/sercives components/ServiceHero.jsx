@@ -125,7 +125,7 @@ const ServiceHero = () => {
                 shadow-2xl
                 hover:scale-[1.02]
               ">
-                <Link to="/servicedetails">Explore Performance Solutions</Link>
+                <Link to="/services/performance-management">Explore Performance Solutions</Link>
               </button>
 
               {/* <button className="

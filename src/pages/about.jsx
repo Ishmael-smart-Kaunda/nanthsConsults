@@ -1,5 +1,4 @@
 import NavBar from "../components/navBar"
-import Footer from "../components/footer"
 import image from "../assets/images/contact/q.jpeg"
 import Header from "../components/about components/header"
 import Company from "../components/about components/company"
@@ -17,7 +16,6 @@ export default function About(){
                      <Article/>
                      <FAQ/>
                      <CTA/>
-                     <Footer/>
                   </>
           )
 }

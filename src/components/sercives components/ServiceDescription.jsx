@@ -9,23 +9,30 @@
 
 
 import { VscArrowSmallRight } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     id: 1,
     title: "Organizational Design and Business Development",
+    slug: "organizational-design"
   },
   {
     id: 2,
     title: "Policies and Contract Formulation",
+    slug: "policies-contracts"
   },
   {
     id: 3,
     title: "Recruitment, Selection and Employee Retention",
+    slug: "recruitment-retention"
+
   },
   {
     id: 4,
     title: "Creation of HR Systems",
+    slug: "hr-systems"
+
   },
 ];
 
@@ -155,7 +162,8 @@ const ServiceDescription = () => {
                   group
                   cursor-pointer
                 ">
-                  Learn More
+                  <Link to={`/services/${service.slug}`} >
+                    Learn More
 
                   <VscArrowSmallRight
                     size={22}
@@ -165,6 +173,7 @@ const ServiceDescription = () => {
                       group-hover:translate-x-1
                     "
                   />
+                  </Link>
                 </button>
 
               </div>

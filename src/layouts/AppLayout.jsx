@@ -15,6 +15,7 @@ import { useEffect } from "react";
 
 
 import NavBar from "../components/navBar";
+import Footer from "../components/footer";
 
 
 
@@ -44,6 +45,8 @@ const AppLayout = () => {
           <Outlet />
         </main>
       </AnimatePresence>
+
+      <Footer />
     </>
   );
 };
