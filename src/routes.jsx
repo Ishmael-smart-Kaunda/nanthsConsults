@@ -11,6 +11,8 @@ import Blog from "./pages/blog";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Services from "./pages/services";
+import ServiceDetails from "./pages/ServiceDetails";
+
 
 
 
@@ -24,7 +26,8 @@ const router = createBrowserRouter(
                 {path: "/services", Component: Services},
                 {path: "/blog", Component: Blog},
                 {path: "/contact", Component: Contact},
-                {path: "/about", Component: About}
+                {path: "/about", Component: About},
+                {path: "/servicedetails", Component: ServiceDetails}
             ]   
         }
     ]
