@@ -17,9 +17,9 @@ export default function FAQ(){
 
                 
                    return(
-                         <section className="w-full max-w-[1440px] bg-sky-100/30 p-5 md:px-25 pt-10">
-                            <h2 className="font text-[25px]">Others Asked</h2>
-                             <div className="w-full space-y-6 py-5 text-[18px]">
+                         <section className="w-full max-w-[1440px] bg-gray-200 /30 p-5 md:px-25 pt-15">
+                            <h2 className="font text-[40px] font-bold">Others Asked</h2>
+                             <div className="w-full space-y- py-5 text-[18px]">
                                 {
                                     questions.map((item)=>(
                                                 <Question 

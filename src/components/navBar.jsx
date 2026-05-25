@@ -97,7 +97,7 @@ export default function NavBar(){
                                 
 
                             </div> 
-                            <NavLink to='/contact' className="cursor-pointer p-2 px-5 border border-white/10  rounded-sm font-semibold text-white/80 bg-[#854836]">Get Started</NavLink>       
+                            <NavLink to='/contact' className="cursor-pointer p-3 px-6  rounded-sm font-semibold text-[18px] text-white /80 bg-ascent">Get Started</NavLink>       
                     </div>
                     {/*Nav menu */}
        
@@ -109,11 +109,11 @@ export default function NavBar(){
                                   onClick={closeMenu}
                                 />
                         </div>
-                        <div className=" mt-4 flex flex-col gap-8 font-normal px-5 py-8">
-                            <NavLink to='/'  onClick={closeMenu } className="ursor-pointer inline-flex justify-between  items-center gap-3 borblack/15 p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Home <HiChevronRight className="size-3"/></NavLink>
-                            <NavLink to='/services'  onClick={closeMenu } className=" cursor-pointer  inline-flex justify-between  items-center gap-3  p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Our services <HiChevronRight className="size-3"/></NavLink> 
-                            <NavLink to='/about'    onClick={closeMenu } className=" cursor-pointer  inline-flex justify-between  items-center gap-3  p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">About Us <HiChevronRight className="size-3"/></NavLink>
-                            <NavLink to='/contact'  onClick={closeMenu }className=" cursor-pointer  inline-flex justify-between  items-center gap-3 p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Contact Us <HiChevronRight className="size-3"/></NavLink>
+                        <div className=" mt-4 flex flex-col gap-8 font-normal px-5 py-8 text-[22px]">
+                            <NavLink to='/'  onClick={closeMenu } className="ursor-pointer inline-flex justify-between  items-center gap-3 borblack/15 p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Home <HiChevronRight className="size-5"/></NavLink>
+                            <NavLink to='/services'  onClick={closeMenu } className=" cursor-pointer  inline-flex justify-between  items-center gap-3  p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Our services <HiChevronRight className="size-5"/></NavLink> 
+                            <NavLink to='/about'    onClick={closeMenu } className=" cursor-pointer  inline-flex justify-between  items-center gap-3  p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">About Us <HiChevronRight className="size-5"/></NavLink>
+                            <NavLink to='/contact'  onClick={closeMenu }className=" cursor-pointer  inline-flex justify-between  items-center gap-3 p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Contact Us <HiChevronRight className="size-5"/></NavLink>
                         </div>
                         
                         <hr className="w-9/10 mx-auto opacity-10"/>
