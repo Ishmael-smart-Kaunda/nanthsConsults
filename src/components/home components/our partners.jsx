@@ -39,7 +39,7 @@ export default function Partners(){
 
                         return(
                                <section className="w-full max-w-[1440px] md:py-25 px-5 md:px-25">
-                                <span className="w-full inline-flex justify-between text-[30px] md:text-[35px] font-semibold whitespace-nowrap">Our clientela <p className="hidden md:inline-flex text-end flex-end gap-1 text-[22px] font-semibold">
+                                <span className="w-full inline-flex justify-between text-[30px] md:text-[35px] font-semibold whitespace-nowrap">Our clientele <p className="hidden md:inline-flex text-end flex-end gap-1 text-[22px] font-semibold">
                                     500 <FaPlus className="size-2 translate-y-2"/> Clients within  Malawi and beyond</p> 
                                 </span>
                                 

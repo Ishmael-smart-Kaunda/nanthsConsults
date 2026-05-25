@@ -10,7 +10,7 @@ export default function NavBar(){
                                     <Link to='/' className="inline-flex items-center gap-1 text-[22px] text-ascent font-bold">
                                          Home
                                     </Link>
-                                    <Link to='/' className="inline-flex items-center gap-1 text-[22px] text-ascent font-bold">
+                                    <Link to='/services' className="inline-flex items-center gap-1 text-[22px] text-ascent font-bold">
                                          Services
                                     </Link>
                                     </div>

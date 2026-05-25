@@ -66,8 +66,8 @@ export default function NavBar(){
                                       <FiMail className="size-4 translate-y-1"/> 
                                       Email
                                 </a>
-                                <Link to='/blog'>
-                                   <span className="cursor-pointer inline-flex gap-1 font-semld text-black/80 hover:text-amber-800"><FiFileText className="text-gray-700 size-4 translate-y-1"/> Blog</span>
+                                <Link to='/blog' className="group">
+                                   <span className="cursor-pointer inline-flex gap-1 font-semld text-black/80 hover:text-amber-800"><FiFileText className="text-gray-700 group-hover:text-amber-800 size-4 translate-y-1"/> Blog</span>
                                 </Link>
                             </div>
                         {/*overlay */}
