@@ -32,8 +32,8 @@ export default function About(){
                           Our work goes beyond policy and paperwork. We partner closely with organisations to 
                           unlock the full potential of their people-building cultures where talent thrives, teams perform, and leadership grows.
                         </p>
-                        <a href="" className="group inline-flex gap-1 font-semibold text-[18px] text-black items-center">Get to know us <FiArrowRight className="size-4 animate-slider group-hover:[animation-play-state:paused] group-hover:translate-x-4 transition-all duration-300"/></a>
-                        <div className="w-25 h-[0.5px] bg-black -translate-y-6"></div>
+                        <a href="/about" className="group inline-flex gap-1 font-semibold text-[18px] text-black items-center">Get to know us <FiArrowRight className="size-4 animate-slider group-hover:[animation-play-state:paused] group-hover:translate-x-4 transition-all duration-300"/></a>
+                      
                     </div>
                  </section>
          )

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
@@ -57,13 +58,16 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="bg-white text-black px-6 py-4 text-base md:text-lg font-semibold rounded-lg hover:bg-gray-200 transition-all duration-300 cursor-pointer shadow-lg">
-              Book A Consultation
-            </button>
-
-            <button className="border border-white/30 text-white px-6 py-4 text-base md:text-lg font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 cursor-pointer">
-              Learn More
-            </button>
+            <Link to='/contact'>
+                <button className="bg-white text-black px-6 py-4 text-base md:text-lg font-semibold rounded-lg hover:bg-gray-200 transition-all duration-300 cursor-pointer shadow-lg">
+                  Book A Consultation
+                </button>
+            </Link>
+            <Link to='/services'>
+                <button className="border border-white/30 text-white px-6 py-4 text-base md:text-lg font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 cursor-pointer">
+                  Learn More
+                </button>
+            </Link>
           </div>
         </div>
       </div>

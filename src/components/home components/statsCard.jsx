@@ -6,13 +6,15 @@ import { useInView } from "react-intersection-observer";
 
 
 export default function StatsCard({item}){
-         const {id, value, Icon, headline, descript} =item; 
-         const count = useCountUp( value, 7000);
+         const {id, value, Icon, headline, descript} =item;
+         
+         const { ref, inView } = useInView({ threshold: 0.3 });
+         const count = useCountUp( value, 7000, inView);
          
          
       
       return(
-               <div  
+               <div  ref={ref}
                     className=" w-full min-h-60  p-8 flex flex-col align-center gap-1 text-white bg-black border border-amber-900/20 rounded-md">
                     {id===1 || id===4 ? 
                          <span className="hidden inline-flex font-bold"> <FaPlus className="size-4 font-bold translate-y-4"/> <p className="text-[40px]">{count}</p> </span> 

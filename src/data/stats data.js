@@ -9,7 +9,7 @@ export default [
                },
               {
                 id:2,
-                value:300,
+                value:500,
                 headline:"Clients served",
                 descript:"Across sectors & industries"
               },
