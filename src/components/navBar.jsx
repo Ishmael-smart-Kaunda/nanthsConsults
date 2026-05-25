@@ -33,30 +33,15 @@ export default function NavBar(){
                 setOpen(false)    
           }
 
-          {/*menu services show/hide */}
-          const [display, setDisplay] =useState(false)
-          const toggleDisplay=()=>{
-                setDisplay(!display)    
-          }
           {/* Sign Up form toggle show */}
           const [show, setShow]=useState(false)
           const toggleSignUp = ()=>{
                 setShow(!show)    
           }
          
-          {/*toggle overlay */}
-          let isClose=null;
-          const toggleOverlay=()=>{
-            
-             if(open || show){
-                isClose=false;
-             }
-             else{
-                isClose=true;
-             }
-             return isClose;
-          }
-         
+          {/*isClose for toggling overlay */}
+          let isClose = (open || show)? true : null
+          
 
           return(
                  <header className=" w-full  ">
@@ -77,27 +62,30 @@ export default function NavBar(){
                                         <FiUser className="size-5 translate-y-0.2"/> Sign Up
                                 </span>
 
-                                <span  className="hidden cursor-pointer md:inline-flex gap-1 font-norm text-black/80 hover:text-amber-800"><FiMail className="size-4 translate-y-1"/> Email</span>
+                                <a href="mailto:nanthconsults@gmail.com" className="hidden cursor-pointer md:inline-flex gap-1 font-norm text-black/80 hover:text-amber-800">
+                                      <FiMail className="size-4 translate-y-1"/> 
+                                      Email
+                                </a>
                                 <Link to='/blog'>
                                    <span className="cursor-pointer inline-flex gap-1 font-semld text-black/80 hover:text-amber-800"><FiFileText className="text-gray-700 size-4 translate-y-1"/> Blog</span>
                                 </Link>
                             </div>
-                                         {/*overlay */}
-                        {open &&<div onClick={closeMenu} className="cursor-pointer absolute inset-0  w-full h-[100vh] bg-black/92 transition-all duration-500 delay-300"></div>}
+                        {/*overlay */}
+                        {isClose &&<div onClick={()=>{isClose=null}} className="cursor-pointer absolute inset-0  w-full h-[100vh] bg-black/92 transition-all duration-500 delay-300"></div>}
                     </div>
                     
                     <div  className="mt-16 w-full px-5 md:px-25 py-3 flex flex-row justify-between items-center bg-black">
-                            <div className="flex flex-row justify-between text-[#fff]">
-                                
+                            <div className="flex flex-row justify-between text-[#fff]">    
                                 <span className="inline-flex gap-2 font-semibold cursor-pointer" 
                                       onClick={openMenu}>
                                     <AiOutlineMenu className="size-6.5"/> 
                                     Menu
                                 </span>
-                                
-
                             </div> 
-                            <NavLink to='/contact' className="cursor-pointer p-3 px-6  rounded-sm font-semibold text-[18px] text-white /80 bg-ascent">Get Started</NavLink>       
+                            <NavLink to='/contact' 
+                                     className="cursor-pointer p-3 md:px-6 md:py-3 rounded-sm font-semibold text-[18px] text-white /80 bg-ascent">
+                                        Get Started
+                            </NavLink>       
                     </div>
                     {/*Nav menu */}
        
@@ -110,10 +98,10 @@ export default function NavBar(){
                                 />
                         </div>
                         <div className=" mt-4 flex flex-col gap-8 font-normal px-5 py-8 text-[22px]">
-                            <NavLink to='/'  onClick={closeMenu } className="ursor-pointer inline-flex justify-between  items-center gap-3 borblack/15 p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Home <HiChevronRight className="size-5"/></NavLink>
-                            <NavLink to='/services'  onClick={closeMenu } className=" cursor-pointer  inline-flex justify-between  items-center gap-3  p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Our services <HiChevronRight className="size-5"/></NavLink> 
-                            <NavLink to='/about'    onClick={closeMenu } className=" cursor-pointer  inline-flex justify-between  items-center gap-3  p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">About Us <HiChevronRight className="size-5"/></NavLink>
-                            <NavLink to='/contact'  onClick={closeMenu }className=" cursor-pointer  inline-flex justify-between  items-center gap-3 p-2 rounded-md hover:bg-black/3 hover:text-blue-400 transition-all duration-300">Contact Us <HiChevronRight className="size-5"/></NavLink>
+                            <NavLink to='/'  onClick={closeMenu } className="ursor-pointer inline-flex justify-between  items-center gap-3 borblack/15 p-2 rounded-md hover:bg-black/3 hover:text-amber-800 transition-all duration-300">Home <HiChevronRight className="size-5"/></NavLink>
+                            <NavLink to='/services'  onClick={closeMenu } className=" cursor-pointer  inline-flex justify-between  items-center gap-3  p-2 rounded-md hover:bg-black/3 hover:text-amber-800 transition-all duration-300">Our services <HiChevronRight className="size-5"/></NavLink> 
+                            <NavLink to='/about'    onClick={closeMenu } className=" cursor-pointer  inline-flex justify-between  items-center gap-3  p-2 rounded-md hover:bg-black/3 hover:text-amber-800 transition-all duration-300">About Us <HiChevronRight className="size-5"/></NavLink>
+                            <NavLink to='/contact'  onClick={closeMenu }className=" cursor-pointer  inline-flex justify-between  items-center gap-3 p-2 rounded-md hover:bg-black/3 hover:text-amber-800 transition-all duration-300">Contact Us <HiChevronRight className="size-5"/></NavLink>
                         </div>
                         
                         <hr className="w-9/10 mx-auto opacity-10"/>
@@ -131,15 +119,16 @@ export default function NavBar(){
 
                     </div>
                     {/*sign up form*/}
-                    <div className={`fixed ${show ? 'opacity-100 left-[50%] translate-x-[-50%]' :'opacity-0 left-[200%] translate-x-[-50%]'} top-[53%] rounded-sm -translate-y-[50%] bg-white transition-all duration-500 z-100 w-9/10 md:w-[400px] e px-5 py-10 h-fit`}>
-                        <button onClick={()=>{toggleSignUp(); closeMenu()}} className="cursor-pointer relative w-full  ">
-                            <AiOutlineClose className="size-5  text-red-600 absolute left-[95%] -top-10 hover:scale-115 transition-all duration-500"/>
+                    
+                    <div className={`fixed ${show ? 'opacity-100 left-[50%] translate-x-[-50%]' :'opacity-0 left-[200%] translate-x-[-50%]'} top-[53%] rounded-sm -translate-y-[50%] bg-white transition-all duration-500 z-100 w-9/10 md:w-[400px] e px-5 py-10 h-fit flex flex-col `}>
+                        <button onClick={()=>{toggleSignUp()}} className="cursor-pointer w-fit bg-gray-300 rounded-full p-1  self-end">
+                            <AiOutlineClose className="size-5  text-gray-600 hover:scale-115 transition-all duration-500"/>
                         </button>
                         <div className="mx-auto w-fit p-2 rounded-full bg-gradient-to-b from-amber-950 to-white">
                             <FaUser className="size-15 text-white/50 w-ful rounderder"/>
                         </div>
-                         <h1 className=" text-center mt-5 text-black/90 text-[17px] font-semibold">Sign Up for Newsletter</h1>
-                         <p className="text-center text-gray-500 text-[15px]">Get HR & Admin insights for your business growth</p>
+                         <h1 className=" text-center mt-5 text-black text-[20px] font-semibold my-4">Sign Up for Newsletter</h1>
+                         <p className="text-center text-[18px] font-light">Get HR & Admin insights for your business growth</p>
                          <form className="w-full my-10 flex flex-col gap-5">
                                <fieldset className="inline-flex gap-3 w-full">
                                      <input type="text" placeholder="Name" className="border border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/>
@@ -148,7 +137,7 @@ export default function NavBar(){
                                
                                <input type="text" placeholder="Email" className="border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/>
                                <fieldset className="inline-flex gap-2 w-full">
-                                    <button className="cursor-pointer p-2 w-full rounded-sm bg-amber-700 text-white font-semibold">Sign Up</button>
+                                    <button className="cursor-pointer p-2 w-full rounded-sm bg-ascent text-white font-semibold">Sign Up</button>
                                </fieldset>    
                         </form>
                      

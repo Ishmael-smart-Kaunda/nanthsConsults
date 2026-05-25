@@ -14,10 +14,15 @@ export default function CTA(){
                                   
                                   <a href="/contact" className="block text-[20px] font-bold">Lets Talk</a>
                                   <div className="w-8/10 mx-auto hidden md:inline-flex justify-between text-amber-800 border-t border-white/20 py-5 ">
-                                      <a href="" className="inline-flex gap-1 items-center text-[18px]"><PiPhoneCallLight className="size-6"/> +265 88 8703 316</a>
-                                      <a href="" className="inline-flex gap-1 items-center text-[18px]"><PiWhatsappLogoLight className="size-6"/> +265 98 0048 010</a>
-                                      <a href="" className="inline-flex gap-1 items-center text-[18px]"><HiMail className="size-6"/>nanthconsults@gmail.com</a>
-                                      <a href="" className="inline-flex gap-1 items-center text-[18px]"><PiMapPin className="size-6"/>Lilongwe, Malawi</a>
+                                      <a href="tel:+265980048010" className="inline-flex gap-1 items-center text-[18px]"><PiPhoneCallLight className="size-6"/>+265 88 8703 316 </a>
+                                      <a href="https://wa.me/265980048010?text=Hi,+I+want+to+know+more+about+your+services." className="inline-flex gap-1 items-center text-[18px]"><PiWhatsappLogoLight className="size-6"/> +265 98 0048 010</a>
+                                      <a href="mailto:nanthconsults@gmail.com" className="inline-flex gap-1 items-center text-[18px]"><HiMail className="size-6"/>nanthconsults@gmail.com</a>
+                                      <a href="https://maps.google.com/?q=Area+18+Lilongwe"  
+                                         target="_blank"
+                                         rel="noopener noreferrer" 
+                                         className="inline-flex gap-1 items-center text-[18px]">
+                                            <PiMapPin className="size-6"/>Lilongwe, Malawi
+                                      </a>
                                   </div>
                              </div>
 

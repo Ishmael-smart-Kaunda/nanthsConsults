@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 
-export function useCountUp(end, duration = 1500) {
+
+{/* A REUSABLE HOOK FOR COUT UP STATS. IT TAKES TWO PARAMETER; end=count threshold, and duration, the time for count to take */}
+export function useCountUp(end, duration = 1500, start = false) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let start = 0;
+    if (!start) return;
+    let startValue = 0;
     const startTime = performance.now();
 
     const animate = (currentTime) => {
@@ -20,7 +23,7 @@ export function useCountUp(end, duration = 1500) {
     };
 
     requestAnimationFrame(animate);
-  }, [end, duration]);
+  }, [end, duration, start]);
 
   return count;
 }

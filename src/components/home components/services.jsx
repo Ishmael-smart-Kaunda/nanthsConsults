@@ -32,7 +32,7 @@ export default function Services(){
                   
                   
                      <div className={`relative h-fit transition-all duration-500 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10  overflow-hidden`}>
-                        <article className="relative z-10 cursor-poiter p-5 flex flex-col gap-2 h-140  bg-white rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                        <article className="relative z-10 cursor-poiter p-5 flex flex-col overflow-hidden gap-2 h-140  bg-white rounded-md hover:shadow-zinc-400 transition-all duration-500">
                             
                             <div className="absolute left-0 top-5 w-2/10 px-4 py-2 bg-black rounded-r-full">
                                 <RiFileSearchLine className=" size-8 text-white"/>
@@ -57,7 +57,7 @@ export default function Services(){
                         </article> 
 
 
-                <article className="relative z-10 cursor-poiter p-5 flex flex-col gap-2 h-140  bg-white rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                <article className="relative z-10 cursor-poiter p-5 flex flex-col gap-2 overflow-hidden h-140  bg-white rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="absolute left-0 top-5 w-2/10 px-4 py-2 bg-black rounded-r-full">
                         <RiSettings3Line className="size-8 text-white"/>
@@ -81,7 +81,7 @@ export default function Services(){
                 </article> 
 
                 
-                    <article className="relative z-10 cursor-poiter p-5 flex flex-col gap-2 h-140  bg-white rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                    <article className="relative z-10 cursor-poiter p-5 flex flex-col gap-2 overflow-hidden h-140  bg-white rounded-md hover:shadow-zinc-400 transition-all duration-500">
                             
                             <div className="absolute top-5 left-0 px-4 py-2 w-2/10  back-drop-blur bg-black   rounded-r-full  ">
                                 <RiBarChartBoxLine className="size-8 text-white"/>
@@ -105,7 +105,7 @@ export default function Services(){
                            <Link to='/services' className="absolute bottom-3 w-fit bg-ascent/10 text-black hover:text-ascent -200 font-bold rounded-full py-1 px-3">learn more</Link>
                     </article>
 
-                  <article className="relative z-10 cursor-poiter p-5 flex flex-col gap-2 h-140  bg-white rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                  <article className="relative z-10 cursor-poiter p-5 flex flex-col gap-2 overflow-hidden h-140  bg-white rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="absolute top-5 left-0 px-4 py-2 w-2/10 bg-black rounded-r-full">
                         <RiLineChartLine className="size-8 text-white"/>
@@ -128,7 +128,7 @@ export default function Services(){
                      <Link to='/services' className="absolute bottom-3 w-fit bg-ascent/10 text-black hover:text-ascent -200 font-bold rounded-full py-1 px-3">learn more</Link>
                 </article> 
 
-                <article className="relative z-10 cursor-poiter p-5 flex flex-col gap-2  bg-white rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                <article className="relative z-10 cursor-poiter p-5 flex flex-col gap-2 overflow-hidden  bg-white rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     
                     <div className="absolute left-0 top-5 px-4 py-2 w-2/10 bg-black rounded-r-full">
                         <RiFileTextLine className="size-8 text-white"/>
@@ -150,7 +150,7 @@ export default function Services(){
                     </div> 
                     <Link to='/services' className="absolute bottom-3 w-fit bg-ascent/10 text-black hover:text-ascent -200 font-bold rounded-full py-1 px-3">learn more</Link>
                 </article>
-                 <article className="relative z-10 cursor-poiter p-5 flex flex-col gap-2 h-140  bg-white rounded-md hover:shadow-zinc-400  transition-all  duration-500 ">       
+                 <article className="relative z-10 cursor-poiter p-5 flex flex-col gap-2  overflow-hidden h-140  bg-white rounded-md hover:shadow-zinc-400  transition-all  duration-500 ">       
                             
                             <div className="absolute left-0 top-5 px-4 py-2 w-2/10 bg-black rounded-r-full">
                                 <RiPresentationLine className="size-8 text-white"/>
@@ -174,7 +174,8 @@ export default function Services(){
                     </article> 
                 </div>
 
-                {/* CTA*/}
+                {/* CTA TO GRAB USER ATTENTION. THE SERVICES ARE TOO MUCH CAUSING THE SERVICES SECTION TO BE TO LONG. A CTA BETWEEN 
+                    CATCHES USER'S ATTENTION*/}
                 <div className="relative w-full grid grid-cols-1 md:grid-cols-3 p-5 bg-black/90 rounded-md">
                   <div className="col-span-2 w-full h-full p-5 md:px-10 flex flex-col justify-between text-white/60">
                       
@@ -182,21 +183,32 @@ export default function Services(){
                         <p className="px-4 text-[25px] md:text-[35px] font-semibold ">Great organisations are built on great people. Let us help you find, grow, and keep yours.</p>
                       
                     <address className="inline-flex justify-between items-center gap-1 py-4 text-[14px] whitespace-nowrap"> 
-                         <p className="inline-flex items-center gap-1 text-[10px] md:text-[14px]"><FiMail className=" size-5 text-green-300"/> nanthconsults@gmail.com  </p>
-                         <a href="" className=" text-white text-[12px]">+265 98 0048 010</a> 
+                         <a href="mailto:nanthconsults@gmail.com" className="inline-flex items-center gap-1 text-[10px] md:text-[14px]"><FiMail className=" size-5 text-green-300"/> nanthconsults@gmail.com  </a>
+                         <a href="tel:+265980043010" className=" text-white text-[12px]">+265 98 0048 010</a> 
                     </address>  
                          
                   </div>
                   <div className="w-full h-full flex flex-col justify-between md:border-l md:border-white/10 p-5 md:py-15 space-y-3">
-                            <button className="group cursor-pointer inline-flex justify-center items-center gap-3 p-5 bg-ascent   text-[18px] text-white font-bold rounded-[5px] whitespace-nowrap">Schedule a meeting <FaArrowRight 
-                                    className="animate-slider group-hover:[animation-play-state:paused]"/> </button>
-                            <button className="cursor-pointer inline-flex justify-center items-center gap-3 p-5 border border-white/30   text-[18px] text-white font-bold rounded-md">Learn more</button>
+                           
+                                <Link to='/contact' className="group cursor-pointer inline-flex justify-center items-center gap-3 p-5 bg-ascent   
+                                        text-[18px] text-white font-bold rounded-[5px] whitespace-nowrap">
+                                        Schedule a meeting <FaArrowRight 
+                                        className="animate-slider group-hover:[animation-play-state:paused]"/> 
+                                </Link>
+                            
+                            
+                            
+                            <Link to='/services' className="cursor-pointer inline-flex justify-center items-center gap-3 p-5 border border-white/30   text-[18px] text-white font-bold rounded-md">
+                                    Learn more
+                            </Link>
+                            
                             <p className="text-center">No commitment required. <br/> Free initial consultation.</p>
                     </div>
                     <span className="hidden absolute bottom-0 w-full flex flex-col items-center text-black text-center">Explore more services <FaChevronDown className=""/> </span>
 
                 </div>
                
+               {/* THE SERVICES CONTINUE */}
                 <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
 
                 <article className="relative cursor-pointr p-5 flex flex-col h-80 shadow-zinc/200 shadow-sm bg-white text-black rounded-md hover:shadow-zinc-400 transition-all duration-500">
