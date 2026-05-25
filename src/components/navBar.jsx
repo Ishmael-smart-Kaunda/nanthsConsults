@@ -55,9 +55,9 @@ export default function NavBar(){
                                     </div>
                                 </div>
                             </NavLink>
-                            <div className="inline-flex items-center gap-8">
+                            <div className="inline-flex items-center font-semibold gap-8">
                                 <span onClick={toggleSignUp} 
-                                      className="hidden  cursor-pointer md:inline-flex gap-1 font-sebold text-black/80 hover:text-amber-800"
+                                      className="hidden  cursor-pointer md:inline-flex gap-1 text-black/80 hover:text-amber-800"
                                       >
                                         <FiUser className="size-5 translate-y-0.2"/> Sign Up
                                 </span>

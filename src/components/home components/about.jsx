@@ -20,7 +20,7 @@ export default function About(){
                         
                         
 
-                        <p id="services" className="first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:font-bold first-letter:text-ascent first-line:tracking-widest ">
+                        <p id="services" className="first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:font-bold first-letter:text-amber-800 first-line:tracking-widest ">
                             We are a duly registered Malawian consultancy firm that provides 
                             a full range of management consultancy services specifically in the areas of human resources 
                             management, trainings, performance management, integrated management systems, 
@@ -32,7 +32,7 @@ export default function About(){
                           Our work goes beyond policy and paperwork. We partner closely with organisations to 
                           unlock the full potential of their people-building cultures where talent thrives, teams perform, and leadership grows.
                         </p>
-                        <a href="/about" className="group inline-flex gap-1 font-semibold text-[18px] text-black items-center">Get to know us <FiArrowRight className="size-4 animate-slider group-hover:[animation-play-state:paused] group-hover:translate-x-4 transition-all duration-300"/></a>
+                        <a href="/about" className="group inline-flex gap-1 font-bold text-[18px] text-amber-800 items-center">Get to know us <FiArrowRight className="size-4 animate-slider group-hover:[animation-play-state:paused] group-hover:translate-x-4 transition-all duration-300"/></a>
                       
                     </div>
                  </section>

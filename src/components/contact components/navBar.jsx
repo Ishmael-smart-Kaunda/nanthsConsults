@@ -6,9 +6,14 @@ import { Link } from "react-router-dom";
 export default function NavBar(){
                         return(
                                 <div className="bg-white w-full flex flex-row justify-between px-5 md:px-25 py-5 shadow-s ">
-                                    <Link to='/' className="inline-flex items-center gap-1 text-[18px] text-ascent font-bold">
-                                        <PiArrowLeft className="size-5"/> Back
+                                    <div className="inline-flex items-center gap-10 font-bold">
+                                    <Link to='/' className="inline-flex items-center gap-1 text-[22px] text-ascent font-bold">
+                                         Home
                                     </Link>
+                                    <Link to='/' className="inline-flex items-center gap-1 text-[22px] text-ascent font-bold">
+                                         Services
+                                    </Link>
+                                    </div>
                                     <div className="inline-flex items-center gap-8 text-ascent">
                                         <a href="" className=""><PiPhoneCallBold className="size-6"/></a>
                                         <a href="" className=""> <PiWhatsappLogoBold className="size-6"/></a>
