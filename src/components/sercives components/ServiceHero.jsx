@@ -2,6 +2,8 @@
 // Handles the Performance management
 // route: /services/performance-management
 
+import { Link } from "react-router-dom";
+
 const ServiceHero = () => {
   return (
     <section className="relative w-full h-[700px] overflow-hidden">
@@ -123,10 +125,10 @@ const ServiceHero = () => {
                 shadow-2xl
                 hover:scale-[1.02]
               ">
-                Build High-Performing Teams
+                <Link to="/servicedetails">Explore Performance Solutions</Link>
               </button>
 
-              <button className="
+              {/* <button className="
                 border
                 border-white/25
                 bg-white/5
@@ -143,8 +145,8 @@ const ServiceHero = () => {
                 duration-300
                 cursor-pointer
               ">
-                Explore Performance Solutions
-              </button>
+                Build High-Performing Teams
+              </button> */}
 
             </div>
 
