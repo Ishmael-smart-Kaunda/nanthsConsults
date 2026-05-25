@@ -1,6 +1,8 @@
 // Salary Structure section under the Services page
 // Route: services/salary-structure
 
+import { Link } from "react-router-dom"
+
 const SalaryStructureEvaluation = () => {
   return (
         <section className="w-full overflow-hidden bg-[#1f1f1f] relative">
@@ -104,7 +106,7 @@ const SalaryStructureEvaluation = () => {
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap gap-4 mt-12">
 
-                    <button className="
+                    <Link to="/services/job-evaluation-salary-survey" className="
                     bg-white
                     text-black
                     px-7
@@ -121,9 +123,9 @@ const SalaryStructureEvaluation = () => {
                     hover:scale-[1.02]
                     ">
                         Build Fair Compensation Structures
-                    </button>
+                    </Link>
 
-                    <button className="
+                    {/* <button className="
                     border
                     border-white/20
                     bg-white/5
@@ -141,7 +143,7 @@ const SalaryStructureEvaluation = () => {
                     cursor-pointer
                     ">
                         Explore Salary Evaluation Solutions
-                    </button>
+                    </button> */}
 
                 </div>
 

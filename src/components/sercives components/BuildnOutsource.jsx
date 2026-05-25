@@ -1,6 +1,8 @@
 // Workforce Development & HR Systems under the services page
 // Route: services/workforce-development-hr-systems
 
+import { Link } from "react-router-dom";
+
 const BuildnOutsource = () => {
   return (
     <section className="w-full overflow-hidden bg-[#1f1f1f] relative">
@@ -96,7 +98,7 @@ const BuildnOutsource = () => {
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mt-12">
 
-            <button className="
+            <Link to="/services/training-development" className="
               bg-white
               text-black
               px-7
@@ -113,9 +115,9 @@ const BuildnOutsource = () => {
               hover:scale-[1.02]
             ">
               Develop Your HR Systems
-            </button>
+            </Link>
 
-            <button className="
+            <Link to="/services/hr-outsourcing" className="
               border
               border-white/20
               bg-white/5
@@ -133,7 +135,7 @@ const BuildnOutsource = () => {
               cursor-pointer
             ">
               Partner With Our HR Team
-            </button>
+            </Link>
 
           </div>
 

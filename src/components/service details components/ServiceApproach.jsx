@@ -1,25 +1,17 @@
-// the approach section under the services section
-// Under this section i focused on mainly 2 things
-// 1. Showcase the framework and workflow i.e how Nanths Consults handles clients
-// This is to show that work isnt done randomly, but there's a system to it
-// From understanding clients needs to service delivery & follow ups
-// This increases the chance and possibility of connecting with the clients
-// As it shows how the internal system is set, building confidence in having their own system set as well
-// 2. Capitalizing on the Systems approach above, a follow-up CTA on Intergrated Management Systems was set
-// Route: /services/ims
-
-
-// Design approach
-// I was aiming for the left text side to auto scroll on reaching that section and then
-// hand-over scroll to other sections on complete
-// still a bit off, need a click to activate unlike the targeted auto.
+// Performance Management Approach Section
+// Updated:
+// Added Outcomes & Benefits section between
+// framework and CTA section
 
 import { useEffect, useRef } from "react"
 import approachFrameworkData from "../../data/approachFrameworkData"
-import ApproachPropHandler from "./ApproachPropHandler"
+import ApproachPropHandler from "../sercives components/ApproachPropHandler"
+import { services } from "../../data/IndividualServicesData"
 import { Link } from "react-router-dom"
+import BenefitCardHandler from "./BenefitCardHandler"
+import DedicatedServiceApproachHandler from "./DedicatedServiceApproachHandler"
 
-const Approach = () => {
+const ServiceApproach = ({service}) => {
 
     const sectionRef = useRef(null)
     const scrollRef = useRef(null)
@@ -95,7 +87,7 @@ const Approach = () => {
             className="
                 relative
                 w-full
-                bg-gray-100
+                bg-[#f7f7f7]
                 overflow-hidden
             "
         >
@@ -111,17 +103,17 @@ const Approach = () => {
             ">
 
                 {/* Top Header */}
-                <div className="max-w-3xl mb-16">
+                <div className="max-w-4xl mb-16">
 
                     <p className="
                         uppercase
                         tracking-[0.2em]
                         text-sm
                         font-semibold
-                        text-gray-500
+                        text-amber-700
                         mb-4
                     ">
-                        Our Process
+                        {service.framework.tag}
                     </p>
 
                     <h2 className="
@@ -132,17 +124,16 @@ const Approach = () => {
                         text-gray-900
                         mb-6
                     ">
-                        A Structured Approach Built Around Organizational Growth
+                        {service.framework.heading}
                     </h2>
 
                     <p className="
                         text-lg
                         leading-8
                         text-gray-600
+                        max-w-3xl
                     ">
-                        Every organization faces unique workforce and operational challenges.
-                        Our 5-step framework is designed to help businesses build stronger systems,
-                        improve efficiency, and support long-term sustainable growth.
+                        {service.framework.description}
                     </p>
 
                 </div>
@@ -167,12 +158,14 @@ const Approach = () => {
                     >
 
                         <div className="space-y-12">
-                            {approachFrameworkData.map((framework) => (
-                                <ApproachPropHandler
-                                    key={framework.id}
-                                    framework={framework}
+
+                            {service.framework.steps.map((approach) => (
+                                <DedicatedServiceApproachHandler 
+                                    key={approach.id}
+                                    approach={approach}
                                 />
                             ))}
+
                         </div>
 
                     </div>
@@ -189,7 +182,18 @@ const Approach = () => {
                                 overflow-hidden
                                 rounded-[32px]
                                 shadow-2xl
+                                relative
                             ">
+
+                                {/* Overlay */}
+                                <div className="
+                                    absolute
+                                    inset-0
+                                    bg-gradient-to-t
+                                    from-black/40
+                                    to-transparent
+                                    z-10
+                                " />
 
                                 <img
                                     className="
@@ -197,8 +201,8 @@ const Approach = () => {
                                         h-[780px]
                                         object-cover
                                     "
-                                    src="https://i.pinimg.com/1200x/c9/7c/19/c97c195a409434e41a7af4e868f3848b.jpg"
-                                    alt="Professional HR consultation"
+                                    src={service.framework.image}
+                                    alt="Performance management consultation"
                                 />
 
                             </div>
@@ -209,17 +213,79 @@ const Approach = () => {
 
                 </div>
 
-                {/* IMS CTA */}
+                {/* OUTCOMES SECTION */}
+                <div className="mt-28">
+
+                    {/* Heading */}
+                    <div className="max-w-3xl mb-14">
+
+                        <p className="
+                            uppercase
+                            tracking-[0.2em]
+                            text-sm
+                            font-semibold
+                            text-amber-700
+                            mb-4
+                        ">
+                            {service.outcomes.tag}
+                        </p>
+
+                        <h2 className="
+                            text-3xl
+                            md:text-5xl
+                            font-bold
+                            leading-[110%]
+                            text-gray-900
+                            mb-6
+                        ">
+                            {service.outcomes.heading}
+                        </h2>
+
+                        <p className="
+                            text-lg
+                            leading-8
+                            text-gray-600
+                            max-w-3xl
+                        ">
+                            {service.outcomes.description}
+                        </p>
+
+                    </div>
+
+                    {/* Benefits Grid */}
+                    <div className="
+                        grid
+                        grid-cols-1
+                        md:grid-cols-2
+                        lg:grid-cols-4
+                        gap-6
+                    ">
+                        {service.outcomes.benefits.map((benefit) => (
+                            <BenefitCardHandler 
+                                key={benefit.id}
+                                benefit={benefit}
+                            />
+                        ))}
+
+                        
+
+                    </div>
+
+                </div>
+
+                {/* CTA SECTION */}
                 <div className="
                     mt-24
                     rounded-[32px]
                     bg-gradient-to-br
-                    from-[#3d3d3d]
-                    to-[#1f1f1f]
+                    from-[#2e2e2e]
+                    via-[#1f1f1f]
+                    to-black
                     overflow-hidden
                     relative
                 ">
 
+                    {/* Ambient Glow */}
                     <div className="
                         absolute
                         inset-0
@@ -245,7 +311,7 @@ const Approach = () => {
                             text-gray-300
                             mb-5
                         ">
-                            Integrated Management Systems
+                            {service.cta.tag}
                         </p>
 
                         <h2 className="
@@ -256,7 +322,7 @@ const Approach = () => {
                             text-white
                             mb-8
                         ">
-                            Structured Systems. Sustainable Performance.
+                            {service.cta.heading}
                         </h2>
 
                         <p className="
@@ -266,29 +332,48 @@ const Approach = () => {
                             max-w-3xl
                             mb-10
                         ">
-                            The right systems create the foundation for operational
-                            excellence. Through our Integrated Management Systems (IMS)
-                            solutions, we help organizations streamline processes,
-                            strengthen compliance standards, and build more efficient,
-                            performance-driven workplaces using a structured and
-                            collaborative approach.
+                            {service.cta.description}
                         </p>
 
-                        <Link to="/services/integrated-management-systems" className="
-                            bg-white
-                            text-black
-                            px-8
-                            py-4
-                            rounded-xl
-                            font-semibold
-                            text-lg
-                            hover:bg-gray-200
-                            transition-all
-                            duration-300
-                            cursor-pointer
-                            shadow-xl
-                        ">
-                            Explore IMS Solutions
+                        <Link
+                            to={service.cta.buttonLink}
+                            className="
+                                inline-flex
+                                items-center
+                                justify-center
+                                text-center
+
+                                bg-white
+                                text-black
+
+                                px-6
+                                sm:px-8
+
+                                py-3
+                                sm:py-4
+
+                                rounded-xl
+                                font-semibold
+
+                                text-base
+                                sm:text-lg
+
+                                hover:bg-gray-200
+                                transition-all
+                                duration-300
+
+                                shadow-xl
+
+                                w-full
+                                sm:w-fit
+
+                                max-w-full
+
+                                break-words
+                                whitespace-normal
+                            "
+                            >
+                            {service.cta.buttonText}
                         </Link>
 
                     </div>
@@ -301,4 +386,4 @@ const Approach = () => {
     )
 }
 
-export default Approach
+export default ServiceApproach

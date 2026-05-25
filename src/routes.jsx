@@ -25,11 +25,11 @@ const router = createBrowserRouter(
                 {index: true, Component: Home},
                 {path: "/services", Component: Services},
                 {path: "/blog", Component: Blog},
-                {path: "/contact", Component: Contact},
                 {path: "/about", Component: About},
-                {path: "/servicedetails", Component: ServiceDetails}
+                {path: "/services/:serviceId", Component: ServiceDetails}
             ]   
-        }
+        },
+        {path: "/contact", Component: Contact},
     ]
 )
 

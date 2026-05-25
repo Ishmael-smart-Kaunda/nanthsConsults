@@ -16,7 +16,6 @@ const services = () => {
       <BuildnOutsource />
       <Insights />
       <SalaryStructureEvaluation />
-      <Footer />
     </div>
   )
 }
