@@ -1,3 +1,5 @@
+// Cumulated data on all services being offered by NaNths Consults
+
 export const services =  [
   {
     id: "performance-management",

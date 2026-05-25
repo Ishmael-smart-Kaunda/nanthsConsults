@@ -2,6 +2,8 @@
 // Centralized routes make it easier for:
 // Debugging, Scale, Visualize the app, and manage nested layouts
 // Plus its better for lazy loading
+// The contact page is seperate from the AppLayout, 
+// meaning the navbar and footer are not part & parcel of it 
 
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home";

@@ -1,4 +1,8 @@
-import { Link, useParams } from "react-router-dom";
+// Hero section of the Service details page
+// Child component is receiving data from a parent component
+// Use of props, to dynamically render data.
+
+import { Link } from "react-router-dom";
 
 
 const ServiceDetailsHero = ({service}) => {

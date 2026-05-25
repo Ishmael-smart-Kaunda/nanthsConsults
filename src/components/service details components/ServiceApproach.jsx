@@ -1,7 +1,8 @@
-// Performance Management Approach Section
+// Service Approach Section
 // Updated:
 // Added Outcomes & Benefits section between
 // framework and CTA section
+// 
 
 import { useEffect, useRef } from "react"
 import approachFrameworkData from "../../data/approachFrameworkData"

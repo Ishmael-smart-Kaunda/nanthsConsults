@@ -1,3 +1,6 @@
+// Service reasoning
+// basically highlights the significance of the service in play
+
 const ServiceReasoning = ({service}) => {
   return (
     <section className="w-full bg-[#f5f5f5] overflow-hidden">

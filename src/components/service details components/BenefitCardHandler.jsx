@@ -1,3 +1,5 @@
+// Handles prop management & rendering of service benefits, outcomes.
+
 
 const BenefitCardHandler = ({benefit}) => {
   return (

@@ -1,4 +1,4 @@
-import React from 'react'
+// Handles prop management & rendering of service approach & framework
 
 const DedicatedServiceApproachHandler = ({approach}) => {
   return (
