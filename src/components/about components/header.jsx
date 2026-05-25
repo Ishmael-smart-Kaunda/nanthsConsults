@@ -14,8 +14,8 @@ export default function Header(){
                                              <FaChevronRight className="size-4 mt-1"/> About
                                           </span>
                                         
-                                          <h2 className="md:text-6xl lg:text-[70px] l font-bold text-white leading-tight">Trusted HR & Admin <br/> Consultancy In Malawi</h2>
-                                          <p className="text-[20px]">Center of Expert level HR and administration solutions.</p>
+                                          <h2 className="text-4xl lg:text-8xl font-bold text-white leading-tight">Trusted HR & Admin <br/> Consultancy In Malawi</h2>
+                                          <p className="text-[22px]">Center of Expert level HR and administration solutions.</p>
                                           <span className="cursor-pointer flex flex-col gap-3 items-center font-semibold text-amber-700 mt-5">Know Us  
                                                 <button className="w-fit p-1 rounded-full bg-amber-700 /50 animate-bounce "><FaArrowDown className="size-4 text-black"/></button> 
                                           </span>

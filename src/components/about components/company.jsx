@@ -12,11 +12,11 @@ export default function Company(){
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-15">          
                         <div className="md:b md:space-y-20">
-                            <h1 className="w-full py-2 border-b text-[40px] font-bold "> Our Company</h1>
-                            <h3 className="text-4xl font-light ">Guided By <br/> Purpose. Driven <br/>  By People</h3>
+                            <h1 className="w-full py-2 border-b text-[30px] md:text-[40px] font-bold "> Our Company</h1>
+                            <h3 className="text-4xl font-light my-10">Guided By <br/> Purpose. Driven <br/>  By People</h3>
                         </div>
                             <div className="w-full px-2 relaxed">
-                                <p className="text-[22px] md:text-[25px] font-light leading-relaxed py-5">
+                                <p className="text-[23px] md:text-[25px] font-light leading-relaxed py-5">
                                         We are a duly registered Malawian consultancy firm that provides 
                                         a full range of management consultancy services specifically in the areas of human resources 
                                         management, trainings, performance management, integrated management systems, 
@@ -26,7 +26,7 @@ export default function Company(){
                         </div>
                 </div>
                  {/* CORE VALUES */}
-                 <h2 className="font text-[30px] font-semibold my-10">Our Core Values</h2>
+                 <h2 className="text-[30px] md:text-[40px] font-bold my-10">Our Core Values</h2>
                 <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-6">
                     <article className="h-full border border-gray-600 bg-black text-white space-y-3 p-5">
                             <div className="w-fit rounded-full border p-2 "> 
@@ -62,33 +62,33 @@ export default function Company(){
                 {/*MISSION AND VISION */}
                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2 my-20">
                      <div className="space-y-6">
-                        <div className="p-5 bg-white rounded-xl shadow-md space-y-3 ">
+                        <div className="p-5 bg-white md:rounded-xl shadow-md space-y-3 ">
                                 <h3 className="font-semibold text-[20px]">Our Mission</h3>
                                 <p className="">To offer business development and management solutions that are tailor-made 
                                         to suit the needs of our clients and beyond their expectations.</p>
                         </div>
-                        <div className="p-5 bg-white rounded-xl shadow-md space-y-3  ">
+                        <div className="p-5 bg-white md:rounded-xl shadow-md space-y-3  ">
                                 <h3 className="font-semibold text-[20px]">Our Vision</h3>
                                 <p className="">To be a reliable and number one choice consulting firm in Malawi and beyond.</p>
                         </div>
                         
                     </div>
-                    <div className="w-full h-full px-5 ">
+                    
                         <div className="cursor-pointer w-full h-25 text-center  borderamber-700/50  boder-2 bg-gray-300 rounded-xl p-5 text-[20px] font-bold">
                                 <PiFilePdfLight className="size-8 shrink-0 text-red-900 mx-auto"/>
                                 <p className="">Download Our Profile</p>
                         </div>
 
-                    </div>
+                    
 
 
                 </div> 
 
                  {/* VALUE PROPOSITION*/}
-                 <h2 className="font text-[35px] font-semibold mt-10">Why Us?</h2>
+                 <h2 className="font text-[40px] font-bold mt-10">Why Choose Us?</h2>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-10">
                         <div className="w-full flex flex-col gap-2 px-2 font-light ">
-                                <h1 className="text-[25px] font-semibold">Explore factors defining  our difference.</h1>
+                                <h1 className="text-[22px] text-amber-800 font-semibold uppercase">Explore factors defining  our difference.</h1>
                                 {/*<hr/>
                                 <p className="text-center">Below are the reasons why we are a step closer to your HR and Administration solutions</p>*/}
                                 <article className="space-y-2 my-4 text-[20px]">

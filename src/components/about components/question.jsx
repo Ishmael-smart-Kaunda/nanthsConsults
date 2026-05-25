@@ -5,7 +5,9 @@ import { HiChevronDown, HiPlus } from "react-icons/hi2";
 import { HiMinus } from "react-icons/hi";
 
                 
-                
+      {/* A question component that structure the layout of question and answer. it accepts props for question and answer display
+           and a function and a value/ state of expansion for each question */} 
+      {/* the function and question expansion state value help in toggling expansion*/}         
 
 export default function Question({id, Q, A, handleExpansion, isExpanded}){
                         return(
@@ -15,6 +17,9 @@ export default function Question({id, Q, A, handleExpansion, isExpanded}){
                                             <p className={`${id===isExpanded ? 'opacity-100' : 'opacity-0'} transition-all duration-500 font-light opacity -0`}>{A}</p>
                                     </div>
                                        <button className="bordr p-1 rounded-full">
+                                        {/*Conditional rendering to display either minus or plus sign depending on 
+                                           whether the question box is expanded or not.
+                                        */}
                                         {
                                            id===isExpanded 
                                               ? 
