@@ -1,157 +1,165 @@
-// Props to handle the dynamic display of blog cards under the insight section
-
+import { Link } from "react-router-dom";
 import { VscArrowSmallRight } from "react-icons/vsc";
+import { format } from "date-fns";
 
-const InsightPropHandler = ({ blog }) => {
+const InsightPropHandler = ({ post }) => {
   return (
-    <article
-      className="
-        group
-        bg-white
-        border
-        border-gray-200
-        rounded-[28px]
-        overflow-hidden
-        shadow-sm
-        hover:shadow-2xl
-        hover:-translate-y-1
-        transition-all
-        duration-300
-        flex
-        flex-col
-        justify-between
-      "
+    <Link
+      to={`/blog/${post.slug.current}`}
+      className="block"
     >
+      <article
+        className="
+          group
+          bg-white
+          border
+          border-gray-200
+          rounded-[28px]
+          overflow-hidden
+          shadow-sm
+          hover:shadow-2xl
+          hover:-translate-y-1
+          transition-all
+          duration-300
+          flex
+          flex-col
+          justify-between
+          h-full
+          cursor-pointer
+        "
+      >
 
-      {/* Image */}
-      <div className="overflow-hidden h-[240px]">
+        {/* Image */}
+        <div className="overflow-hidden h-[240px]">
 
-        <img
-          className="
-            w-full
-            h-full
-            object-cover
-            group-hover:scale-105
-            transition-transform
-            duration-700
-          "
-          src={blog.image}
-          alt={blog.title}
-        />
-
-      </div>
-
-      {/* Content */}
-      <div className="p-7 flex flex-col flex-1">
-
-        {/* Meta */}
-        <div className="flex items-center gap-3 mb-5">
-
-          <p
+          <img
             className="
-              text-sm
-              font-semibold
-              text-amber-700
+              w-full
+              h-full
+              object-cover
+              group-hover:scale-105
+              transition-transform
+              duration-700
             "
-          >
-            {blog.date}
-          </p>
-
-          <span className="w-1 h-1 rounded-full bg-gray-400" />
-
-          <p
-            className="
-              text-sm
-              text-gray-500
-            "
-          >
-            {blog.readTime}
-          </p>
+            src={post.mainImage.asset.url}
+            alt={post.title}
+          />
 
         </div>
 
-        {/* Title */}
-        <h2
-          className="
-            text-2xl
-            font-bold
-            text-[#1f1f1f]
-            leading-[125%]
-            mb-5
-            group-hover:text-amber-700
-            transition-colors
-            duration-300
-          "
-        >
-          {blog.title}
-        </h2>
+        {/* Content */}
+        <div className="p-7 flex flex-col flex-1">
 
-        {/* Description */}
-        <p
-          className="
-            text-gray-600
-            leading-8
-            text-base
-            flex-1
-          "
-        >
-          {blog.description}
-        </p>
+          {/* Meta */}
+          <div className="flex items-center gap-3 mb-5">
 
-        {/* Footer */}
-        <div className="flex items-center justify-between mt-8">
+            <p
+              className="
+                text-sm
+                font-semibold
+                text-amber-700
+              "
+            >
+              {post.publishedAt
+                ? format(new Date(post.publishedAt), 'dd MMMM yyyy')
+                : 'No date'
+              }
+            </p>
 
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2">
+            <span className="w-1 h-1 rounded-full bg-gray-400" />
 
-            {blog.tags?.slice(0, 2).map((tag, index) => (
-              <span
-                key={index}
-                className="
-                  bg-gray-100
-                  text-gray-600
-                  text-sm
-                  px-3
-                  py-1
-                  rounded-full
-                  font-medium
-                "
-              >
-                {tag}
-              </span>
-            ))}
+            <p
+              className="
+                text-sm
+                text-gray-500
+              "
+            >
+              {post.readTime}
+            </p>
 
           </div>
 
-          {/* Button */}
-          <button
+          {/* Title */}
+          <h2
             className="
-              flex
-              items-center
-              gap-1
-              text-amber-700
-              font-semibold
-              cursor-pointer
-              group/button
+              text-2xl
+              font-bold
+              text-[#1f1f1f]
+              leading-[125%]
+              mb-5
+              group-hover:text-amber-700
+              transition-colors
+              duration-300
             "
           >
-            Read More
+            {post.title}
+          </h2>
 
-            <VscArrowSmallRight
-              size={22}
+          {/* Description */}
+          <p
+            className="
+              text-gray-600
+              leading-8
+              text-base
+              flex-1
+            "
+          >
+            {post.excerpt}
+          </p>
+
+          {/* Footer */}
+          <div className="flex flex-wrap gap-4 items-center justify-between mt-8">
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2">
+
+              {post.categories?.slice(0, 2).map((category, index) => (
+                <span
+                  key={category.title}
+                  className="
+                    bg-gray-100
+                    text-gray-600
+                    text-sm
+                    px-3
+                    py-1
+                    rounded-full
+                    font-medium
+                  "
+                >
+                  {category.title}
+                </span>
+              ))}
+
+            </div>
+
+            {/* Read More */}
+            <div
               className="
-                transition-transform
-                duration-300
-                group-hover/button:translate-x-1
+                flex
+                items-center
+                gap-1
+                text-amber-700
+                font-semibold
               "
-            />
-          </button>
+            >
+              Read More
+
+              <VscArrowSmallRight
+                size={22}
+                className="
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                "
+              />
+            </div>
+
+          </div>
 
         </div>
 
-      </div>
-
-    </article>
+      </article>
+    </Link>
   );
 };
 

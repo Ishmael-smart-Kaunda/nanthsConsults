@@ -4,8 +4,53 @@
 
 import InsightPropHandler from "./InsightPropHandler";
 import HROSData from "../../data/HROSData";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import client from '../../utils/sanityClient'
 
 const Insights = () => {
+
+  const [posts, setPosts] = useState([])
+
+    useEffect(() => {
+        client.fetch(`
+            *[_type == "post"]{
+                title,
+                slug,
+                body,
+
+                publishedAt,
+
+                author->{
+                    name,
+                    bio
+                },
+
+                readTime,
+
+                excerpt,
+
+                categories[]->{
+                    title,
+                    description
+                },
+
+                mainImage{
+                    alt,
+                    asset->{
+                        _id,
+                        url
+                    }
+                }
+            }
+        `)
+        .then((data) => {
+            console.log(data)
+            setPosts(data)
+        })
+        .catch(console.error)
+    }, [])
+
   return (
     <section className="w-full bg-gray-50 overflow-hidden">
 
@@ -74,7 +119,9 @@ const Insights = () => {
 
           {/* Right */}
           <div>
-            <button
+            <Link
+
+              to="/blog"
               className="
                 border
                 border-gray-300
@@ -92,7 +139,7 @@ const Insights = () => {
               "
             >
               View All Insights
-            </button>
+            </Link>
           </div>
 
         </div>
@@ -103,15 +150,24 @@ const Insights = () => {
             grid
             grid-cols-1
             md:grid-cols-2
-            xl:grid-cols-3
+            lg:grid-cols-3
             gap-6
           "
         >
-          {HROSData.map((blog) => (
-            <InsightPropHandler
-              key={blog.id}
-              blog={blog}
-            />
+          {posts
+            ?.filter((post) =>
+              post.categories?.some((category) =>
+                [
+                  "HR Outsourcing Services",
+                  "HR Systems Development",
+                ].includes(category.title)
+              )
+            )
+            .map((post) => (
+              <InsightPropHandler
+                key={post.slug.current}
+                post={post}
+              />
           ))}
         </div>
 

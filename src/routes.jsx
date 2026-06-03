@@ -14,6 +14,7 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Services from "./pages/services";
 import ServiceDetails from "./pages/ServiceDetails";
+import SingleBlog from "./pages/SingleBlog";
 
 
 
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
                 {index: true, Component: Home},
                 {path: "/services", Component: Services},
                 {path: "/blog", Component: Blog},
+                {path: "/blog/:slug", Component: SingleBlog},
                 {path: "/about", Component: About},
                 {path: "/services/:serviceId", Component: ServiceDetails}
             ]   
