@@ -20,6 +20,7 @@ import { BiMailSend } from "react-icons/bi"
 import { BsMailbox2 } from "react-icons/bs"
 
 
+const API_URL = "http://localhost:3000"
 
 
 export default function NavBar(){
@@ -42,6 +43,77 @@ export default function NavBar(){
           {/*isClose for toggling overlay */}
           let isClose = (open || show)? true : null
           
+          const [formData, setFormData ] = useState({
+            email: ""
+          })
+
+          const [submitted, setSubmitted] = useState(false)
+          const [loading, setLoading] = useState(false)
+          const [error, setError] = useState('')
+
+          const handleInputChange = (e) => {
+            const {name, value } = e.target
+
+            setFormData(prev => ({
+                ...prev,
+                [name]: value
+            }))
+          }
+
+          console.log(formData)
+
+          const handleSubmit = async (e) => {
+            e.preventDefault()
+
+            setLoading(true)
+            setError('')
+
+            const payload = {
+                email: formData.email
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/api/create-newsletter-subscription`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                })
+
+                const data = await response.json()
+                console.log(data)
+
+                if (!response.ok || !data.success) {
+                    throw new Error(data.message || 'Newletter Subscription Failed')
+                }
+
+                setSubmitted(true)
+            } catch (error) {
+                setError(
+                    error instanceof Error
+                        ? error.message
+                        : 'Something went wrong. Please try again'
+                )
+            } finally {
+                setLoading(false)
+                setFormData({
+                    email: ""
+                })
+            }
+          }
+
+          const resetAndClose = () => {
+            setError('')
+            setLoading(false)
+            setSubmitted(false)
+
+            setFormData({
+                email: ''
+            })
+
+            toggleSignUp()
+          }
 
           return(
                  <header className=" w-full  ">
@@ -121,7 +193,7 @@ export default function NavBar(){
                     {/*sign up form*/}
                     
                     <div className={`fixed ${show ? 'opacity-100 left-[50%] translate-x-[-50%]' :'opacity-0 left-[200%] translate-x-[-50%]'} top-[53%] rounded-sm -translate-y-[50%] bg-white transition-all duration-500 z-100 w-9/10 md:w-[400px] e px-5 py-10 h-fit flex flex-col `}>
-                        <button onClick={()=>{toggleSignUp()}} className="cursor-pointer w-fit bg-gray-300 rounded-full p-1  self-end">
+                        <button onClick={()=>{resetAndClose()}} className="cursor-pointer w-fit bg-gray-300 rounded-full p-1  self-end">
                             <AiOutlineClose className="size-5  text-gray-600 hover:scale-115 transition-all duration-500"/>
                         </button>
                         <div className="mx-auto w-fit p-2 rounded-full bg-gradient-to-b from-amber-950 to-white">
@@ -129,13 +201,20 @@ export default function NavBar(){
                         </div>
                          <h1 className=" text-center mt-5 text-black text-[20px] font-semibold my-4">Sign Up for Newsletter</h1>
                          <p className="text-center text-[18px] font-light">Get HR & Admin insights for your business growth</p>
-                         <form className="w-full my-10 flex flex-col gap-5">
-                               <fieldset className="inline-flex gap-3 w-full">
+                         <form onSubmit={handleSubmit} className="w-full my-10 flex flex-col gap-5">
+                               {/* <fieldset className="inline-flex gap-3 w-full">
                                      <input type="text" placeholder="Name" className="border border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/>
                                     <input type="text" placeholder="Phone" className="border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/> 
-                               </fieldset>
+                               </fieldset> */}
                                
-                               <input type="text" placeholder="Email" className="border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/>
+                               <input 
+                                    type="email" 
+                                    placeholder="Enter your email" 
+                                    className="border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "
+                                    name="email"
+                                    onChange={handleInputChange}
+                                    value={formData.email}
+                                />
                                <fieldset className="inline-flex gap-2 w-full">
                                     <button className="cursor-pointer p-2 w-full rounded-sm bg-ascent text-white font-semibold">Sign Up</button>
                                </fieldset>    

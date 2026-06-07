@@ -1,43 +1,45 @@
 import { Link } from "react-router-dom";
 import { VscArrowSmallRight } from "react-icons/vsc";
-import { format } from "date-fns";
+import { format } from 'date-fns'
+
+
 
 const InsightPropHandler = ({ post }) => {
   return (
     <Link
       to={`/blog/${post.slug.current}`}
-      className="block"
+      className="
+        group
+        block
+      "
     >
       <article
         className="
-          group
+          h-full
           bg-white
           border
           border-gray-200
-          rounded-[28px]
+          rounded-[32px]
           overflow-hidden
           shadow-sm
           hover:shadow-2xl
-          hover:-translate-y-1
+          hover:-translate-y-2
           transition-all
-          duration-300
+          duration-500
           flex
           flex-col
-          justify-between
-          h-full
-          cursor-pointer
         "
       >
 
         {/* Image */}
-        <div className="overflow-hidden h-[240px]">
+        <div className="overflow-hidden h-[280px]">
 
           <img
             className="
               w-full
               h-full
               object-cover
-              group-hover:scale-105
+              group-hover:scale-110
               transition-transform
               duration-700
             "
@@ -48,44 +50,46 @@ const InsightPropHandler = ({ post }) => {
         </div>
 
         {/* Content */}
-        <div className="p-7 flex flex-col flex-1">
+        <div className="p-8 flex flex-col flex-1">
 
           {/* Meta */}
           <div className="flex items-center gap-3 mb-5">
 
-            <p
+            <span
               className="
                 text-sm
                 font-semibold
                 text-amber-700
               "
             >
-              {post.publishedAt
-                ? format(new Date(post.publishedAt), 'dd MMMM yyyy')
-                : 'No date'
-              }
-            </p>
+              
+                {post.publishedAt
+                  ? format(new Date(post.publishedAt), 'dd MMMM yyyy')
+                  : 'No date'}
+              
+            </span>
 
             <span className="w-1 h-1 rounded-full bg-gray-400" />
 
-            <p
+            <span
               className="
                 text-sm
                 text-gray-500
               "
             >
               {post.readTime}
-            </p>
+            </span>
 
           </div>
 
           {/* Title */}
-          <h2
+          <h3
             className="
               text-2xl
+              md:text-3xl
               font-bold
               text-[#1f1f1f]
-              leading-[125%]
+              leading-[120%]
               mb-5
               group-hover:text-amber-700
               transition-colors
@@ -93,14 +97,13 @@ const InsightPropHandler = ({ post }) => {
             "
           >
             {post.title}
-          </h2>
+          </h3>
 
           {/* Description */}
           <p
             className="
               text-gray-600
               leading-8
-              text-base
               flex-1
             "
           >
@@ -108,12 +111,12 @@ const InsightPropHandler = ({ post }) => {
           </p>
 
           {/* Footer */}
-          <div className="flex flex-wrap gap-4 items-center justify-between mt-8">
+          <div className="mt-8">
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-6">
 
-              {post.categories?.slice(0, 2).map((category, index) => (
+              {post.categories?.slice(0, 3).map((category, index) => (
                 <span
                   key={category.title}
                   className="
@@ -137,12 +140,12 @@ const InsightPropHandler = ({ post }) => {
               className="
                 flex
                 items-center
-                gap-1
+                gap-2
                 text-amber-700
                 font-semibold
               "
             >
-              Read More
+              Read Article
 
               <VscArrowSmallRight
                 size={22}

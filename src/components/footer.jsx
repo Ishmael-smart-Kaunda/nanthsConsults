@@ -4,12 +4,77 @@ import {
   RiInstagramFill,
 } from "react-icons/ri";
 
+import { useState } from "react";
+
 import { NavLink, Link } from "react-router-dom";
 import { VscArrowSmallRight } from "react-icons/vsc";
 
 import logo from "../assets/images/logo/nanth-logo.jpeg";
 
+const API_URL = "http://localhost:3000"
+
 export default function Footer() {
+  const [formData, setFormData] = useState({
+    email: ''
+  })
+
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleInputChange = (e) => {
+    const {name, value} = e.target
+
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  console.log(formData)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    setLoading(true)
+    setError('')
+
+    const payload = {
+      email: formData.email
+    }
+
+    try {
+      const response = await fetch(`${API_URL}/api/create-newsletter-subscription`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+
+      const data = await response.json()
+      console.log(data)
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || 'Newletter Subscription Failed')
+      } 
+
+      setSubmitted(true)
+    } catch (error) {
+      setError(
+        error instanceof Error
+        ? error.message
+        : 'Something went wrong. Please try again'
+      )
+    } finally {
+      setLoading(false)
+      setFormData({
+        email: ""
+      })
+    }
+  }
+
+
   return (
     <footer className="w-full bg-[#111111] overflow-hidden">
 
@@ -246,7 +311,7 @@ export default function Footer() {
             </h3>
 
             {/* Input */}
-            <div
+            <form
               className="
                 flex
                 items-center
@@ -257,6 +322,8 @@ export default function Footer() {
                 overflow-hidden
                 mb-4
               "
+
+              onSubmit={handleSubmit}
             >
 
               <input
@@ -271,6 +338,9 @@ export default function Footer() {
                   placeholder:text-gray-400
                   outline-none
                 "
+                name="email"
+                onChange={handleInputChange}
+                value={formData.email}
               />
 
               <button
@@ -290,7 +360,7 @@ export default function Footer() {
                 />
               </button>
 
-            </div>
+            </form>
 
             <small className="text-gray-400 leading-6">
               By subscribing, you agree to receive updates,
