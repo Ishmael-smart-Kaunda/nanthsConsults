@@ -116,7 +116,7 @@ export default function NavBar(){
           }
 
           return(
-                 <header className=" w-full  ">
+                 <header className=" w-full">
                     <div className="fixed top-0 z-100 bg-white w-full flex flex-row justify-between px-5 md:px-25 shadow-s">
                              <NavLink to='/'>
                                 <div className="inline-flex">

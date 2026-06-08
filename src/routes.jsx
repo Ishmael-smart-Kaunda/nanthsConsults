@@ -19,6 +19,7 @@ import SingleBlog from "./pages/SingleBlog";
 
 
 
+
 const router = createBrowserRouter(
     [
         {

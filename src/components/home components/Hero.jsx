@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <section className="relative w-screen h-[650px] overflow-hidden">
+    <section className="relative w-full h-[650px] overflow-hidden">
       
       {/* Background Image */}
       <img

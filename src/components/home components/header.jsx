@@ -112,7 +112,7 @@ export default function Header(){
                      <div className="w-full md:max-w-[1440px] h-[100vh] md:min-h-[93vh] bg-black/30">
                            <section className="relative w-full h-full  bg-[#f7f7f7]/80 gradient-to-r  from-violet-50 via-violet-100 to-slate-900/70 ">
                               <img src={image1}
-                                   alt=" Timely HR solutions" className="hiddn absolute inset-0 w-full h-full object-cover blur-sm mix-blend-overlay"/>
+                                   alt=" Timely HR solutions" className="hidden absolute inset-0 w-full h-full object-cover blur-sm mix-blend-overlay"/>
                               <div className="absolute top-1/10 md:top-2/10 left-1/2 -translate-x-1/2 w-full md:w-[85%] overflow-hidden mx-auto flex flex-col md:flex-row ">
                                        <div className="text-black/90  my-auto h-fit gap-8 space-y-3 md:space-y-6">
                                             <h1 className=" text-3xl md:text-[35px] w-full md:w-8/10 text-center md:text-left font-bold leading-tight uppercase">Strategic HR Solutions that Drive Business Growth</h1>

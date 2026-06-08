@@ -9,7 +9,7 @@ export default [
                },
               {
                 id:2,
-                value:500,
+                value:50,
                 headline:"Clients served",
                 descript:"Across sectors & industries"
               },
@@ -21,7 +21,7 @@ export default [
               },
               {
                 id:4,
-                value:15,
+                value:10,
                 headline:"HR specialists",
                 descript:"Certified & experienced team"
               },

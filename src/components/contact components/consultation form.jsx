@@ -171,7 +171,7 @@ export default function ConsultForm() {
                     </fieldset>
                                         
                     <button 
-                    className="cursor-pointer w-full md:w-1/2 px-4 py-3 bg-gray-800  gray-800 text- amber-700 950 white font-bold rounded-md hover:opacity-80"
+                    className="cursor-pointer w-full md:w-1/2 px-4 py-3 text-white/70 bg-gray-800  gray-800 text- amber-700 950 white font-bold rounded-md hover:opacity-80"
                     >
                       Book Consultation
                     </button>
