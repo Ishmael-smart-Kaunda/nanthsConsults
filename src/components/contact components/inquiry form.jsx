@@ -77,58 +77,60 @@ export default function InquiryForm(){
     return(
                               
         <form onSubmit={handleSubmit} className="w-full flex flex-col gap-6 py-5 rounded-r-sm font-semibold text-[18px]">
-                <fieldset className="flex flex-col gap-1">
-                    <label className="text-gray-950">Your name</label>
+                <div className="inline-flex gap-4">
+                <label className="flex flex-col text-gray-500 gap-3">
+                     Your name
                     <input 
                         type="text"
                         name="fullName"
                         onChange={handleInputChange}
                         value={formData.fullName}
                         placeholder="Full name" 
-                        className="w-full p-3 text-gray-400 bg-gray-800 shadow-sm border-2 border-gray-900 rounded-xl  focus:outline-none "
+                        className="w-full p-3 text-gray-900 bg-gray-300 border-2 border-gray-400/40 rounded-xl  focus:outline-none "
                         required
                     />
-                </fieldset>
+                   
+                </label>
 
-                <fieldset className="flex flex-col gap-1">
-                    <label className="text-gray-950">Email</label>
+                <label className="flex flex-col text-gray-500 gap-3">
+                     Email
                     <input 
                         type="email"
                         name="email" 
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="Enter your email" 
-                        className="w-full p-3 text-gray-400 bg-gray-800 shadow-sm border-2 border-gray-900 rounded-xl  focus:outline-none "
+                        className="w-full p-3 text-gray-900 bg-gray-300 border-2 border-gray-400/40 rounded-xl  focus:outline-none "
                     />
-                </fieldset>
-
-                <fieldset className="flex flex-col gap-1">
-                    <label className="text-gray-950">Subject</label>
+                </label>
+                </div>
+                <label className="flex flex-col text-gray-500 gap-3">
+                    Subject
                     <input 
                         type="text"
                         name="subject" 
                         value={formData.subject}
                         onChange={handleInputChange}
                         placeholder="What is this about?" 
-                        className="w-full p-3 text-gray-400 bg-gray-800 shadow-sm border-2 border-gray-900 rounded-xl  focus:outline-none "
+                        className="w-full p-3 text-gray-900 bg-gray-300 border-2 border-gray-400/40 rounded-xl  focus:outline-none "
                     />
-                </fieldset>
+                </label>
 
-                <fieldset className="flex flex-col gap-1">
-                    <label className="text-gray-950">Message</label>
+                <label className="flex flex-col text-gray-500 gap-3">
+                    Message
                     <textarea 
                         name="message" 
                         type="text"
                         value={formData.message}
                         onChange={handleInputChange}
                         placeholder="Your message..." 
-                        className="w-full p-3 text-gray-400 bg-gray-800 shadow-sm border-2 border-gray-900 rounded-xl  focus:outline-none "
+                        className="w-full p-3 text-gray-900 bg-gray-300 shadow-sm border-2 border-gray-400/40 rounded-xl  focus:outline-none "
                     >
                     </textarea>
-                </fieldset>
+                </label>
                                         
                     <button 
-                    className="cursor-pointer w-full md:w-1/2 px-4 py-3 bg-gray-800 font-bold rounded-md hover:opacity-80">Send Your message</button>
+                    className="cursor-pointer w-full md:w-fit px-6 py-4 text-white bg-ascent  font-bold rounded-md hover:opacity-80 whitespace-nowrap">Send Your message</button>
                                         
         </form>
                             

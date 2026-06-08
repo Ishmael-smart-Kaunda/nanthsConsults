@@ -7,7 +7,7 @@ import HROSData from "../data/HROSData";
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import { PortableText } from "@portabletext/react";
-import client from "../utils/sanityClient";
+import client from "../utils/sanityClient"
 import portableTextComponents from "../components/blog components/PortableText";
 
 const SingleBlog = () => {

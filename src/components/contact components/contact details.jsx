@@ -9,7 +9,7 @@ export default function ContactDetails(){
                                  
                                 <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 ">
                                     <figure className="">
-                                        <img src={aboutImg} alt="" className="w-full h-auto object-cover rounded-[35px]" />
+                                        <img src={aboutImg} alt="talk to us" className="md:-translate-x-30 w-full h-auto object-cover rounded-[35px]" />
                                         
                                     </figure>
                                     <div className="w-full h-full flex flex-col gap-4 items-end h-80">
@@ -22,11 +22,11 @@ export default function ContactDetails(){
                                             <a href="tel:+265980048010" className="inline-flex gap-1 items-center text-[18px] text-amber-800  bg-white p-4 rounded-xl"><PiPhoneCallBold className="size-6"/>+265 88 8703 316 </a>
                                             <a href="https://wa.me/265980048010?text=Hi,+I+want+to+know+more+about+your+services." className="inline-flex gap-1 items-center text-[18px] text-amber-800  bg-white p-4 rounded-xl"><PiWhatsappLogoBold className="size-6"/> +265 98 0048 010</a>
                                             <a href="mailto:nanthconsults@gmail.com" className="inline-flex gap-1 items-center text-[18px] text-amber-800  bg-white p-4 rounded-xl"><HiMail className="size-6"/>nanthconsults@gmail.com</a>
-                                            <a href="https://maps.google.com/?q=Area+18+Lilongwe"  
+                                            <a href="https://www.google.com/maps/place/11%C2%B024'59.9%22S+34%C2%B000'30.1%22E/@-11.4166389,34.0083611,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-11.4166389!4d34.0083611?hl=en&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"  
                                                 target="_blank"
                                                 rel="noopener noreferrer" 
                                                 className="inline-flex gap-1 items-center text-[18px] text-amber-800  bg-white p-4 rounded-xl">
-                                                <PiMapPin className="size-6"/>Lilongwe, Malawi
+                                                <PiMapPin className="size-6"/>Area 4, Mzuzu
                                             </a>
                                         </div>
                                         

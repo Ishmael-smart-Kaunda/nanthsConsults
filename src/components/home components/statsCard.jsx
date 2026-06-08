@@ -16,15 +16,14 @@ export default function StatsCard({item}){
       return(
                <div  ref={ref}
                     className=" w-full min-h-60  p-8 flex flex-col align-center gap-1 text-white bg-black border border-amber-900/20 rounded-md">
-                    {id===1 || id===4 ? 
-                         <span className="hidden inline-flex font-bold"> <FaPlus className="size-4 font-bold translate-y-4"/> <p className="text-[40px]">{count}</p> </span> 
-                         : id===2 ?
-                         <span className="hidden inline-flex font-bold"> <p className="text-[40px]">{count}</p> <FaPlus className="size-4 font-bold translate-y-4"/> </span> 
-                         : 
-                         <span className="hidden inline-flex font-bold"> <p className="text-[40px]">{count}</p> <FaPercent className="size-4 font-bold translate-y-4"/> </span> 
-                        } 
-                    <p className="font-semibold"> {headline} </p>
-                    <p className="text-gray-500">{descript} </p>
+                    {id===1 || id===4 
+                         ? <span className="hidden inline-flex font-bold text-amber-800"> <FaPlus className="size-4 font-bold translate-y-4"/> <p className="text-[40px]">{count}</p> </span> 
+                         : id===2 
+                         ? <span className="hidden inline-flex font-bold text-amber-800"> <p className="text-[40px]">{count}</p> <FaPlus className="size-4 font-bold translate-y-4"/> </span> 
+                         : <span className="hidden inline-flex font-bold text-amber-800"> <p className="text-[40px]">{count}</p> <FaPercent className="size-4 font-bold translate-y-4"/> </span> 
+                    } 
+                    <p className="font-semibold text-[22px]"> {headline} </p>
+                    <p className="text-gray-500 text-[18px]">{descript} </p>
                     
                 </div>
       )

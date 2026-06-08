@@ -1,5 +1,6 @@
 import { FiArrowRight } from "react-icons/fi"
 import Image from "../../assets/images/logo/nanth-logo.jpeg"
+import { Link } from "react-router-dom"
 
 export default function About(){
          return(
@@ -16,7 +17,7 @@ export default function About(){
                     </div>
                     
 
-                    <div className="w-full md:my-15 px-2 relaxed font-light space-y-6 text-[21px]">
+                    <div className="w-full md:my-15 px-2 relaxed font-light space-y-6 text-[22px]">
                         
                         
 
@@ -30,9 +31,13 @@ export default function About(){
 
                         <p className="">
                           Our work goes beyond policy and paperwork. We partner closely with organisations to 
-                          unlock the full potential of their people-building cultures where talent thrives, teams perform, and leadership grows.
+                          unlock the full potential of their people-building cultures where talent thrives, 
+                          teams perform, and leadership grows.
                         </p>
-                        <a href="/about" className="group inline-flex gap-1 font-bold text-[18px] text-amber-800 items-center">Get to know us <FiArrowRight className="size-4 animate-slider group-hover:[animation-play-state:paused] group-hover:translate-x-4 transition-all duration-300"/></a>
+                        <Link to="/about" className="group inline-flex items-center gap-1 font-bold text-[20px] text-amber-800 items-center">
+                          Get to know us 
+                          <FiArrowRight className="size-4 mt-1 animate-slider group-hover:[animation-play-state:paused] group-hover:translate-x-4 transition-all duration-300"/>
+                        </Link>
                       
                     </div>
                  </section>

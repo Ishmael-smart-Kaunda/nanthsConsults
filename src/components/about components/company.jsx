@@ -33,26 +33,26 @@ export default function Company(){
                                 <PiMedalLight className="size-6 ext-black"/>
                                 
                            </div>
-                            <h3 className="font-semibold text-[20px]">Quality </h3>
+                            <h3 className="font-semibold text-[20px] text-amber-800">Quality </h3>
                             <p>Our excellence in service delivery leads to distinct output.</p>
                     </article>
                     <article className="h-full bg-black text-white space-y-3 p-5">
                             <div className="size-fit rounded-full border p-2 "> <PiSealCheck className="size-6 ext-black"/></div>
-                            <h3 className="font-semibold text-[20px]">Integrity and Professionalism</h3>
+                            <h3 className="font-semibold text-[20px] text-amber-800">Integrity and Professionalism</h3>
                             <p className="">We are firm believers of core values and our service delivery is based on honesty, sincerity, 
                             professionalism and truthfulness.
                             </p>
                     </article>
                     <article className="h-full  bg-black text-white  space-y-3 p-5">
                             <div className="size-fit rounded-full border p-2 "> <PiAtomLight className="size-6 ext-black"/></div>
-                            <h3 className="font-semibold text-[20px]">Innovation </h3>
+                            <h3 className="font-semibold text-[20px] text-amber-800">Innovation </h3>
                             <p> We value business improvement of our clients through our service delivery 
                             that is modern and easy to use. 
                             </p>
                     </article>
                     <article className="h-full text-white  bg-black  space-y-3 p-5">
                             <div className="size-fit rounded-full border p-2 "> <PiClock className="size-6 ext-black"/></div>
-                            <h3 className="font-semibold text-[20px]">Timeliness</h3>
+                            <h3 className="font-semibold text-[20px] text-amber-800">Timeliness</h3>
                             <p className="text-">We believe in timely service delivery to our clients.
                             </p>
                     </article>
@@ -63,21 +63,23 @@ export default function Company(){
                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2 my-20">
                      <div className="space-y-6">
                         <div className="p-5 bg-white md:rounded-xl shadow-md space-y-3 ">
-                                <h3 className="font-semibold text-[20px]">Our Mission</h3>
+                                <h3 className="font-semibold text-[20px] text-amber-800">Our Mission</h3>
                                 <p className="">To offer business development and management solutions that are tailor-made 
                                         to suit the needs of our clients and beyond their expectations.</p>
                         </div>
                         <div className="p-5 bg-white md:rounded-xl shadow-md space-y-3  ">
-                                <h3 className="font-semibold text-[20px]">Our Vision</h3>
+                                <h3 className="font-semibold text-[20px] text-amber-800">Our Vision</h3>
                                 <p className="">To be a reliable and number one choice consulting firm in Malawi and beyond.</p>
                         </div>
                         
                     </div>
                     
-                        <div className="cursor-pointer w-full h-25 text-center  borderamber-700/50  boder-2 bg-gray-300 rounded-xl p-5 text-[20px] font-bold">
+                        <button onClick={()=>window.open("files/profile.pdf")}
+                           className="cursor-pointer w-full h-25 text-center  
+                           borderamber-700/50  boder-2 bg-gray-300 rounded-xl p-5 text-[20px] font-bold hover:opacity-70 transition-all duraion-500">
                                 <PiFilePdfLight className="size-8 shrink-0 text-red-900 mx-auto"/>
                                 <p className="">Download Our Profile</p>
-                        </div>
+                        </button>
 
                     
 
