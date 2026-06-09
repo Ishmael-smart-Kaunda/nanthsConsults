@@ -47,7 +47,7 @@ export default function Services(){
                 <div className="relative w-full grid grid-cols-1 md:grid-cols-3 p-5 md:py-20 bg-black/90 rounded-md">
                   <div className="col-span-2 w-full h-full p-5 md:px-10 flex flex-col justify-between text-white/90">
                      <FaQuoteLeft className="size-3 md:size-5"/>
-                      <p className="px-4 text-4xl md:text-5xl font-semibold leading-tight">
+                      <p className="md:px-4 text-4xl md:text-5xl font-semibold leading-tight">
                         Great organisations are built on great people. 
                         Let us help you find, grow, and keep yours.
                     </p>
@@ -83,7 +83,7 @@ export default function Services(){
                
                {/* THE SERVICES CONTINUE */}
                 <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-                  <article className="relative cursor-pointr p-5 flex flex-col h-80 shadow-zinc/200 shadow-sm bg-white text-black rounded-md hover:shadow-zinc-400 transition-all duration-500">  
+                  <article className="relative cursor-pointr p-5 flex flex-col h-fit shadow-zinc/200 shadow-sm bg-white text-black rounded-md hover:shadow-zinc-400 transition-all duration-500">  
                     <div className="p-1 bg-black back-drop-blur w-fit rounded-md">
                         <RiShieldCheckLine className="size-10 text-white"/>
                     </div>
@@ -96,7 +96,7 @@ export default function Services(){
                     </div> 
                   </article>
 
-                  <article className="cursor-ponter p-5 flex flex-col h-80 shadow-zinc/200 shadow-sm bg-white text-black  rounded-md hover:shadow-zinc-400 transition-all duration-500">
+                  <article className="cursor-ponter p-5 flex flex-col h-fit shadow-zinc/200 shadow-sm bg-white text-black  rounded-md hover:shadow-zinc-400 transition-all duration-500">
                     <div className="p-1 bg-black back-drop-blur w-fit rounded-md">
                         <RiServerLine className="size-10 text-white"/>
                     </div>

@@ -13,7 +13,7 @@ export default function ContactDetails(){
                                         
                                     </figure>
                                     <div className="w-full h-full flex flex-col gap-4 items-end h-80">
-                                        <figure className="">
+                                        <figure className="hidden md:block">
                                             <img src={logo} alt="" className=" rounded-[15px] scale-60" />
                                         </figure>
                                         
