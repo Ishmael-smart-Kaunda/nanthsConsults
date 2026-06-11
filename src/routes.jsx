@@ -15,6 +15,9 @@ import Contact from "./pages/contact";
 import Services from "./pages/services";
 import ServiceDetails from "./pages/ServiceDetails";
 import SingleBlog from "./pages/SingleBlog";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import ProtectionWrapper from "./wrappers/ProtectionWrapper";
 
 
 
@@ -35,6 +38,15 @@ const router = createBrowserRouter(
             ]   
         },
         {path: "/contact", Component: Contact},
+        {path: '/login', Component: Login},
+        {
+            path: '/dashboard', 
+            element: (
+                <ProtectionWrapper>
+                    <Dashboard />
+                </ProtectionWrapper>
+            )
+        }
     ]
 )
 
