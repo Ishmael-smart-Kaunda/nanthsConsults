@@ -75,6 +75,14 @@ export default function Footer() {
     }
   }
 
+  const resetForm = () => {
+  setSubmitted(false)
+  setError('')
+  setFormData({
+    email: ''
+  })
+}
+
 
   return (
     <footer className="w-full bg-[#111111] overflow-hidden">
@@ -282,95 +290,190 @@ export default function Footer() {
 
           </div>
 
-          {/* Newsletter */}
-          <div>
+{/* Newsletter */}
+<div>
 
-            <p
+  <p
+    className="
+      uppercase
+      tracking-[0.2em]
+      text-sm
+      font-semibold
+      text-gray-400
+      mb-6
+    "
+  >
+    Stay Updated
+  </p>
+
+  <h3
+    className="
+      text-2xl
+      font-semibold
+      text-white
+      leading-[140%]
+      mb-6
+    "
+  >
+    Receive the latest insights on workforce management,
+    organizational growth, and HR best practices.
+  </h3>
+
+  {/* Success State */}
+  {submitted ? (
+
+    <div
+      className="
+        bg-green-500/10
+        border
+        border-green-500/20
+        rounded-2xl
+        p-5
+        mb-4
+      "
+    >
+      <h4
+        className="
+          text-green-400
+          font-semibold
+          mb-2
+        "
+      >
+        Subscription Successful 🎉
+      </h4>
+
+      <p className="text-gray-300 text-sm leading-6">
+        Thank you for subscribing to the NaNth Consults
+        newsletter. You'll receive the latest HR,
+        workforce, and organizational development insights.
+      </p>
+
+      <button
+        onClick={resetForm}
+        className="
+          mt-4
+          text-amber-400
+          text-sm
+          font-semibold
+          hover:text-amber-300
+          transition-colors
+          cursor-pointer
+        "
+      >
+        Subscribe another email
+      </button>
+    </div>
+
+  ) : (
+
+    <>
+      {/* Form */}
+      <form
+        onSubmit={handleSubmit}
+        className="
+          flex
+          items-center
+          bg-white/5
+          border
+          border-white/10
+          rounded-2xl
+          overflow-hidden
+          mb-4
+        "
+      >
+
+        <input
+          type="email"
+          placeholder="Enter your email"
+          className="
+            flex-1
+            bg-transparent
+            px-5
+            py-4
+            text-white
+            placeholder:text-gray-400
+            outline-none
+          "
+          name="email"
+          value={formData.email}
+          onChange={handleInputChange}
+          required
+        />
+
+        <button
+          type="submit"
+          disabled={loading}
+          className="
+            bg-amber-700
+            hover:bg-amber-600
+            transition-all
+            duration-300
+            px-5
+            py-4
+            cursor-pointer
+            disabled:opacity-60
+            disabled:cursor-not-allowed
+            flex
+            items-center
+            justify-center
+            min-w-[72px]
+          "
+        >
+          {loading ? (
+            <div
               className="
-                uppercase
-                tracking-[0.2em]
-                text-sm
-                font-semibold
-                text-gray-400
-                mb-6
+                w-5
+                h-5
+                border-2
+                border-white/30
+                border-t-white
+                rounded-full
+                animate-spin
               "
-            >
-              Stay Updated
-            </p>
+            />
+          ) : (
+            <VscArrowSmallRight
+              size={24}
+              color="white"
+            />
+          )}
+        </button>
 
-            <h3
-              className="
-                text-2xl
-                font-semibold
-                text-white
-                leading-[140%]
-                mb-6
-              "
-            >
-              Receive the latest insights on workforce management,
-              organizational growth, and HR best practices.
-            </h3>
+      </form>
 
-            {/* Input */}
-            <form
-              className="
-                flex
-                items-center
-                bg-white/5
-                border
-                border-white/10
-                rounded-2xl
-                overflow-hidden
-                mb-4
-              "
+      {/* Error Message */}
+      {error && (
+        <div
+          className="
+            bg-red-500/10
+            border
+            border-red-500/20
+            rounded-xl
+            px-4
+            py-3
+            mb-4
+          "
+        >
+          <p
+            className="
+              text-red-400
+              text-sm
+            "
+          >
+            {error}
+          </p>
+        </div>
+      )}
+    </>
+  )}
 
-              onSubmit={handleSubmit}
-            >
+  <small className="text-gray-400 leading-6">
+    By subscribing, you agree to receive updates,
+    insights, and organizational support resources
+    from NaNth Consults.
+  </small>
 
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="
-                  flex-1
-                  bg-transparent
-                  px-5
-                  py-4
-                  text-white
-                  placeholder:text-gray-400
-                  outline-none
-                "
-                name="email"
-                onChange={handleInputChange}
-                value={formData.email}
-              />
-
-              <button
-                className="
-                  bg-amber-700
-                  hover:bg-amber-600
-                  transition-all
-                  duration-300
-                  px-5
-                  py-4
-                  cursor-pointer
-                "
-              >
-                <VscArrowSmallRight
-                  size={24}
-                  color="white"
-                />
-              </button>
-
-            </form>
-
-            <small className="text-gray-400 leading-6">
-              By subscribing, you agree to receive updates,
-              insights, and organizational support resources
-              from NaNth Consults.
-            </small>
-
-          </div>
-
+</div>
         </div>
 
         {/* Bottom Bar */}

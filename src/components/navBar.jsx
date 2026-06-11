@@ -62,58 +62,66 @@ export default function NavBar(){
 
           console.log(formData)
 
-          const handleSubmit = async (e) => {
-            e.preventDefault()
+const handleSubmit = async (e) => {
+    e.preventDefault()
 
-            setLoading(true)
-            setError('')
+    setLoading(true)
+    setError("")
+    setSubmitted(false)
 
-            const payload = {
-                email: formData.email
+    const payload = {
+        email: formData.email
+    }
+
+    try {
+        const response = await fetch(
+            `${API_URL}/api/create-newsletter-subscription`,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
             }
+        )
 
-            try {
-                const response = await fetch(`${API_URL}/api/create-newsletter-subscription`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(payload)
-                })
+        const data = await response.json()
 
-                const data = await response.json()
-                console.log(data)
+        if (!response.ok || !data.success) {
+            throw new Error(
+                data.message || "Newsletter subscription failed"
+            )
+        }
 
-                if (!response.ok || !data.success) {
-                    throw new Error(data.message || 'Newletter Subscription Failed')
-                }
+        setSubmitted(true)
 
-                setSubmitted(true)
-            } catch (error) {
-                setError(
-                    error instanceof Error
-                        ? error.message
-                        : 'Something went wrong. Please try again'
-                )
-            } finally {
-                setLoading(false)
-                setFormData({
-                    email: ""
-                })
-            }
-          }
+        setFormData({
+            email: ""
+        })
 
+    } catch (error) {
+
+        setError(
+            error instanceof Error
+                ? error.message
+                : "Something went wrong. Please try again."
+        )
+
+    } finally {
+        setLoading(false)
+    }
+}
           const resetAndClose = () => {
-            setError('')
-            setLoading(false)
-            setSubmitted(false)
+    setError("")
+    setSubmitted(false)
+    setLoading(false)
 
-            setFormData({
-                email: ''
-            })
+    setFormData({
+        email: ""
+    })
 
-            toggleSignUp()
-          }
+    setShow(false)
+}
 
           return(
                  <header className=" w-full">
@@ -143,8 +151,21 @@ export default function NavBar(){
                                 </Link>
                             </div>
                         {/*overlay */}
-                        {isClose &&<div onClick={()=>{isClose=null}} className="cursor-pointer absolute inset-0  w-full h-[100vh] bg-black/92 transition-all duration-500 delay-300"></div>}
-                    </div>
+{isClose && (
+    <div
+        onClick={() => {
+            setOpen(false)
+            setShow(false)
+        }}
+        className="
+            cursor-pointer
+            fixed
+            inset-0
+            bg-black/70
+            z-50
+        "
+    />
+)}                    </div>
                     
                     <div  className="mt-16 w-full px-5 md:px-25 py-3 flex flex-row justify-between items-center bg-black">
                             <div className="flex flex-row justify-between text-[#fff]">    
@@ -201,11 +222,45 @@ export default function NavBar(){
                         </div>
                          <h1 className=" text-center mt-5 text-black text-[20px] font-semibold my-4">Sign Up for Newsletter</h1>
                          <p className="text-center text-[18px] font-light">Get HR & Admin insights for your business growth</p>
+                         {submitted && (
+    <div
+        className="
+            mt-4
+            bg-green-50
+            border
+            border-green-200
+            text-green-700
+            px-4
+            py-3
+            rounded-lg
+            text-sm
+            text-center
+        "
+    >
+        ✓ Successfully subscribed to the newsletter.
+    </div>
+)}
+
+{error && (
+    <div
+        className="
+            mt-4
+            bg-red-50
+            border
+            border-red-200
+            text-red-700
+            px-4
+            py-3
+            rounded-lg
+            text-sm
+            text-center
+        "
+    >
+        {error}
+    </div>
+)}
                          <form onSubmit={handleSubmit} className="w-full my-10 flex flex-col gap-5">
-                               {/* <fieldset className="inline-flex gap-3 w-full">
-                                     <input type="text" placeholder="Name" className="border border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/>
-                                    <input type="text" placeholder="Phone" className="border border-black/10 p-2 w-full focus:outline-amber-800 shadow-sm rounded-sm bg-white "/> 
-                               </fieldset> */}
+                               
                                
                                <input 
                                     type="email" 
@@ -216,8 +271,42 @@ export default function NavBar(){
                                     value={formData.email}
                                 />
                                <fieldset className="inline-flex gap-2 w-full">
-                                    <button className="cursor-pointer p-2 w-full rounded-sm bg-ascent text-white font-semibold">Sign Up</button>
-                               </fieldset>    
+<button
+    type="submit"
+    disabled={loading}
+    className="
+        cursor-pointer
+        p-3
+        w-full
+        rounded-sm
+        bg-ascent
+        text-white
+        font-semibold
+        transition-all
+        duration-300
+        disabled:opacity-60
+        disabled:cursor-not-allowed
+    "
+>
+    {loading ? (
+        <div className="flex items-center justify-center gap-2">
+            <div
+                className="
+                    w-4
+                    h-4
+                    border-2
+                    border-white/30
+                    border-t-white
+                    rounded-full
+                    animate-spin
+                "
+            />
+            <span>Subscribing...</span>
+        </div>
+    ) : (
+        "Sign Up"
+    )}
+</button>                               </fieldset>    
                         </form>
                      
                     </div>
