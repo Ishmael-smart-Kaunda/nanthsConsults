@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-const API_URL = import.meta.env.VITE_BACKEND_URL;
-
+const API_URL = import.meta.env.VITE_BACKEND_URL?.replace(/\/$/, "") ??
+  "http://localhost:3000";
+  
 export default function ConsultForm() {
   const [formData, setFormData] = useState({
     fullName: "",

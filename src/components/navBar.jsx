@@ -20,8 +20,8 @@ import { BiMailSend } from "react-icons/bi"
 import { BsMailbox2 } from "react-icons/bs"
 
 
-const API_URL = import.meta.env.VITE_BACKEND_URL
-
+const API_URL = import.meta.env.VITE_BACKEND_URL?.replace(/\/$/, "") ??
+  "http://localhost:3000";
 
 export default function NavBar(){
 
