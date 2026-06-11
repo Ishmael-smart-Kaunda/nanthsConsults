@@ -11,7 +11,8 @@ import { VscArrowSmallRight } from "react-icons/vsc";
 
 import logo from "../assets/images/logo/nanth-logo.jpeg";
 
-const API_URL = "http://localhost:3000"
+const API_URL = import.meta.env.VITE_BACKEND_URL 
+
 
 export default function Footer() {
   const [formData, setFormData] = useState({
