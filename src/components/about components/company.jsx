@@ -74,12 +74,12 @@ export default function Company(){
                         
                     </div>
                     
-                        <button onClick={()=>window.open("files/profile.pdf")}
+                        <a href="/files/profile.pdf" download="/files/profile.pdf"
                            className="cursor-pointer w-full h-25 text-center  
-                           borderamber-700/50  boder-2 bg-gray-300 rounded-xl p-5 text-[20px] font-bold hover:opacity-70 transition-all duraion-500">
+                           boder-2 bg-gray-300 rounded-md p-5 text-[20px] font-bold hover:opacity-70 transition-all duraion-500">
                                 <PiFilePdfLight className="size-8 shrink-0 text-red-900 mx-auto"/>
                                 <p className="">Download Our Profile</p>
-                        </button>
+                        </a>
 
                     
 
