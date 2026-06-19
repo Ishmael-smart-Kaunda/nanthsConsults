@@ -19,6 +19,8 @@ import { CgMail } from "react-icons/cg"
 import { BiMailSend } from "react-icons/bi"
 import { BsMailbox2 } from "react-icons/bs"
 
+import { supabase } from "../utils/supabaseClient"
+
 
 const API_URL = import.meta.env.VITE_BACKEND_URL?.replace(/\/$/, "") ??
   "http://localhost:3000";
@@ -69,29 +71,48 @@ const handleSubmit = async (e) => {
     setError("")
     setSubmitted(false)
 
-    const payload = {
-        email: formData.email
-    }
+    
 
     try {
-        const response = await fetch(
-            `${API_URL}/api/create-newsletter-subscription`,
+        // const response = await fetch(
+        //     `${API_URL}/api/create-newsletter-subscription`,
+        //     {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify(payload)
+        //     }
+        // )
+
+        // const data = await response.json()
+
+        // if (!response.ok || !data.success) {
+        //     throw new Error(
+        //         data.message || "Newsletter subscription failed"
+        //     )
+        // }
+
+              const payload = {
+                email: formData.email
+              }
+        
+                    const { data, error } = await supabase
+          .from("newsletter_subscribers")
+          .insert([
             {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(payload)
-            }
-        )
-
-        const data = await response.json()
-
-        if (!response.ok || !data.success) {
-            throw new Error(
-                data.message || "Newsletter subscription failed"
-            )
+              email: formData.email,
+            },
+          ])
+          .select();
+        
+        console.log("Inserted:", data);
+        
+        if (error) {
+          console.error(error);
+          throw new Error(error.message);
         }
+        
 
         setSubmitted(true)
 

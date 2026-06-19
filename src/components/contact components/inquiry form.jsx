@@ -54,17 +54,6 @@ export default function InquiryForm() {
       //   }
       // );
 
-      const {error} = supabase
-                    .from('inquiries')
-                    .insert([
-                      {
-                        full_name,
-                        email,
-                        subject,
-                        message
-                      }
-                    ])
-
       // const data = await response.json();
 
       // if (!response.ok || !data.success) {
@@ -73,11 +62,24 @@ export default function InquiryForm() {
       //   );
       // }
 
-      if (error) {
-        throw new Error(
-          data.message || "Inquiry not submitted"
-        );
-      }
+      const { data, error } = await supabase
+  .from("inquiries")
+  .insert([
+    {
+      full_name: formData.fullName,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    },
+  ])
+  .select();
+
+console.log("Inserted:", data);
+
+if (error) {
+  console.error(error);
+  throw new Error(error.message);
+}
 
       setSubmitted(true);
 

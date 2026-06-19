@@ -4,6 +4,8 @@ import {
   RiInstagramFill,
 } from "react-icons/ri";
 
+import { supabase } from "../utils/supabaseClient";
+
 import { useState } from "react";
 
 import { NavLink, Link } from "react-router-dom";
@@ -40,25 +42,44 @@ export default function Footer() {
     setLoading(true)
     setError('')
 
-    const payload = {
-      email: formData.email
-    }
+    
 
     try {
-      const response = await fetch(`${API_URL}/api/create-newsletter-subscription`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      })
+      // const response = await fetch(`${API_URL}/api/create-newsletter-subscription`, {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify(payload)
+      // })
 
-      const data = await response.json()
-      console.log(data)
+      // const data = await response.json()
+      // console.log(data)
 
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || 'Newletter Subscription Failed')
-      } 
+      // if (!response.ok || !data.success) {
+      //   throw new Error(data.message || 'Newletter Subscription Failed')
+      // } 
+
+      const payload = {
+        email: formData.email
+      }
+
+            const { data, error } = await supabase
+  .from("newsletter_subscribers")
+  .insert([
+    {
+      email: formData.email,
+    },
+  ])
+  .select();
+
+console.log("Inserted:", data);
+
+if (error) {
+  console.error(error);
+  throw new Error(error.message);
+}
+
 
       setSubmitted(true)
     } catch (error) {

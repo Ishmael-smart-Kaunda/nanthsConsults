@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "../../utils/supabaseClient";
 
 const API_URL = import.meta.env.VITE_BACKEND_URL?.replace(/\/$/, "") ??
   "http://localhost:3000";
@@ -34,7 +35,29 @@ export default function ConsultForm() {
     setSubmitted(false);
     setLoading(true);
 
-    const payload = {
+    
+
+    try {
+      // const response = await fetch(
+      //   `${API_URL}/api/consultation-booking`,
+      //   {
+      //     method: "POST",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //     body: JSON.stringify(payload),
+      //   }
+      // );
+
+      // const data = await response.json();
+
+      // if (!response.ok || !data.success) {
+      //   throw new Error(
+      //     data.message || "Consultation booking failed"
+      //   );
+      // }
+
+      const payload = {
       full_name: formData.fullName,
       email: formData.email,
       organization_name: formData.organizationName,
@@ -42,25 +65,26 @@ export default function ConsultForm() {
       message: formData.message,
     };
 
-    try {
-      const response = await fetch(
-        `${API_URL}/api/consultation-booking`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+        const { data, error } = await supabase
+        .from("bookings")
+        .insert([
+          {
+            full_name: formData.fullName,
+            email: formData.email,
+            organization_name: formData.organizationName,
+            service_required: formData.serviceRequired,
+            message: formData.message
           },
-          body: JSON.stringify(payload),
-        }
-      );
-
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(
-          data.message || "Consultation booking failed"
-        );
+        ])
+        .select();
+      
+      console.log("Inserted:", data);
+      
+      if (error) {
+        console.error(error);
+        throw new Error(error.message);
       }
+      
 
       setSubmitted(true);
 
