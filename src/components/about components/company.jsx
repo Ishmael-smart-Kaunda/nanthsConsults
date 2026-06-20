@@ -3,7 +3,7 @@ import { FaCheckDouble, FaFilePdf } from "react-icons/fa6";
 import { FiPercent, FiPlus } from "react-icons/fi";
 import { PiAtomLight, PiClock, PiFilePdfLight, PiMedalLight, PiSealCheck, PiTimerLight } from "react-icons/pi";
 import AboutImg from "../../assets/images/contact/instagram.jpeg"
-
+import companyProfile from "../../assets/files/Company Profile.pdf"
 
 export default function Company(){
 
@@ -74,7 +74,7 @@ export default function Company(){
                         
                     </div>
                     
-                        <a href="files/profile.pdf" download="files/profile.pdf"
+                        <a href={companyProfile} download="company-profile.pdf"
                            className="cursor-pointer w-full h-25 text-center  
                            boder-2 bg-gray-300 rounded-md p-5 text-[20px] font-bold hover:opacity-70 transition-all duraion-500">
                                 <PiFilePdfLight className="size-8 shrink-0 text-red-900 mx-auto"/>
