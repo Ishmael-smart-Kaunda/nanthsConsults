@@ -3,8 +3,10 @@ import { RiFacebookBoxFill, RiInstagramFill, RiLinkedinBoxFill } from "react-ico
 
 export default function Social(){
             return(
-                      <div className="flex items-center gap-3">
-                             <Link  to="#" className="size-12 rounded-full bg-black/10 border  border-black/15 flex items-center justify-center
+                      <div className="my-10 md:my-20 bg-black/60 p-5 w-full rounded-xl space-y-8">
+                           <h1 className="text-[16px] text-white font-bold uppercase">Follow Us</h1>
+                           <div className="flex justify-between items-center">
+                             <Link  to="https://web.facebook.com/profile.php?id=61552117840314" className="size-12 rounded-full bg-black/10 border  border-black/15 flex items-center justify-center
                                                       hover:bg-white/10 transition-all duration-300"
                               >
                                  <RiFacebookBoxFill  className="size-6 text-white" />
@@ -21,6 +23,7 @@ export default function Social(){
                               >
                                  <RiInstagramFill className="size-6 text-white" />
                               </Link>
+                           </div>
                       </div>
             )
 }

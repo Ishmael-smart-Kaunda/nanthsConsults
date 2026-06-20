@@ -53,8 +53,8 @@ export default function Services(){
                     </p>
                     <address className="inline-flex justify-between items-center gap-1 py-4 text-[14px] whitespace-nowrap"> 
                       <a href="mailto:nanthconsults@gmail.com" className="inline-flex items-center gap-1 text-[10px] md:text-[14px]"><FiMail className=" size-5 text-green-300"/> nanthconsults@gmail.com  </a>
-                      <a href="tel:+265980043010" className=" text-white text-[12px]">
-                        +265 98 0048 010
+                      <a href="tel:+265888703316" className=" text-white text-[12px]">
+                        +265 88 8703 316
                       </a> 
                     </address>       
                     </div>

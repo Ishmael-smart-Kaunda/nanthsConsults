@@ -115,9 +115,12 @@ export default function ConsultForm() {
         flex-col
         gap-6
         py-5
-        rounded-r-sm
+        bg-gray -500/10
         font-semibold
         text-[18px]
+        borde
+        border-black/10 
+        rounded-lg
       "
     >
       {/* Success Message */}
@@ -160,8 +163,8 @@ export default function ConsultForm() {
       )}
 
       {/* Full Name */}
-      <fieldset className="flex flex-col gap-1">
-        <label className="text-gray-950">
+      <fieldset className="flex flex-col gap-3">
+        <label className="text-gray-700">
           Your Name
         </label>
 
@@ -175,11 +178,11 @@ export default function ConsultForm() {
           className="
             w-full
             p-3
-            text-gray-400
-            bg-gray-800
+            text-gray-900
+            bg-gray-500/10
             shadow-sm
-            border-2
-            border-gray-900
+            border
+            border-gray-600/40
             rounded-xl
             focus:outline-none
           "
@@ -187,8 +190,8 @@ export default function ConsultForm() {
       </fieldset>
 
       {/* Email */}
-      <fieldset className="flex flex-col gap-1">
-        <label className="text-gray-950">
+      <fieldset className="flex flex-col gap-3">
+        <label className="text-gray-700">
           Email
         </label>
 
@@ -202,11 +205,11 @@ export default function ConsultForm() {
           className="
             w-full
             p-3
-            text-gray-400
-            bg-gray-800
+            text-gray-900
+            bg-gray-500/10
             shadow-sm
-            border-2
-            border-gray-900
+            border
+            border-gray-600/40
             rounded-xl
             focus:outline-none
           "
@@ -214,8 +217,8 @@ export default function ConsultForm() {
       </fieldset>
 
       {/* Organization */}
-      <fieldset className="flex flex-col gap-1">
-        <label className="text-gray-950">
+      <fieldset className="flex flex-col gap-3">
+        <label className="text-gray-700">
           Your Organisation
         </label>
 
@@ -229,11 +232,11 @@ export default function ConsultForm() {
           className="
             w-full
             p-3
-            text-gray-400
-            bg-gray-800
+            text-gray-900
+            bg-gray-500/10
             shadow-sm
-            border-2
-            border-gray-900
+            border
+            border-gray-600/40
             rounded-xl
             focus:outline-none
           "
@@ -241,9 +244,9 @@ export default function ConsultForm() {
       </fieldset>
 
       {/* Service */}
-      <fieldset className="flex flex-col gap-1">
-        <label className="text-gray-950">
-          Service Needed
+      <fieldset className="flex flex-col gap-3 text-gray-600">
+        <label className="text-gray-700">
+          The supoort you need
         </label>
 
         <select
@@ -254,16 +257,16 @@ export default function ConsultForm() {
           className="
             w-full
             p-3
-            text-gray-500
-            bg-gray-800
+            text-gray-900
+            bg-gray-500/10
             shadow-sm
-            border-2
-            border-gray-900
+            border
+            border-gray-600/40
             rounded-xl
             focus:outline-none
           "
         >
-          <option value="">
+          <option value="" className="">
             Select a service
           </option>
 
@@ -306,8 +309,8 @@ export default function ConsultForm() {
       </fieldset>
 
       {/* Brief */}
-      <fieldset className="flex flex-col gap-1">
-        <label className="text-gray-950">
+      <fieldset className="flex flex-col gap-3">
+        <label className="text-gray-700">
           Brief
         </label>
 
@@ -315,17 +318,17 @@ export default function ConsultForm() {
           name="message"
           value={formData.message}
           onChange={handleInputChange}
-          placeholder="Describe your needs..."
+          placeholder="Describe how we should support you..."
           rows={6}
           required
           className="
             w-full
             p-4
-            text-gray-400
-            bg-gray-800
+            text-gray-900
+            bg-gray-500/10
             shadow-sm
-            border-2
-            border-gray-900
+            border
+            border-gray-600/40
             rounded-xl
             focus:outline-none
           "
@@ -339,7 +342,7 @@ export default function ConsultForm() {
         className="
           cursor-pointer
           w-full
-          md:w-1/2
+         
           px-4
           py-3
           bg-gray-800

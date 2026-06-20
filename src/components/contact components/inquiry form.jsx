@@ -107,11 +107,12 @@ if (error) {
         w-full
         flex
         flex-col
-        gap-6
+        gap-8
         py-5
         rounded-r-sm
         font-semibold
         text-[18px]
+        text-gray-700
       "
     >
       {/* Success Message */}
@@ -154,8 +155,7 @@ if (error) {
       )}
 
       {/* Name + Email */}
-      <div className="flex flex-col md:flex-row gap-4">
-        <label className="flex flex-col text-gray-500 gap-3 flex-1">
+        <label className="flex flex-col gap-3 flex-1">
           Your Name
 
           <input
@@ -167,10 +167,9 @@ if (error) {
             className="
               w-full
               p-3
-              text-gray-900
-              bg-gray-300
+              bg-gray-100
               border-2
-              border-gray-400/40
+              border-gray-400/20
               rounded-xl
               focus:outline-none
             "
@@ -178,7 +177,7 @@ if (error) {
           />
         </label>
 
-        <label className="flex flex-col text-gray-500 gap-3 flex-1">
+        <label className="flex flex-col gap-3 flex-1">
           Email
 
           <input
@@ -186,24 +185,23 @@ if (error) {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            placeholder="Enter your email"
+            placeholder="e.g nanthconsults@gmail.com"
             className="
               w-full
               p-3
               text-gray-900
-              bg-gray-300
+              bg-gray-100
               border-2
-              border-gray-400/40
+              border-gray-400/20
               rounded-xl
               focus:outline-none
             "
             required
           />
         </label>
-      </div>
 
       {/* Subject */}
-      <label className="flex flex-col text-gray-500 gap-3">
+      <label className="flex flex-col gap-3">
         Subject
 
         <input
@@ -216,9 +214,9 @@ if (error) {
             w-full
             p-3
             text-gray-900
-            bg-gray-300
+            bg-gray-100
             border-2
-            border-gray-400/40
+            border-gray-400/20
             rounded-xl
             focus:outline-none
           "
@@ -227,7 +225,7 @@ if (error) {
       </label>
 
       {/* Message */}
-      <label className="flex flex-col text-gray-500 gap-3">
+      <label className="flex flex-col gap-3">
         Message
 
         <textarea
@@ -240,10 +238,9 @@ if (error) {
             w-full
             p-3
             text-gray-900
-            bg-gray-300
-            shadow-sm
+            bg-gray-100
             border-2
-            border-gray-400/40
+            border-gray-400/10
             rounded-xl
             focus:outline-none
           "
@@ -258,7 +255,8 @@ if (error) {
         className="
           cursor-pointer
           w-full
-          md:w-fit
+          md:
+          mx-auto
           px-6
           py-4
           text-white
