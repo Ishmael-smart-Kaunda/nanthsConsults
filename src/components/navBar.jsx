@@ -203,7 +203,22 @@ const handleSubmit = async (e) => {
                     </div>
                     {/*Nav menu */}
        
-                    <div className={`${open ? 'left-0 opacity-100' : 'left-[-550px] opacity-0'} z-1000 transition-all duration-500 absolute top-0 w-full md:w-[350px] min-h-[100vh] bg-white font-semibold p-3`}>
+                    <div className={
+                         `
+                         fixed
+                         top-0 w-full 
+                         md:w-[350px] 
+                         min-h-[100vh] 
+                         ${open ? 
+                            'left-0 opacity-100' 
+                            : 
+                            'left-[-550px] opacity-0'
+                          } 
+                         z-1000 transition-all 
+                         duration-500  
+                         bg-white 
+                         font-semibold 
+                         p-3`}>
                         
                         <div className="w-full px-5 flex flex-col items-end">
                                 <MdOutlineClose 

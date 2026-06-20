@@ -74,7 +74,9 @@ export default function Company(){
                         
                     </div>
                     
-                        <a href={companyProfile} download="company-profile.pdf"
+                        <a href={companyProfile} 
+                           download="companyProfile.pdf" 
+                           target="_blank" rel="noopener noreferrer"
                            className="cursor-pointer w-full h-25 text-center  
                            boder-2 bg-gray-300 rounded-md p-5 text-[20px] font-bold hover:opacity-70 transition-all duraion-500">
                                 <PiFilePdfLight className="size-8 shrink-0 text-red-900 mx-auto"/>
