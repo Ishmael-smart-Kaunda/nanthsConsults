@@ -25,7 +25,7 @@ const API_URL = "http://localhost:3000"
 
 export default function NavBar(){
 
-          {/* menu show/hide */}
+          {/*menu show/hide*/}
           const [open, setOpen]=useState(false)
           const openMenu = ()=>{
                 setOpen(true)    
@@ -34,7 +34,7 @@ export default function NavBar(){
                 setOpen(false)    
           }
 
-          {/* Sign Up form toggle show */}
+          {/*Sign Up form toggle show*/}
           const [show, setShow]=useState(false)
           const toggleSignUp = ()=>{
                 setShow(!show)    
