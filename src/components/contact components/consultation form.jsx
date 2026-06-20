@@ -246,7 +246,7 @@ export default function ConsultForm() {
       {/* Service */}
       <fieldset className="flex flex-col gap-3 text-gray-600">
         <label className="text-gray-700">
-          The supoort you need
+          The support you need
         </label>
 
         <select
