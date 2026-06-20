@@ -2,7 +2,7 @@
 
 export default function Hero(){
                return(
-                       <header className="relative w-full h-[60vh} md:[80vh] max-w-[1440px] bg-black/70 px-5 md:px-25 py-10 mt-15">
+                       <header className="relative w-full min-h-[30vh] md:min-h-[40vh] max-w-[1440px] bg-black/70 px-5 md:px-25 py-10 mt-15">
                             <img src="https://i.pinimg.com/1200x/3b/83/8e/3b838e8cfa9a10073c9b9efa3dce1268.jpg" 
                                  alt="lets talk" 
                                  className="absolute inset-0 w-full h-full object-cover mix-blend-overlay" 
