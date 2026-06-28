@@ -7,10 +7,15 @@ export default function Hero(){
                                  alt="lets talk" 
                                  className="absolute inset-0 w-full h-full object-cover mix-blend-overlay" 
                             />
-                           <div className="relative w-full md:w-3/4 text-white space-y-10">
-                              <p className="inline-flex items-center rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-2 text-sm md:text-base font-medium text-blue-100 mb-6">lets talk</p>
-                              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">We'd love to hear from you.</h1>
-                              <p className="w-full md:w-8/10 text-xl md:text-[24px] font-light">From a free initial consultation to a long-term HR partnership, 
+                           <div className="relative w-full md:w-3/4 text-white space-y-16">
+                              <p className="w-fit rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-8 py-2 text-sm md:text-base font-medium text-blue-100 mb-6">
+                                Lets Talk
+                              </p>
+                              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold">
+                                   We'd love to hear from you.
+                              </h1>
+                              <p className="w-full text-xl md:text-[24px] font-light">
+                                 From a free initial consultation to a long-term HR partnership, 
                                 every engagement starts with a conversation. Reach out and let's explore how we 
                                 can help your organisation.  
                              </p>  

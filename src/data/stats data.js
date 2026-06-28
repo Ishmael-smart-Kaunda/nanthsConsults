@@ -10,19 +10,19 @@ export default [
               {
                 id:2,
                 value:50,
-                headline:"Clients served",
+                headline:"Clients Served",
                 descript:"Across sectors & industries"
               },
               {
                 id:3,
                 value:95,
-                headline:"Client retention",
+                headline:"Client Retention",
                 descript:"Long-term partnerships"
               },
               {
                 id:4,
                 value:10,
-                headline:"HR specialists",
+                headline:"HR Specialists",
                 descript:"Certified & experienced team"
               },
 ]

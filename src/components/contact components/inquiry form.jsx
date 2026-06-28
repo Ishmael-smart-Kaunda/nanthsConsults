@@ -106,7 +106,7 @@ if (error) {
       className="
         w-full
         flex
-        flex-col
+        flex-col justify-between
         gap-8
         py-5
         rounded-r-sm

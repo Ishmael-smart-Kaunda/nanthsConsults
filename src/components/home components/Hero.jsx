@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-[650px] overflow-hidden">
+    <section className="relative w-full h-[650px] overflow-hidden md:px-20">
       
       {/* Background Image */}
       <img
@@ -13,10 +13,10 @@ const Hero = () => {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-10" />
+      <div className="absolute inset-0 bg-black/60 z-10 " />
 
       {/* Content */}
-      <div className="relative z-20 h-full flex items-center px-6 md:px-12 lg:px-24">
+      <div className="relative z-20 h-full flex items-center px-6">
         
         <div className="max-w-3xl">
           

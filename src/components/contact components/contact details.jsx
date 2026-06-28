@@ -7,7 +7,7 @@ export default function ContactDetails(){
                     return(
                             <section className="w-full max-w-[1440px] bg-gray-400 px-5 md:px-25 py-20 md:py-10">
                                  
-                                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10">
+                                <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
                                     <figure className="">
                                         <img src={aboutImg} alt="talk to us" className="mdanslate-x-30 w-full h-auto object-cover rounded-[35px]" />   
                                     </figure>

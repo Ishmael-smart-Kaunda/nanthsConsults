@@ -17,11 +17,10 @@ export default function About(){
                     </div>
                     
 
-                    <div className="w-full md:my-15 px-2 relaxed font-light space-y-6 text-[22px]">
-                        
+                    <div className="w-full md:my-15 px-2 relaxed font-light space-y-8 text-[22px]">
                         
 
-                        <p id="services" className="first-letter:float-left first-letter:mr-2 first-letter:text-5xl first-letter:font-bold first-letter:text-amber-800 first-line:tracking-widest ">
+                        <p id="services" className="first-letter:float-left first-letter:mr-1 first-letter:text-6xl first-letter:font-bold first-letter: ext-amber-800">
                             We are a duly registered Malawian consultancy firm that provides 
                             a full range of management consultancy services specifically in the areas of human resources 
                             management, trainings, performance management, integrated management systems, 
@@ -34,9 +33,9 @@ export default function About(){
                           unlock the full potential of their people-building cultures where talent thrives, 
                           teams perform, and leadership grows.
                         </p>
-                        <Link to="/about" className="group inline-flex items-center gap-1 font-bold text-[20px] text-amber-800 items-center">
-                          Get to know us 
-                          <FiArrowRight className="size-4 mt-1 animate-slider group-hover:[animation-play-state:paused] group-hover:translate-x-4 transition-all duration-300"/>
+                        <Link to="/about" className="group inline-flex items-center gap-1 font-semibold text-[20px] my-5 px-6 py-4 rounded-xl text-white bg-amber-800 items-center">
+                          Get To Know Us 
+                          <FiArrowRight className="size-5 mt-1 animate- slider group-hover:[animation-play-state:paused] group-hover:translate-x-4 transition-all duration-500"/>
                         </Link>
                       
                     </div>

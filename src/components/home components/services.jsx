@@ -31,9 +31,9 @@ export default function Services(){
                <section id="services" className=" relative w-full max-w-[1440px] text-white bg-gradent-to-b from-white 0 to-transparent px-5 md:px-25 mx-auto mt-50 py-15 ">
                   <img src={servicesBg} alt="" className="absolute inset-0 w-full h-full obgject-cover opacity- 0 mix-blend-overlay" />
                  <h1 className="font-bold text-center text-amber-400  text-[40px]">Our Services</h1>
-                 <p className="text-center font-light text-[22px] py-5">Comprehensive HR and administration services tailored to support modern organizations.</p>
+                 <p className="text-center font-light text-[22px] py-12">Comprehensive HR and administration services tailored to support modern organizations.</p>
                      
-                     <div className={`relative h-fit transition-all duration-500 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10  overflow-hidden`}>
+                     <div className={`relative h-fit transition-all duration-500 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md-10  overflow-hidden`}>
                          {filteredServices.map(({id, ...service})=>
                            <ServicesCard 
                              key={id}
@@ -44,8 +44,8 @@ export default function Services(){
                      </div>
 
                 {/* CTA */}
-                <div className="relative w-full grid grid-cols-1 md:grid-cols-3 p-5 md:py-20 bg-black/90 rounded-md">
-                  <div className="col-span-2 w-full h-full p-5 md:px-10 flex flex-col justify-between text-white/90">
+                <div className="relative w-full grid grid-cols-1 lg:grid-cols-3 p-5 md:py-20 bg-black/90 rounded-md">
+                  <div className="lg:col-span-2 w-full h-full p-5 md:px-10 flex flex-col justify-between text-white/90">
                      <FaQuoteLeft className="size-3 md:size-5"/>
                       <p className="md:px-4 text-4xl md:text-5xl font-semibold leading-tight">
                         Great organisations are built on great people. 

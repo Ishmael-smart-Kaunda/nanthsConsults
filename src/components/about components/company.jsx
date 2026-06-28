@@ -27,7 +27,7 @@ export default function Company(){
                 </div>
                  {/* CORE VALUES */}
                  <h2 className="text-[30px] md:text-[40px] font-bold my-10">Our Core Values</h2>
-                <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <article className="h-full border border-gray-600 bg-black text-white space-y-3 p-5">
                             <div className="w-fit rounded-full border p-2 "> 
                                 <PiMedalLight className="size-6 ext-black"/>
@@ -122,68 +122,6 @@ export default function Company(){
                                 <img src={AboutImg} alt="Nanth Consult's value proposition" className="w-full h-auto object-cover rounded-[35px]" />
                                 
                         </div>
-
-                        
-                        {/*
-                        
-                            <h1 className="text-[19px] font-light mb-5">By The Numbers</h1>
-                                <article className="inline-flex gap-3 items-start font-light">
-                                        <div className="inline-col content-center px-5  size-21 shrink-0 bg-blue-600/30 rounded-full"> 
-                                                <span className="inline-flex text-[35px] px-1">10 <FiPlus className="size-4 translate-y-5"/></span> 
-                                                <p className="text-[14px] -translate-y-3 translate-x-2">years</p> 
-                                        </div>
-                                        <div className="borde py- space-y-1">
-                                            <h5 className="font-semibold">A decade of proven expertise</h5>
-                                            <p className="">Over 10 years delivering HR and 
-                                                            administration  solutions across 
-                                                            Malawi and the wider region.
-                                           </p>
-                                        </div>
-                                </article>
-                                 <article className="inline-flex gap-3 items-start font-light">
-                                        <div className="inline-col content-center px-2  size-21 shrink-0 rounded-full bg-emerald-600">
-                                            <span className="inline-flex text-[35px] "> 500 <FiPlus className="size-4 translate-y-5"/></span>
-                                            <p className="text-[14px] -translate-y-2 translate-x-1 px-2">clients</p> 
-                                        </div>
-                                        <div className="borde space-y-1">
-                                            <h5 className="font-semibold">Trusted by hundreds of organisations</h5>
-                                            <p className="">From small businesses to large institutions,
-                                                            we have served over 500 clients across 10 sectors.
-                                           </p>
-                                        </div>
-                                </article>
-
-                                 <article className="inline-flex gap-3 items-start font-light">
-                                        <div className="inline-col content-center px-5  size-21 shrink-0  rounded-full bg-indigo-600">
-                                           <span className="inline-flex text-[35px] px-1"> 10 <FiPlus className="size-4 translate-y-5"/></span>
-                                           <p className="text-[14px] -translate-y-2 translate-x-1">sectors</p> 
-                                        </div>
-                                        <div className="b space-y-1">
-                                            <h5 className="font-semibold">Broad sectoral experience</h5>
-                                            <p className="">From finance and healthcare to education 
-                                                            and government, our expertise spans 10 
-                                                            distinct sectors.
-                                           </p>
-                                        </div>
-                                </article>
-
-                                 <article className="inline-flex gap-3 items-start font-light">
-                                        <div className="inline-col content-center px-4 size-21 shrink-0  rounded-full bg-amber-600">
-                                          <span className="inline-flex text-[35px] px-1"> 98 <FiPercent className="size-4 translate-y-5"/></span>
-                                          <p className="text-[14px] -translate-y-2 translate-x-1">retention</p> 
-                                        </div>
-                                        <div className="px- space-y-1">
-                                            <h5 className="font-semibold">Long-term client partnerships</h5>
-                                            <p className="">Our 98% client retention rate reflects the 
-                                                        trust, quality, and consistency we bring to every 
-                                                        engagement.
-                                           </p>
-                                        </div>
-                                </article>
-                        
-                        
-                        
-                        */}
                 </div>
            </section>
     )
