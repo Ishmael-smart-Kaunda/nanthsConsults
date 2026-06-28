@@ -108,7 +108,7 @@ const Insights = () => {
 
         {/* Blog Grid */}
         <div
-          className=" hidden
+          className="
             grid
             grid-cols-1
             md:grid-cols-2
