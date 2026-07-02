@@ -44,7 +44,7 @@ export default function Services(){
                      </div>
 
                 {/* CTA */}
-                <div className="relative w-full grid grid-cols-1 lg:grid-cols-3 p-5 md:py-20 bg-black/90 rounded-md">
+                <div className="relative w-full grid grid-cols-1 lg:grid-cols-3 p-5 md:py-20 bg-black/90 rounded-md mt-12">
                   <div className="lg:col-span-2 w-full h-full p-5 md:px-10 flex flex-col justify-between text-white/90">
                      <FaQuoteLeft className="size-3 md:size-5"/>
                       <p className="md:px-4 text-4xl md:text-5xl font-semibold leading-tight">
