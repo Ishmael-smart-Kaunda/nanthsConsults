@@ -171,6 +171,8 @@ if (error) {
 
               <Link
                 to="https://web.facebook.com/profile.php?id=61552117840314"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="
                   w-12
                   h-12
@@ -191,6 +193,8 @@ if (error) {
 
               <Link
                 to="https://www.linkedin.com/in/nanth-consults-58723741b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkcFjsVwdRAmBmgU8CFirEQ%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="
                   w-12
                   h-12

@@ -9,6 +9,7 @@ export default function Social(){
                              <Link  
                              to="https://web.facebook.com/profile.php?id=61552117840314" 
                              target="_blank"
+                             rel="noopener noreferrer"
                                 className="size-12 rounded-full bg-amber-700/20 border  
                                             border-amber-700/50 flex items-center justify-center
                                                       hover:bg-amber-700/30 transition-all duration-300"
@@ -18,6 +19,7 @@ export default function Social(){
 
                               <Link  to="https://www.linkedin.com/in/nanth-consults-58723741b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkcFjsVwdRAmBmgU8CFirEQ%3D%3D" 
                                      target="_blank"
+                                     rel="noopener noreferrer"
                                      className="
                                       size-12 
                                       rounded-full 
