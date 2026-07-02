@@ -14,8 +14,18 @@ export default function Social(){
                                  <RiFacebookBoxFill  className="size-6 text-white" />
                               </Link>
 
-                              <Link  to="#" className="size-12 rounded-full bg-amber-700/20 border  border-amber-700/50 flex items-center justify-center
-                                                      hover:bg-amber-700/30 transition-all duration-300"
+                              <Link  to="https://www.linkedin.com/in/nanth-consults-58723741b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkcFjsVwdRAmBmgU8CFirEQ%3D%3D" 
+                                   className="
+                                      size-12 
+                                      rounded-full 
+                                      bg-amber-700/20 
+                                      border  
+                                      border-amber-700/50 
+                                      flex items-center 
+                                      justify-center
+                                      hover:bg-amber-700/30 
+                                      transition-all
+                                      duration-300"
                               >
                                  <RiLinkedinBoxFill className="size-6 text-white" />
                               </Link>
