@@ -245,8 +245,8 @@ const SingleBlog = () => {
         <div
           className="
             prose
-            prose-lg
-            max-w-md
+            prose-md
+            max-w- md
           "
         >
           <PortableText
