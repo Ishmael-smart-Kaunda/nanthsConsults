@@ -219,8 +219,7 @@ const SingleBlog = () => {
       {/* ================= BLOG CONTENT ================= */}
       <section
         className="
-          
-          
+          max-w-4xl
           mx-auto
           px-6
           py-16
@@ -245,8 +244,8 @@ const SingleBlog = () => {
         <div
           className="
             prose
-            prose-md
-            max-w-md
+            prose-lg
+            max-w-none
           "
         >
           <PortableText
