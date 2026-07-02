@@ -244,10 +244,10 @@ const SingleBlog = () => {
         {/* Placeholder Content */}
         <div
           className="
-           hidden
+           
             prose
             prose-lg
-            max-w-none
+            max-w-screen
           "
         >
           <PortableText
