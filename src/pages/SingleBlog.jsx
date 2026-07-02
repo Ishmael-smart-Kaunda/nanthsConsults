@@ -220,7 +220,7 @@ const SingleBlog = () => {
       <section
         className="
           
-          max-w-screen
+          
           mx-auto
           px-6
           py-16
