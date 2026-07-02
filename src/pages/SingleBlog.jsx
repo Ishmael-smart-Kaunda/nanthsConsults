@@ -246,7 +246,7 @@ const SingleBlog = () => {
           className="
             prose
             prose-md
-            max-w- md
+            max-w-md
           "
         >
           <PortableText
