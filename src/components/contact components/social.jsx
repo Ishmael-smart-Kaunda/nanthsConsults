@@ -6,7 +6,9 @@ export default function Social(){
                       <div className="my-10 md:my-20 bg-black/60 p-5 md:px-10 w-full rounded-xl space-y-8">
                            <h1 className="text-[15px] text-white font-semibold uppercase">Follow Us</h1>
                            <div className="flex justify-between items-center">
-                             <Link  to="https://web.facebook.com/profile.php?id=61552117840314" 
+                             <Link  
+                             to="https://web.facebook.com/profile.php?id=61552117840314" 
+                             target="_blank"
                                 className="size-12 rounded-full bg-amber-700/20 border  
                                             border-amber-700/50 flex items-center justify-center
                                                       hover:bg-amber-700/30 transition-all duration-300"
@@ -15,7 +17,8 @@ export default function Social(){
                               </Link>
 
                               <Link  to="https://www.linkedin.com/in/nanth-consults-58723741b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkcFjsVwdRAmBmgU8CFirEQ%3D%3D" 
-                                   className="
+                                     target="_blank"
+                                     className="
                                       size-12 
                                       rounded-full 
                                       bg-amber-700/20 
