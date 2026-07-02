@@ -219,8 +219,8 @@ const SingleBlog = () => {
       {/* ================= BLOG CONTENT ================= */}
       <section
         className="
-          hidden
-          max-w-4xl
+          
+          max-w-screen
           mx-auto
           px-6
           py-16
