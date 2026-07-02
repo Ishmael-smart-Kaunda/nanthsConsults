@@ -245,7 +245,7 @@ const SingleBlog = () => {
           className="
             prose
             prose-lg
-            max-w-[360px] 
+            max-w-none
           "
         >
           <PortableText

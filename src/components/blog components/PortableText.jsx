@@ -1,31 +1,31 @@
 const portableTextComponents = {
   block: {
     normal: ({ children }) => (
-      <p className="max-w-[360px] text-gray-700 text-lg leading-9 mb-8">
+      <p className="text-gray-700 text-lg leading-9 mb-8">
         {children}
       </p>
     ),
 
     h1: ({ children }) => (
-      <h1 className="max-w-[360px] text-4xl font-bold text-gray-900 mt-16 mb-8">
+      <h1 className="text-4xl font-bold text-gray-900 mt-16 mb-8">
         {children}
       </h1>
     ),
 
     h2: ({ children }) => (
-      <h2 className="max-w-[360px] text-3xl font-bold text-gray-900 mt-14 mb-6">
+      <h2 className="text-3xl font-bold text-gray-900 mt-14 mb-6">
         {children}
       </h2>
     ),
 
     h3: ({ children }) => (
-      <h3 className="max-w-[360px] text-2xl font-semibold text-gray-900 mt-10 mb-4">
+      <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4">
         {children}
       </h3>
     ),
 
     h4: ({ children }) => (
-      <h4 className="max-w-[360px] text-xl font-semibold text-gray-900 mt-8 mb-3">
+      <h4 className="text-xl font-semibold text-gray-900 mt-8 mb-3">
         {children}
       </h4>
     ),
