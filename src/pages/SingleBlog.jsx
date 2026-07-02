@@ -219,7 +219,7 @@ const SingleBlog = () => {
       {/* ================= BLOG CONTENT ================= */}
       <section
         className="
-          max-w-[360px]
+          
           
           mx-auto
           px-6
@@ -244,6 +244,7 @@ const SingleBlog = () => {
         {/* Placeholder Content */}
         <div
           className="
+           hidden
             prose
             prose-lg
             max-w-none
