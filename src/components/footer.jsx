@@ -190,7 +190,7 @@ if (error) {
               </Link>
 
               <Link
-                to="#"
+                to="https://www.linkedin.com/in/nanth-consults-58723741b/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkcFjsVwdRAmBmgU8CFirEQ%3D%3D"
                 className="
                   w-12
                   h-12

@@ -146,7 +146,7 @@ const handleSubmit = async (e) => {
 
           return(
                  <header className=" w-full">
-                    <div className="fixed top-0 z-100 bg-white w-full max-w-md flex flex-row justify-between px-5 md:px-25">
+                    <div className="fixed top-0 z-100 bg-white w-full  flex flex-row justify-between px-5 md:px-25">
                              <NavLink to='/'>
                                 <div className="inline-flex">
                                     <img src={logo} alt="" className="size-12 " />
