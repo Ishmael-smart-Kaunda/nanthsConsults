@@ -219,7 +219,7 @@ const SingleBlog = () => {
       {/* ================= BLOG CONTENT ================= */}
       <section
         className="
-          
+          max-w-[360px]
           
           mx-auto
           px-6
