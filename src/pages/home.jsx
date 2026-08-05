@@ -6,6 +6,7 @@ import Services from "../components/home components/services"
 import Testimonial from "../components/home components/testimonials"
 import CTA from "../components/home components/CTA"
 import Hero from "../components/home components/Hero"
+import WelcomeModal from "../components/modal components/WelcomeModal"
 
 
 export default function Home(){
@@ -13,6 +14,7 @@ export default function Home(){
                   <>
                      {/* <Header/> */}
                      <Hero />
+                     <WelcomeModal/>
                      <About/>
                      <Partners/>
                      <STAT/>
