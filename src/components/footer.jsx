@@ -12,6 +12,7 @@ import { NavLink, Link } from "react-router-dom";
 import { VscArrowSmallRight } from "react-icons/vsc";
 
 import logo from "../assets/images/logo/nanth-logo.jpeg";
+import corestack from '../assets/images/corestack/logo-000.png'
 
 const API_URL = import.meta.env.VITE_BACKEND_URL?.replace(/\/$/, "") ??
   "http://localhost:3000";
@@ -213,25 +214,7 @@ if (error) {
                 <RiLinkedinBoxFill size={24} color="white" />
               </Link>
 
-              <Link
-                to="#"
-                className="
-                  w-12
-                  h-12
-                  rounded-full
-                  bg-white/5
-                  border
-                  border-white/10
-                  flex
-                  items-center
-                  justify-center
-                  hover:bg-white/10
-                  transition-all
-                  duration-300
-                "
-              >
-                <RiInstagramFill size={24} color="white" />
-              </Link>
+             
 
             </div>
 
@@ -508,8 +491,17 @@ if (error) {
             © 2026 NaNth Consults. All Rights Reserved.
           </small>
 
-          <small className="text-gray-500">
-            Designed & Developed by CoreStack.
+          <small className="flex gap-2 text-gray-500">
+            Designed & Developed by 
+            <a href="https://www.corestacksolutions.tech" 
+               target="_blank"
+               rel="noopener noreferrer"
+               className="flex gap-2 items-center font-semibold">
+               <span className="overflow-hidden rounded-md ">
+                  <img src={corestack} alt="corestack" className="size-5 object-cover" />
+               </span>
+              CoreStack.
+            </a>
           </small>
 
         </div>

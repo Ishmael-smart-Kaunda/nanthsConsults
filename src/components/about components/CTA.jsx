@@ -17,7 +17,10 @@ export default function CTA(){
                                   <div className="w-8/10 mx-auto hidden md:inline-flex justify-between text-amber-800 border-t border-white/20 py-5 ">
                                       <a href="tel:+265888703316" className="inline-flex gap-1 items-center text-[18px]"><PiPhoneCallLight className="size-6"/>+265 88 8703 316 </a>
                                       <a href="https://wa.me/265980048010?text=Hi+Nanth+Consults,+I+want+to+know+more+about+your+services." className="inline-flex gap-1 items-center text-[18px]"><PiWhatsappLogoLight className="size-6"/> +265 98 0048 010</a>
-                                      <a href="mailto:nanthconsults@gmail.com" className="inline-flex gap-1 items-center text-[18px]"><HiMail className="size-6"/>nanthconsults@gmail.com</a>
+                                      <a href="mailto:info@nanthsconsults.com" className="inline-flex gap-1 items-center text-[18px]">
+                                         <HiMail className="size-6"/>
+                                         info@nanthsconsults.com
+                                        </a>
                                       <a href="https://www.google.com/maps/place/11%C2%B024'59.9%22S+34%C2%B000'30.1%22E/@-11.4166389,34.0083611,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-11.4166389!4d34.0083611?hl=en&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"  
                                          target="_blank"
                                          rel="noopener noreferrer" 

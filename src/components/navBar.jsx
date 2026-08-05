@@ -163,7 +163,7 @@ const handleSubmit = async (e) => {
                                         <FiUser className="size-5 translate-y-0.2"/> Sign Up
                                 </span>
 
-                                <a href="mailto:nanthconsults@gmail.com" className="hidden cursor-pointer md:inline-flex gap-1 font-norm text-black/80 hover:text-amber-800">
+                                <a href="mailto:info@nanthsconsults.com" className="hidden cursor-pointer md:inline-flex gap-1 font-norm text-black/80 hover:text-amber-800">
                                       <FiMail className="size-4 translate-y-1"/> 
                                       Email
                                 </a>
