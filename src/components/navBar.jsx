@@ -187,8 +187,8 @@ const handleSubmit = async (e) => {
         "
     />
 )}                    </div>
-                    
-                    <div  className="mt-16 w-full px-5 md:px-25 py-3 flex flex-row justify-between items-center bg-black">
+                   
+                    <div  className="mt-14 w-full px-5 md:px-25 py-3 flex flex-row justify-between items-center bg-black">
                             <div className="flex flex-row justify-between text-[#fff]">    
                                 <span className="inline-flex gap-2 font-semibold cursor-pointer" 
                                       onClick={openMenu}>
@@ -201,7 +201,7 @@ const handleSubmit = async (e) => {
                                         Get Started
                             </NavLink>       
                     </div>
-                    {/*Nav menu */}
+                    {/*mobile Nav */}
        
                     <div className={
                          `
@@ -209,6 +209,8 @@ const handleSubmit = async (e) => {
                          top-0 w-full 
                          md:w-[350px] 
                          min-h-[100vh] 
+                         
+                         
                          ${open ? 
                             'left-0 opacity-100' 
                             : 
