@@ -81,9 +81,9 @@ const SingleBlog = () => {
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
 
-        <div className="relative z-20 max-w-[1600px] mx-auto h-full flex items-end px-6 pb-12 md:pb-16 md:px-12 lg:px-24">
+        <div className="relative z-20 max-w-[1600px] mx-auto h-full flex items-center px-6 pb-12 md:pb-16 md:px-12 lg:px-24">
 
-          <div className="max-w-4xl min-w-0">
+          <div className="max-w-4xl min-w-0 ">
 
             <div className="flex flex-wrap gap-2 mb-6">
               {singlePost.categories?.map((category) => (
@@ -100,9 +100,9 @@ const SingleBlog = () => {
               {singlePost.title}
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-8 max-w-3xl mb-8 break-words">
+            {/* <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-8 max-w-3xl mb-8 break-words">
               {singlePost.excerpt}
-            </p>
+            </p> */}
 
             <div className="flex flex-wrap items-center gap-4 text-white/80">
 
